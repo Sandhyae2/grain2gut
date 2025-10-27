@@ -99,6 +99,10 @@ def home():
     with left_col:
         if st.button("Summarized Analysis"):
             go_to("summarized_analysis")
+    # ------------------------------------------------Millet-wise Analysis---------------------------------------------------------------
+    with middle_col:
+        if st.button("Millet-wise Analysis"):
+            go_to("milletwise_analysis")
    
  # -------------------------------------------------- Meta Data ---------------------------------------------------------------------------
     with right_col:
