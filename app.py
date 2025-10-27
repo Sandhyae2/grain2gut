@@ -453,5 +453,5 @@ elif page == "ec_analysis":
 elif page == "ko_analysis":
     ko_page()
 elif page == "pwy_analysis":
-    pwy_page(   
+    pwy_page()  
 
