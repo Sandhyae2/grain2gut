@@ -130,7 +130,7 @@ def ec_page():
             st.markdown("""
             **EC (Enzyme Commission) numbers** are a numerical classification scheme for enzymes, 
             based on the chemical reactions they catalyze.  
-            - Each EC number consists of four numbers separated by periods (e.g., `2.7.1.1`).  
+            - Each EC number consists of four numbers separated by periods (e.g., 2.7.1.1).  
             - The first number represents the main enzyme class (6 major classes: Oxidoreductases, Transferases, Hydrolases, Lyases, Isomerases, Ligases).  
             - The subsequent numbers give more specific subclass, sub-subclass, and the serial number of the enzyme.  
             """)
