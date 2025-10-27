@@ -553,10 +553,10 @@ def ec_class():
         st.pyplot(fig)
 
      with right_col:
-         st.markdown("### Interpretation")
-         st.write(f"""
-         - **Dominant EC classes:** {', '.join(class_counts['EC Class'].head(3).tolist())}
-         """)
+          st.markdown("### Interpretation")
+          st.write(f"""
+          - **Dominant EC classes:** {', '.join(class_counts['EC Class'].head(3).tolist())}
+          """)
 
 #--------------------------------------------------------------Summary--------------------------------------------------------------------------
 def summary():
