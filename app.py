@@ -49,7 +49,7 @@ def home():
  # ----------------------------------- Sidebar with Project Description ------------------------------------------------------------------------
    # "Back to Home" button at the top of the sidebar
     
-    with st.sidebar.expander("About This App", expanded=True):
+    with st.sidebar.expander("About This App", expanded=False):
         st.markdown("""
         1. This app is based on a research paper by our guide, where lactic acid bacteria (LAB) were isolated and characterized from millets([research paper link](https://github.com/Sandhyae2/grain2gut/blob/main/Isolation_%26_characterization_of_biological_traits_of_millet-derived_lactic_acid_bacteria.pdf)).
         2. Among the isolates, four LAB strains showed probiotic characteristics, and their 16S rRNA partial sequences were submitted to NCBI.
