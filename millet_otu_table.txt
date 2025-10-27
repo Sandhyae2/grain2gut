@@ -1,0 +1,5 @@
+#OTU ID	millet_PP355677	millet_PP355678	millet_PP355679	millet_PP355680
+millet_PP355677.1	1	0	0	0
+millet_PP355678.1	0	1	0	0
+millet_PP355679.1	0	0	1	0
+millet_PP355680.1	0	0	0	1

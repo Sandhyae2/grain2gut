@@ -1,0 +1,227 @@
+ko_id,description
+K02003,"Function: Utilizes ATP hydrolysis to provide energy for the transport of various substrates across cellular membranes as part of an ABC transport system; Role in LAB: Contributes to nutrient uptake, toxin efflux, and maintenance of cellular homeostasis, supporting survival under stress and nutrient-limited conditions; Probiotic/Food Relevance: Enhances resilience and metabolic versatility of LAB during fermentation and gastrointestinal transit, aiding consistent probiotic activity; Biological Pathways: Associated with ATP-binding cassette (ABC) transport and membrane transport pathways."
+K01223,"Function: Catalyzes the hydrolysis of 6-phospho-?-D-glucosides into glucose-6-phosphate and alcohol, enabling the utilization of phosphorylated sugars; Role in LAB: Supports carbohydrate metabolism by breaking down complex sugars into fermentable forms, enhancing energy production and growth; Probiotic/Food Relevance: Improves the ability of LAB to utilize diverse carbohydrates in fermented foods, contributing to flavor development and consistent fermentation; Biological Pathways: Involved in glycolysis/gluconeogenesis and starch and sucrose metabolism pathways."
+K01990,"Function: Hydrolyzes ATP to supply energy for substrate translocation across the membrane as part of an ABC-2 type transport system; Role in LAB: Facilitates transport of nutrients, ions, and metabolites, contributing to metabolic efficiency and environmental adaptability; Probiotic/Food Relevance: Enhances nutrient uptake and stress tolerance in LAB, supporting stable growth and fermentation performance in food matrices; Biological Pathways: Involved in ATP-binding cassette (ABC) transport and membrane transport pathways."
+K01992,"Function: Forms the transmembrane channel component of the ABC-2 type transport system, allowing selective passage of substrates across the cell membrane; Role in LAB: Enables efficient transport of nutrients and metabolites, supporting cellular homeostasis and metabolic adaptability; Probiotic/Food Relevance: Contributes to nutrient acquisition and environmental resilience of LAB during fermentation and gastrointestinal transit; Biological Pathways: Involved in ATP-binding cassette (ABC) transport and membrane transport pathways."
+K02004,"Function: Constitutes the membrane-spanning component of an ABC transport system, facilitating substrate translocation across the cell membrane; Role in LAB: Supports selective uptake and efflux of molecules, aiding nutrient acquisition and stress response; Probiotic/Food Relevance: Enhances LAB’s ability to adapt and thrive in fermentation environments, ensuring consistent metabolic activity; Biological Pathways: Involved in ATP-binding cassette (ABC) transport and membrane transport pathways."
+K02757,"Function: Facilitates the transport and phosphorylation of beta-glucosides across the cell membrane via the phosphotransferase system (PTS); Role in LAB: Enables uptake and utilization of beta-glucosides as carbon sources, supporting energy metabolism and growth; Probiotic/Food Relevance: Enhances carbohydrate metabolism during fermentation, contributing to flavor development and efficient substrate utilization; Biological Pathways: Involved in the phosphotransferase system (PTS) and membrane transport pathways."
+K06147,"Function: Binds and hydrolyzes ATP to power substrate transport across membranes as part of the ABC transporter subfamily B; Role in LAB: Facilitates import and export of various molecules, supporting nutrient uptake, toxin efflux, and cellular homeostasis; Probiotic/Food Relevance: Enhances LAB’s adaptability and survival during fermentation and gastrointestinal transit, promoting consistent probiotic effects; Biological Pathways: Involved in ATP-binding cassette (ABC) transport and membrane transport pathways."
+K07024,"Function: Catalyzes the hydrolysis of sucrose-6-phosphate into sucrose and inorganic phosphate; Role in LAB: Participates in sucrose metabolism, enabling utilization of sucrose as a carbon source to support growth and energy production; Probiotic/Food Relevance: Contributes to efficient carbohydrate utilization during fermentation, enhancing flavor development and fermentation consistency; Biological Pathways: Involved in starch and sucrose metabolism and biosynthesis of secondary metabolites pathways."
+K02761,"Function: Mediates the transport and phosphorylation of cellobiose across the cell membrane via the phosphotransferase system (PTS); Role in LAB: Enables utilization of cellobiose as a carbon source, supporting energy metabolism and growth; Probiotic/Food Relevance: Enhances carbohydrate uptake during fermentation, contributing to efficient substrate utilization and flavor formation; Biological Pathways: Involved in starch and sucrose metabolism and phosphotransferase system (PTS) pathways."
+K02529,"Function: Regulates gene expression by repressing the galactose operon, controlling the metabolism of galactose; Role in LAB: Modulates carbohydrate metabolism, ensuring efficient use of galactose and preventing unnecessary energy expenditure; Probiotic/Food Relevance: Helps optimize sugar utilization during fermentation, contributing to stable metabolic activity and product consistency; Biological Pathways: Involved in transcriptional regulation and carbohydrate metabolism pathways."
+K17318,"Function: Binds and delivers aldouronate substrates to the ABC transport system for import into the cell; Role in LAB: Facilitates uptake of aldouronates, supporting utilization of complex carbohydrates and enhancing metabolic versatility; Probiotic/Food Relevance: Aids in breakdown and fermentation of plant-derived polysaccharides, improving flavor and texture in fermented foods; Biological Pathways: Involved in ABC transporters and membrane transport pathways."
+K17320,"Function: Forms the membrane-spanning channel of the aldouronate ABC transport system, enabling substrate translocation across the cell membrane; Role in LAB: Supports import of aldouronates for carbohydrate metabolism, enhancing nutrient acquisition and metabolic flexibility; Probiotic/Food Relevance: Promotes efficient fermentation of plant-derived polysaccharides, contributing to flavor development and texture in fermented products; Biological Pathways: Involved in ABC transporters and membrane transport pathways."
+K17319,"Function: Acts as a membrane-spanning permease in the aldouronate ABC transport system, facilitating the transport of aldouronate molecules into the cell; Role in LAB: Enables efficient uptake of complex carbohydrate derivatives, supporting versatile metabolism and energy production; Probiotic/Food Relevance: Enhances the ability of LAB to ferment plant-based substrates, improving flavor and texture consistency in fermented foods; Biological Pathways: Involved in ABC transporters and membrane transport pathways."
+K02025,"Function: Forms the membrane channel component of the multiple sugar transport system, allowing uptake of various sugars into the cell; Role in LAB: Facilitates transport of diverse carbohydrates to support metabolic flexibility and energy production; Probiotic/Food Relevance: Enhances ability of LAB to utilize a range of sugars during fermentation, promoting robust growth and consistent product quality; Biological Pathways: Involved in membrane transport and carbohydrate uptake pathways."
+K02026,"Function: Serves as the transmembrane permease component of the multiple sugar transport system, enabling the import of a variety of sugars into the cell; Role in LAB: Supports utilization of diverse carbohydrate sources, enhancing metabolic adaptability and growth; Probiotic/Food Relevance: Improves fermentation efficiency and flavor development by facilitating uptake of multiple sugars in food substrates; Biological Pathways: Involved in membrane transport and carbohydrate uptake pathways."
+K03488,"Function: Regulates expression of the beta-glucoside operon by preventing premature transcription termination, allowing full gene expression; Role in LAB: Enables efficient utilization of beta-glucosides by coordinating expression of related transport and metabolic genes; Probiotic/Food Relevance: Supports metabolism of plant-derived sugars during fermentation, enhancing flavor and fermentation consistency; Biological Pathways: Involved in transcriptional regulation and carbohydrate metabolism pathways."
+K02760,"Function: Transfers phosphate groups to cellobiose during its transport across the cell membrane via the phosphotransferase system (PTS); Role in LAB: Facilitates uptake and phosphorylation of cellobiose, supporting carbohydrate metabolism and energy production; Probiotic/Food Relevance: Enhances LAB’s ability to utilize cellobiose during fermentation, contributing to efficient substrate use and flavor formation; Biological Pathways: Involved in starch and sucrose metabolism and phosphotransferase system (PTS) pathways."
+K02073,"Function: Binds D-methionine and delivers it to the ABC transport system for uptake into the cell; Role in LAB: Supports acquisition of D-methionine, an important amino acid for protein synthesis and metabolic functions; Probiotic/Food Relevance: Enhances nutrient uptake during fermentation, promoting growth and metabolic activity for consistent product quality; Biological Pathways: Involved in ABC transporters and membrane transport pathways."
+K15580,"Function: Binds oligopeptides and delivers them to the ABC transport system for uptake into the cell; Role in LAB: Facilitates acquisition of peptides for nutrition and signaling, supporting growth, protein synthesis, and quorum sensing; Probiotic/Food Relevance: Enhances nutrient uptake and communication during fermentation, contributing to robust growth and flavor development; Biological Pathways: Involved in ABC transporters, quorum sensing, and beta-lactam resistance pathways."
+K03492,"Function: Regulates gene expression related to glucomannan utilization by controlling transcription of relevant metabolic genes; Role in LAB: Enables efficient breakdown and metabolism of glucomannan, supporting carbohydrate utilization and energy production; Probiotic/Food Relevance: Enhances LAB’s ability to ferment plant-derived polysaccharides, contributing to flavor complexity and fermentation consistency; Biological Pathways: Involved in transcriptional regulation and carbohydrate metabolism pathways."
+K03100,"Function: Cleaves signal peptides from precursor proteins during their translocation across the membrane, enabling proper protein maturation and secretion; Role in LAB: Essential for processing and exporting proteins, including enzymes and surface proteins, supporting cell function and interaction; Probiotic/Food Relevance: Facilitates secretion of enzymes and bioactive compounds that influence fermentation and probiotic activity; Biological Pathways: Involved in protein export and post-translational processing pathways."
+K07720,"Function: Acts as a response regulator in a two-component system, modulating gene expression in response to environmental signals; Role in LAB: Enables adaptation to changing conditions by regulating stress responses, metabolism, and virulence factors; Probiotic/Food Relevance: Supports LAB survival and functionality during fermentation and gastrointestinal transit by fine-tuning physiological responses; Biological Pathways: Involved in two-component signal transduction systems and environmental sensing pathways."
+K07718,"Function: Senses environmental stimuli and autophosphorylates a histidine residue to initiate signal transduction in a two-component system; Role in LAB: Detects changes in the environment to trigger adaptive responses via phosphorylation of response regulators; Probiotic/Food Relevance: Enables LAB to respond rapidly to stress and nutrient availability during fermentation and in the gut, promoting survival and activity; Biological Pathways: Involved in two-component signal transduction systems and environmental sensing pathways."
+K12308,"Function: Hydrolyzes beta-galactosides into monosaccharides like glucose and galactose, enabling carbohydrate breakdown; Role in LAB: Facilitates lactose and other beta-galactoside utilization for energy production and growth; Probiotic/Food Relevance: Enhances fermentation of dairy products and digestion of lactose, improving flavor and reducing lactose intolerance symptoms; Biological Pathways: Involved in galactose metabolism and carbohydrate metabolism pathways."
+K02015,"Function: Forms the membrane channel of the iron complex transport system, facilitating the uptake of iron-bound molecules into the cell; Role in LAB: Supports acquisition of essential iron required for enzymatic functions and metabolic processes; Probiotic/Food Relevance: Enhances LAB growth and metabolic activity during fermentation and gastrointestinal survival by ensuring iron availability; Biological Pathways: Involved in membrane transport and iron uptake pathways."
+K02027,"Function: Binds various sugars outside the cell and delivers them to the multiple sugar transport system for uptake; Role in LAB: Enhances ability to capture diverse carbohydrates, supporting metabolic flexibility and energy production; Probiotic/Food Relevance: Improves carbohydrate utilization during fermentation, contributing to robust growth and consistent product quality; Biological Pathways: Involved in carbohydrate uptake and ABC transport pathways."
+K02072,"Function: Acts as the membrane-spanning permease of the D-methionine ABC transport system, facilitating D-methionine uptake into the cell; Role in LAB: Supports acquisition of D-methionine for protein synthesis and metabolic functions, aiding growth and survival; Probiotic/Food Relevance: Enhances nutrient uptake during fermentation and gastrointestinal transit, promoting LAB viability and activity; Biological Pathways: Involved in ABC transporters and membrane transport pathways."
+K02028,"Function: Hydrolyzes ATP to provide energy for the transport of polar amino acids across the cell membrane via an ABC transporter; Role in LAB: Enables uptake of essential polar amino acids needed for protein synthesis and metabolic processes, supporting growth; Probiotic/Food Relevance: Supports LAB nutrition and stress resistance during fermentation, contributing to consistent probiotic functionality; Biological Pathways: Involved in ABC transport and amino acid uptake pathways."
+K02030,"Function: Binds polar amino acids outside the cell and delivers them to the transport system for uptake; Role in LAB: Facilitates efficient acquisition of essential amino acids, supporting protein synthesis and metabolic functions; Probiotic/Food Relevance: Enhances nutrient uptake and stress resilience in LAB during fermentation and gut transit; Biological Pathways: Involved in ABC transport and amino acid uptake pathways."
+K02013,"Function: Hydrolyzes ATP to provide energy for the active transport of iron complexes across the cell membrane; Role in LAB: Supports iron acquisition critical for enzymatic activity and metabolic processes, promoting growth and survival; Probiotic/Food Relevance: Enhances LAB’s ability to thrive in iron-limited environments during fermentation and in the gastrointestinal tract; Biological Pathways: Involved in ABC transport and iron uptake pathways."
+K01624,"Function: Catalyzes the reversible cleavage of fructose-1,6-bisphosphate into glyceraldehyde-3-phosphate and dihydroxyacetone phosphate in glycolysis and gluconeogenesis; Role in LAB: Plays a central role in carbohydrate metabolism and energy production, supporting growth and fermentation activity; Probiotic/Food Relevance: Enhances efficient sugar metabolism during fermentation, contributing to acid production and flavor development; Biological Pathways: Involved in glycolysis/gluconeogenesis, pentose phosphate pathway, fructose and mannose metabolism, carbon metabolism, and biosynthesis of amino acids."
+K02071,"Function: Hydrolyzes ATP to provide energy for the active transport of D-methionine across the cell membrane via the ABC transport system; Role in LAB: Supports uptake of D-methionine, essential for protein synthesis and metabolic processes, aiding growth and survival; Probiotic/Food Relevance: Enhances nutrient acquisition during fermentation and gastrointestinal transit, promoting LAB viability and activity; Biological Pathways: Involved in ABC transporters and membrane transport pathways."
+K02042,"Function: Forms the membrane-spanning channel of the phosphonate ABC transport system, facilitating phosphonate uptake into the cell; Role in LAB: Enables utilization of phosphonates as phosphorus sources, supporting growth under nutrient-limited conditions; Probiotic/Food Relevance: Enhances LAB survival and metabolic flexibility during fermentation and in the gut by accessing alternative phosphorus sources; Biological Pathways: Involved in ABC transporters and membrane transport pathways."
+K03704,"Function: Binds RNA and DNA to stabilize them and assist in proper folding during sudden temperature drops; Role in LAB: Helps maintain cellular function and gene expression under cold stress, supporting survival; Probiotic/Food Relevance: Enhances LAB’s ability to withstand refrigeration and cold fermentation processes, ensuring consistent performance; Biological Pathways: Involved in stress response and nucleic acid binding pathways."
+K02794,"Function: Transfers phosphate groups to mannose during its transport into the cell via the phosphotransferase system (PTS); Role in LAB: Facilitates uptake and phosphorylation of mannose, supporting carbohydrate metabolism and energy production; Probiotic/Food Relevance: Enhances utilization of mannose-containing sugars during fermentation, contributing to flavor development and fermentation efficiency; Biological Pathways: Involved in fructose and mannose metabolism, amino sugar and nucleotide sugar metabolism, metabolic pathways, and phosphotransferase system (PTS) pathways."
+K06889,"Function: Unknown, uncharacterized protein with no assigned specific function; Role in LAB: Potentially involved in yet-to-be-identified cellular processes supporting growth or stress response; Probiotic/Food Relevance: Unknown, may contribute to LAB physiology or fermentation performance once characterized; Biological Pathways: Not currently assigned to any known pathways."
+K09963,"Function: Unknown, uncharacterized protein with no defined functional role; Role in LAB: May participate in unexplored cellular activities that affect growth or adaptation; Probiotic/Food Relevance: Potentially influences LAB behavior or fermentation outcomes pending future characterization; Biological Pathways: Not currently linked to any specific biological pathways."
+K16787,"Function: Hydrolyzes ATP to provide energy for substrate transport via the energy-coupling factor (ECF) transport system; Role in LAB: Drives uptake of essential micronutrients such as vitamins and ions, supporting growth and metabolic functions; Probiotic/Food Relevance: Enhances LAB nutrient acquisition during fermentation and gut survival, promoting robust activity; Biological Pathways: Involved in ABC transporters and membrane transport pathways."
+K02759,"Function: Transfers phosphate groups to cellobiose during its transport into the cell via the phosphotransferase system (PTS); Role in LAB: Facilitates uptake and phosphorylation of cellobiose, supporting carbohydrate metabolism and energy production; Probiotic/Food Relevance: Enhances utilization of cellobiose in fermentation, contributing to efficient sugar metabolism and flavor development; Biological Pathways: Involved in starch and sucrose metabolism and phosphotransferase system (PTS) pathways."
+K02770,"Function: Transfers phosphate groups to fructose during its transport into the cell via the phosphotransferase system (PTS); Role in LAB: Facilitates uptake and phosphorylation of fructose, supporting carbohydrate metabolism and energy production; Probiotic/Food Relevance: Enhances fructose utilization during fermentation, contributing to efficient sugar metabolism and flavor formation; Biological Pathways: Involved in fructose and mannose metabolism, metabolic pathways, microbial metabolism in diverse environments, and phosphotransferase system (PTS) pathways."
+K02796,"Function: Participates in the transport and phosphorylation of mannose as part of the phosphotransferase system (PTS), specifically the EIID component; Role in LAB: Enables efficient uptake and metabolism of mannose, supporting energy production and growth; Probiotic/Food Relevance: Improves fermentation efficiency by enhancing mannose utilization, contributing to flavor and texture development; Biological Pathways: Involved in fructose and mannose metabolism, amino sugar and nucleotide sugar metabolism, metabolic pathways, and phosphotransferase system (PTS) pathways."
+K03402,"Function: Regulates gene expression involved in arginine metabolism, controlling enzymes and transporters related to arginine utilization; Role in LAB: Modulates arginine catabolism and biosynthesis, supporting nitrogen balance and energy production; Probiotic/Food Relevance: Influences production of metabolites affecting flavor, acid resistance, and stress response during fermentation; Biological Pathways: Involved in transcriptional regulation and arginine metabolism pathways."
+K03475,"Function: Facilitates transport and phosphorylation of ascorbate via the phosphotransferase system (PTS) as the EIIC component; Role in LAB: Enables utilization of ascorbate as a carbon source, supporting energy metabolism and growth; Probiotic/Food Relevance: Enhances fermentation versatility and metabolic flexibility, contributing to flavor and nutrient profiles; Biological Pathways: Involved in ascorbate and aldarate metabolism, metabolic pathways, microbial metabolism in diverse environments, and phosphotransferase system (PTS) pathways."
+K03657,"Function: Unwinds DNA strands in the 3’ to 5’ direction using ATP, facilitating DNA repair and replication processes; Role in LAB: Maintains genome stability by participating in nucleotide excision and mismatch repair, supporting cell survival; Probiotic/Food Relevance: Ensures genetic integrity of LAB under stress conditions during fermentation and gut transit, aiding consistent performance; Biological Pathways: Involved in nucleotide excision repair and mismatch repair pathways."
+K03710,"Function: Regulates gene expression by binding DNA and modulating transcription of target genes, often involved in metabolic pathways; Role in LAB: Controls pathways related to metabolism, stress response, and adaptation, supporting growth and survival; Probiotic/Food Relevance: Influences LAB functionality and resilience during fermentation and gastrointestinal transit; Biological Pathways: Involved in transcriptional regulation and gene expression control pathways."
+K03169,"Function: Alters DNA topology by transiently breaking and rejoining single DNA strands to relieve supercoiling during replication and repair; Role in LAB: Maintains DNA stability and proper replication, supporting genome integrity and cell survival; Probiotic/Food Relevance: Ensures LAB genetic stability under stress, contributing to consistent fermentation performance; Biological Pathways: Involved in DNA replication, repair, and recombination pathways."
+K02822,"Function: Transfers phosphate groups to L-ascorbate during its transport into the cell via the phosphotransferase system (PTS) as the EIIB component; Role in LAB: Facilitates uptake and phosphorylation of ascorbate, supporting carbohydrate metabolism and energy production; Probiotic/Food Relevance: Enhances LAB’s ability to utilize ascorbate during fermentation, contributing to metabolic flexibility and flavor; Biological Pathways: Involved in ascorbate and aldarate metabolism, metabolic pathways, microbial metabolism in diverse environments, and phosphotransferase system (PTS) pathways."
+K02913,"Function: Structural component of the 50S large ribosomal subunit, contributing to ribosome assembly and function; Role in LAB: Supports protein synthesis, essential for growth and cellular maintenance; Probiotic/Food Relevance: Ensures efficient production of proteins necessary for LAB metabolism and fermentation activity; Biological Pathways: Involved in ribosome structure and translation pathways."
+K02795,"Function: Facilitates transport and phosphorylation of mannose as the EIIC component of the phosphotransferase system (PTS); Role in LAB: Enables efficient uptake and metabolism of mannose, supporting energy production and growth; Probiotic/Food Relevance: Enhances fermentation efficiency by improving mannose utilization, contributing to flavor and texture development; Biological Pathways: Involved in fructose and mannose metabolism, amino sugar and nucleotide sugar metabolism, metabolic pathways, and phosphotransferase system (PTS) pathways."
+K02016,"Function: Binds and delivers iron complexes to the transport system for uptake into the cell; Role in LAB: Facilitates acquisition of essential iron, supporting vital cellular processes and growth; Probiotic/Food Relevance: Enhances LAB survival and metabolic activity in iron-limited environments such as the gut and fermentation systems; Biological Pathways: Involved in iron transport and membrane transport pathways."
+K01104,"Function: Removes phosphate groups from tyrosine residues on proteins, regulating their activity; Role in LAB: Modulates signal transduction and cellular processes by controlling protein phosphorylation states; Probiotic/Food Relevance: Influences LAB adaptation, stress response, and metabolic regulation during fermentation; Biological Pathways: Involved in protein phosphorylation and signal transduction pathways."
+K00926,"Function: Catalyzes the ATP-dependent phosphorylation of carbamate to produce carbamoyl phosphate, a key intermediate in nitrogen and amino acid metabolism; Role in LAB: Supports arginine biosynthesis and nitrogen metabolism, contributing to energy production and metabolic balance; Probiotic/Food Relevance: Enhances LAB growth and fermentation efficiency by maintaining amino acid and nitrogen metabolism; Biological Pathways: Involved in arginine biosynthesis, purine metabolism, nitrogen metabolism, and related metabolic pathways."
+K00615,"Function: Transfers two-carbon units between sugar phosphates in the pentose phosphate pathway and Calvin cycle; Role in LAB: Supports carbohydrate metabolism and biosynthesis of amino acids, contributing to energy production and metabolic flexibility; Probiotic/Food Relevance: Enhances LAB growth and fermentation performance by facilitating carbon metabolism and biosynthesis; Biological Pathways: Involved in pentose phosphate pathway, carbon fixation by Calvin cycle, biosynthesis of secondary metabolites, and carbon metabolism."
+K00805,"Function: Catalyzes the synthesis of heptaprenyl diphosphate, a key intermediate in terpenoid biosynthesis; Role in LAB: Supports production of essential isoprenoid compounds important for cell membrane integrity and function; Probiotic/Food Relevance: Contributes to LAB’s resilience and metabolic versatility during fermentation; Biological Pathways: Involved in terpenoid backbone biosynthesis and biosynthesis of secondary metabolites pathways."
+K07052,"Function: Processes and cleaves CAAX motif-containing proteins, often involved in post-translational modification; Role in LAB: Regulates maturation and function of membrane-associated proteins, impacting cell signaling and stability; Probiotic/Food Relevance: Supports LAB adaptation and survival under stress conditions during fermentation; Biological Pathways: Involved in protein processing and post-translational modification pathways."
+K19302,"Function: Hydrolyzes undecaprenyl diphosphate to undecaprenyl phosphate, recycling lipid carriers essential for cell wall biosynthesis; Role in LAB: Supports peptidoglycan and teichoic acid synthesis, maintaining cell wall integrity and growth; Probiotic/Food Relevance: Enhances LAB robustness and survival during fermentation and gastrointestinal transit; Biological Pathways: Involved in peptidoglycan biosynthesis and teichoic acid biosynthesis pathways."
+K07407,"Function: Hydrolyzes alpha-galactosides into simpler sugars, facilitating carbohydrate breakdown; Role in LAB: Enables utilization of complex sugars, supporting energy production and growth; Probiotic/Food Relevance: Improves fermentation efficiency and flavor development by metabolizing raffinose family oligosaccharides; Biological Pathways: Involved in galactose metabolism, glycerolipid metabolism, sphingolipid metabolism, glycosphingolipid biosynthesis, and general metabolic pathways."
+K07304,"Function: Reduces oxidized methionine residues in proteins, repairing oxidative damage; Role in LAB: Protects cellular proteins from oxidative stress, maintaining functionality and viability; Probiotic/Food Relevance: Enhances LAB survival and stability during oxidative stress in fermentation and storage; Biological Pathways: Involved in oxidative stress response and protein repair pathways."
+K16785,"Function: Forms part of the membrane permease complex in energy-coupling factor (ECF) transporters, facilitating substrate translocation across the membrane; Role in LAB: Enables uptake of essential micronutrients, supporting cellular metabolism and growth; Probiotic/Food Relevance: Helps LAB acquire vital nutrients in competitive environments, enhancing fermentation consistency; Biological Pathways: Involved in ABC transporter and membrane transport pathways."
+K07284,"Function: Catalyzes the covalent attachment of surface proteins to the cell wall by recognizing and cleaving specific sorting signals; Role in LAB: Anchors proteins important for adhesion, colonization, and interaction with the environment; Probiotic/Food Relevance: Enhances LAB’s ability to adhere to host tissues and surfaces, improving probiotic efficacy and biofilm formation; Biological Pathways: Involved in protein sorting and cell wall biogenesis pathways."
+K05349,"Function: Hydrolyzes beta-glucosides into glucose and aglycones, aiding in carbohydrate breakdown; Role in LAB: Facilitates utilization of diverse plant-derived sugars, enhancing energy acquisition and growth; Probiotic/Food Relevance: Contributes to flavor development and bioavailability of beneficial compounds during fermentation; Biological Pathways: Involved in cyanoamino acid metabolism, starch and sucrose metabolism, flavonoid degradation, biosynthesis of secondary metabolites, and general metabolic pathways."
+K03734,"Function: Catalyzes the transfer of FMN to apoproteins, converting them into active flavoproteins; Role in LAB: Supports flavoprotein maturation essential for various redox reactions and metabolism; Probiotic/Food Relevance: Enhances LAB metabolic flexibility and stress response during fermentation; Biological Pathways: Involved in cofactor biosynthesis and redox metabolism pathways."
+K08884,"Function: Phosphorylates serine and threonine residues on target proteins, modulating their activity; Role in LAB: Regulates cellular processes such as metabolism, stress response, and signal transduction; Probiotic/Food Relevance: Supports adaptation to environmental changes during fermentation, enhancing LAB survival and performance; Biological Pathways: Involved in signal transduction and regulatory pathways."
+K06950,"Function: Unknown, uncharacterized protein with no assigned function; Role in LAB: Potentially involved in yet-to-be-identified cellular processes; Probiotic/Food Relevance: Unknown impact on LAB performance or fermentation; Biological Pathways: Not currently assigned to any known pathways."
+K06180,"Function: Catalyzes the isomerization of specific uridine residues to pseudouridine in 23S rRNA, enhancing ribosome stability; Role in LAB: Improves ribosomal function and protein synthesis fidelity, supporting growth and stress tolerance; Probiotic/Food Relevance: Ensures efficient protein production during fermentation, contributing to LAB robustness; Biological Pathways: Involved in RNA modification and ribosome biogenesis pathways."
+K05846,"Function: Facilitates transport of osmoprotectants across the cell membrane to maintain osmotic balance; Role in LAB: Protects cells against osmotic stress, supporting survival in high-salt or dehydration conditions; Probiotic/Food Relevance: Enhances LAB resilience during fermentation and storage under stress conditions; Biological Pathways: Involved in ABC transporter and membrane transport pathways."
+K02035,"Function: Binds peptides and nickel ions for transport into the cell; Role in LAB: Supports nutrient uptake and metal ion homeostasis critical for metabolic activity and quorum sensing; Probiotic/Food Relevance: Facilitates efficient nutrient acquisition and communication during fermentation, enhancing LAB growth; Biological Pathways: Involved in quorum sensing and ABC transporter pathways."
+K01952,"Function: Catalyzes a key step in purine nucleotide biosynthesis by forming phosphoribosylformylglycinamidine; Role in LAB: Supports nucleotide synthesis essential for DNA/RNA production and cell proliferation; Probiotic/Food Relevance: Ensures robust growth and replication during fermentation, maintaining LAB viability; Biological Pathways: Involved in purine metabolism and biosynthesis of secondary metabolites pathways."
+K01759,"Function: Catalyzes detoxification of methylglyoxal by converting lactoylglutathione to glutathione and D-lactate; Role in LAB: Protects cells from toxic metabolic byproducts, supporting cellular health and metabolism; Probiotic/Food Relevance: Enhances stress tolerance during fermentation, contributing to stable LAB performance; Biological Pathways: Involved in pyruvate metabolism and general metabolic pathways."
+K01209,"Function: Hydrolyzes alpha-L-arabinofuranoside bonds in polysaccharides; Role in LAB: Enables breakdown of complex plant-derived carbohydrates, enhancing nutrient utilization; Probiotic/Food Relevance: Supports fermentation of plant-based substrates, improving flavor and texture in fermented foods; Biological Pathways: Involved in amino sugar and nucleotide sugar metabolism and general metabolic pathways."
+K00847,"Function: Catalyzes the phosphorylation of fructose to fructose-6-phosphate using ATP as a phosphate donor, a key step in fructose utilization; Role in LAB: Facilitates efficient metabolism of dietary fructose, contributing to energy production and carbohydrate catabolism; Probiotic/Food Relevance: Enhances fermentation efficiency and flavor development in fructose-containing substrates such as fruits and plant-based fermentations; Biological Pathways: Involved in fructose and mannose metabolism and starch and sucrose metabolism."
+K01232,"Function: Hydrolyzes maltose-6'-phosphate into glucose and glucose-6-phosphate, enabling utilization of phosphorylated maltose derivatives; Role in LAB: Supports the breakdown and assimilation of maltose from plant or starch sources, enhancing energy yield and growth in carbohydrate-rich environments; Probiotic/Food Relevance: Contributes to efficient starch-derived sugar metabolism during fermentation, improving texture and sweetness balance in fermented foods; Biological Pathways: Involved in starch and sucrose metabolism."
+K00384,"Function: Catalyzes the NADPH-dependent reduction of thioredoxin disulfide to thioredoxin, maintaining cellular redox homeostasis; Role in LAB: Protects cells from oxidative stress by regenerating reduced thioredoxin, which is essential for maintaining enzyme activity and protein stability; Probiotic/Food Relevance: Enhances stress tolerance and survivability of LAB during fermentation and storage, contributing to probiotic stability; Biological Pathways: Involved in selenocompound metabolism."
+K00244,"Function: Catalyzes the oxidation of succinate to fumarate in the tricarboxylic acid (TCA) cycle, transferring electrons to the electron transport chain via FAD and iron-sulfur clusters; Role in LAB: Contributes to energy generation and redox balance under aerobic or microaerophilic conditions, linking the TCA cycle to respiratory metabolism; Probiotic/Food Relevance: Supports metabolic flexibility and enhances survival in oxygen-variable environments during fermentation and storage; Biological Pathways: Involved in the citrate cycle (TCA cycle), oxidative phosphorylation, and pyruvate metabolism."
+K01206,"Function: Hydrolyzes terminal ?-L-fucose residues from fucosylated oligosaccharides and glycoconjugates; Role in LAB: Enables degradation of complex host- or plant-derived glycans, enhancing access to fucose as a carbon source; Probiotic/Food Relevance: Contributes to the breakdown of dietary glycans and improves adaptation to intestinal or plant-associated niches, aiding in flavor and texture modification during fermentation; Biological Pathways: Involved in other glycan degradation."
+K01191,
+K01126,
+K01060,
+K01193,
+K00558,
+K00611,
+K00627,
+K00058,
+K00059,
+K00134,
+K00073,
+K00975,
+K00995,
+K00948,
+K00874,
+K00661,
+K00868,
+K00766,
+K00790,
+K00525,
+K00005,
+K00016,
+K00027,
+K02122,
+K02121,
+K02120,
+K02119,
+K02118,
+K02117,
+K02078,
+K02044,
+K02036,
+K02057,
+K02040,
+K02041,
+K02033,
+K02032,
+K02034,
+K01198,
+K01635,
+K01537,
+K01714,
+K01652,
+K01738,
+K01752,
+K01754,
+K01686,
+K01783,
+K01784,
+K01812,
+K01803,
+K01834,
+K01881,
+K01926,
+K01989,
+K01222,
+K01258,
+K01534,
+K01478,
+K01462,
+K01465,
+K01356,
+K01265,
+K00162,
+K00161,
+K00383,
+K00382,
+K02775,
+K02783,
+K02779,
+K02798,
+K03111,
+K02954,
+K02810,
+K02911,
+K02800,
+K02781,
+K02372,
+K02358,
+K02774,
+K02773,
+K02769,
+K02768,
+K02564,
+K02392,
+K02123,
+K02124,
+K05833,
+K05832,
+K05520,
+K05350,
+K05340,
+K04750,
+K04487,
+K04486,
+K03703,
+K03885,
+K03800,
+K03789,
+K03574,
+K03588,
+K03652,
+K03654,
+K03210,
+K03294,
+K03406,
+K03408,
+K03570,
+K03217,
+K06173,
+K06872,
+K06975,
+K06966,
+K06949,
+K06901,
+K06213,
+K05847,
+K06131,
+K05837,
+K09684,
+K08317,
+K07483,
+K07023,
+K07010,
+K07104,
+K07149,
+K07192,
+K06183,
+K10189,
+K09812,
+K09773,
+K10040,
+K10112,
+K10188,
+K09815,
+K13256,
+K12952,
+K12574,
+K12556,
+K11069,
+K10823,
+K10190,
+K14155,
+K16509,
+K15975,
+K15634,
+K15583,
+K13993,
+K16788,
+K18349,
+K18350,

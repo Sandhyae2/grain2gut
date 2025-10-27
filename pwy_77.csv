@@ -1,0 +1,63 @@
+Pathway,fam_total,fam_found,completeness,pathway_name
+ANAGLYCOLYSIS-PWY,10,10,1,glycolysis III (from glucose)
+ARGSYNBSUB-PWY,9,9,1,L-arginine biosynthesis II (acetyl cycle)
+COA-PWY,4,4,1,coenzyme A biosynthesis I
+DTDPRHAMSYN-PWY,4,4,1,dTDP-L-rhamnose biosynthesis I
+GALACTUROCAT-PWY,5,5,1,D-galacturonate degradation I
+PEPTIDOGLYCANSYN-PWY,10,10,1,peptidoglycan biosynthesis I (meso-diaminopimelate containing)
+VALSYN-PWY,4,4,1,L-valine biosynthesis
+PWY-6386,8,8,1,UDP-N-acetylmuramoyl-pentapeptide biosynthesis II (lysine-containing)
+PWY-6387,8,8,1,UDP-N-acetylmuramoyl-pentapeptide biosynthesis I (meso-diaminopimelate containing)
+PWY-6121,5,5,1,5-aminoimidazole ribonucleotide biosynthesis I
+PWY-6123,6,6,1,inosine-5'-phosphate biosynthesis I
+PWY-5667,4,4,1,CDP-diacylglycerol biosynthesis I
+PWY-5100,4,4,1,pyruvate fermentation to acetate and lactate II
+PWY-6609,4,4,1,adenine and adenosine salvage III
+PWY-7219,4,4,1,adenosine ribonucleotides de novo biosynthesis
+PWY-7242,4,4,1,D-fructuronate degradation
+PWY0-1319,4,4,1,CDP-diacylglycerol biosynthesis II
+PWY0-1298,6,6,1,superpathway of pyrimidine deoxyribonucleosides degradation
+PWY0-1297,7,7,1,superpathway of purine deoxyribonucleosides degradation
+PWY0-1296,7,7,1,purine ribonucleosides degradation
+PWY0-1061,6,6,1,superpathway of L-alanine biosynthesis
+UDPNAGSYN-PWY,5,5,1,UDP-N-acetyl-D-glucosamine biosynthesis I
+P124-PWY,15,14,0.93,Bifidobacterium shunt
+ANAEROFRUCAT-PWY,14,13,0.93,homolactic fermentation
+GLYCOLYSIS,12,11,0.92,glycolysis I (from glucose 6-phosphate)
+PWY-5484,11,10,0.91,glycolysis II (from fructose 6-phosphate)
+OANTIGEN-PWY,10,9,0.9,O-antigen building blocks biosynthesis (E. coli)
+PWY-5840,10,9,0.9,superpathway of menaquinol-7 biosynthesis
+PWY-5910,10,9,0.9,superpathway of geranylgeranyldiphosphate biosynthesis I (via mevalonate)
+DAPLYSINESYN-PWY,9,8,0.89,L-lysine biosynthesis I
+ARGSYN-PWY,9,8,0.89,L-arginine biosynthesis I (via L-ornithine)
+RIBOSYN2-PWY,9,8,0.89,flavin biosynthesis I (bacteria and plants)
+ARO-PWY,8,7,0.88,chorismate biosynthesis I
+PWY-7229,8,7,0.88,superpathway of adenosine nucleotides de novo biosynthesis I
+PWY-6471,16,14,0.88,peptidoglycan biosynthesis IV (Enterococcus faecium)
+PWY-6126,8,7,0.88,superpathway of adenosine nucleotides de novo biosynthesis II
+PWY-922,7,6,0.86,mevalonate pathway I
+PWY-5837,7,6,0.86,"1,4-dihydroxy-2-naphthoate biosynthesis I"
+PWY-5097,7,6,0.86,L-lysine biosynthesis VI
+PWY-7234,6,5,0.83,inosine-5'-phosphate biosynthesis III
+PWY4FS-8,6,5,0.83,phosphatidylglycerol biosynthesis II (non-plastidic)
+THRESYN-PWY,6,5,0.83,superpathway of L-threonine biosynthesis
+PWY-6163,6,5,0.83,chorismate biosynthesis from 3-dehydroquinate
+PWY-5686,6,5,0.83,UMP biosynthesis
+PWY-6317,6,5,0.83,galactose degradation I (Leloir pathway)
+PWY4FS-7,6,5,0.83,phosphatidylglycerol biosynthesis I (plastidic)
+PWY-7199,5,4,0.8,pyrimidine deoxyribonucleosides salvage
+PWY-7111,5,4,0.8,pyruvate fermentation to isobutanol (engineered)
+PWY0-1261,10,8,0.8,anhydromuropeptides recycling
+PWY-6122,5,4,0.8,5-aminoimidazole ribonucleotide biosynthesis II
+PWY-5973,5,4,0.8,cis-vaccenate biosynthesis
+PWY-621,5,4,0.8,sucrose degradation III (sucrose invertase)
+PWY-5897,10,8,0.8,superpathway of menaquinol-11 biosynthesis
+PWY-5899,10,8,0.8,superpathway of menaquinol-13 biosynthesis
+PWY-5898,10,8,0.8,superpathway of menaquinol-12 biosynthesis
+NONOXIPENT-PWY,5,4,0.8,pentose phosphate pathway (non-oxidative branch)
+FASYN-ELONG-PWY,5,4,0.8,fatty acid elongation -- saturated
+GLUTORN-PWY,5,4,0.8,L-ornithine biosynthesis
+GLYCOGENSYNTH-PWY,5,4,0.8,glycogen biosynthesis I (from ADP-D-Glucose)
+POLYISOPRENSYN-PWY,5,4,0.8,polyisoprenoid biosynthesis (E. coli)
+P161-PWY,5,4,0.8,acetylene degradation
+PWY-6277,5,4,0.8,superpathway of 5-aminoimidazole ribonucleotide biosynthesis

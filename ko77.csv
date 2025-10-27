@@ -1,0 +1,76 @@
+ko_id,ko_abundance,ko_function,ec_id,ec_class,ec_function,map_ids,pathway_names,brite_subclass,brite_class,ec_abundance
+K02003,10,putative ABC transport system ATP-binding protein,nan,,,,,,,
+K01223,10,6-phospho-beta-glucosidase,3.2.1.86,Hydrolases,6-phospho-beta-glucosidase,map00010; map00500,Glycolysis / Gluconeogenesis; Starch and sucrose metabolism,Carbohydrate metabolism,Metabolism,10
+K01990,10,ABC-2 type transport system ATP-binding protein,nan,,,,,,,
+K01992,10,ABC-2 type transport system permease protein,nan,,,,,,,
+K02004,10,putative ABC transport system permease protein,nan,,,,,,,
+K02757,10,beta-glucoside PTS system EIICBA component,2.7.1.-,Transferases,,map02060,Phosphotransferase system (PTS),Membrane transport,Environmental Information Processing,
+K06147,10,"ATP-binding cassette, subfamily B, bacterial",nan,,,,,,,
+K07024,10,sucrose-6-phosphatase,3.1.3.24,Hydrolases,sucrose-phosphate phosphatase,map00500; map01110,Starch and sucrose metabolism; Biosynthesis of secondary metabolites,Carbohydrate metabolism,Metabolism,
+K02761,10,cellobiose PTS system EIIC component,nan,,,map00500; map02060,Starch and sucrose metabolism; Phosphotransferase system (PTS),Carbohydrate metabolism; Membrane transport,Environmental Information Processing; Metabolism,
+K02529,9,"LacI family transcriptional regulator, galactose operon repressor",nan,,,,,,,
+K17318,8,putative aldouronate transport system substrate-binding protein,nan,,,map02010,ABC transporters,Membrane transport,Environmental Information Processing,
+K17320,8,putative aldouronate transport system permease protein,nan,,,map02010,ABC transporters,Membrane transport,Environmental Information Processing,
+K17319,8,putative aldouronate transport system permease protein,nan,,,map02010,ABC transporters,Membrane transport,Environmental Information Processing,
+K02025,8,multiple sugar transport system permease protein,nan,,,,,,,
+K02026,7,multiple sugar transport system permease protein,nan,,,,,,,
+K03488,7,beta-glucoside operon transcriptional antiterminator,nan,,,,,,,
+K02760,7,cellobiose PTS system EIIB component,"2.7.1.196, 2.7.1.205",Transferases,,map00500; map02060,Starch and sucrose metabolism; Phosphotransferase system (PTS),Carbohydrate metabolism; Membrane transport,Environmental Information Processing; Metabolism,
+K02073,6,D-methionine transport system substrate-binding protein,nan,,,map02010,ABC transporters,Membrane transport,Environmental Information Processing,
+K15580,5,oligopeptide transport system substrate-binding protein,nan,,,map01501; map02010; map02024,beta-Lactam resistance; ABC transporters; Quorum sensing,Cellular community - prokaryotes; Drug resistance: antimicrobial; Membrane transport,Cellular Processes; Environmental Information Processing; Human Diseases,
+K03492,5,"GntR family transcriptional regulator, regulator of glucomannan utilization",nan,,,,,,,
+K03100,5,signal peptidase I,3.4.21.89,Hydrolases,signal peptidase I,map03060,Protein export,"Folding, sorting and degradation",Genetic Information Processing,5
+K07720,5,"two-component system, response regulator YesN",nan,,,map02020,Two-component system,Signal transduction,Environmental Information Processing,
+K07718,5,"two-component system, sensor histidine kinase YesM",2.7.13.3,Transferases,histidine kinase,map02020,Two-component system,Signal transduction,Environmental Information Processing,10
+K12308,5,beta-galactosidase,3.2.1.23,Hydrolases,beta-galactosidase,map00052,Galactose metabolism,Carbohydrate metabolism,Metabolism,5
+K02015,5,iron complex transport system permease protein,nan,,,,,,,
+K02027,5,multiple sugar transport system substrate-binding protein,nan,,,,,,,
+K02072,4,D-methionine transport system permease protein,nan,,,map02010,ABC transporters,Membrane transport,Environmental Information Processing,
+K02028,4,polar amino acid transport system ATP-binding protein,7.4.2.1,Translocases,ABC-type polar-amino-acid transporter,,,,,
+K02030,4,polar amino acid transport system substrate-binding protein,nan,,,,,,,
+K02013,4,iron complex transport system ATP-binding protein,7.2.2.-,Translocases,,,,,,
+K01624,4,"fructose-bisphosphate aldolase, class II",4.1.2.13,Lyases,fructose-bisphosphate aldolase,map00010; map00030; map00051; map00680; map00710; map01100; map01110; map01120; map01200; map01230,Glycolysis / Gluconeogenesis; Pentose phosphate pathway; Fructose and mannose metabolism; Methane metabolism; Carbon fixation by Calvin cycle; Metabolic pathways; Biosynthesis of secondary metabolites; Microbial metabolism in diverse environments; Carbon metabolism; Biosynthesis of amino acids,Carbohydrate metabolism; Energy metabolism,Metabolism,4
+K02071,4,D-methionine transport system ATP-binding protein,nan,,,map02010,ABC transporters,Membrane transport,Environmental Information Processing,
+K02042,4,phosphonate transport system permease protein,nan,,,map02010,ABC transporters,Membrane transport,Environmental Information Processing,
+K03704,4,cold shock protein,nan,,,,,,,
+K02794,4,mannose PTS system EIIAB component,2.7.1.191,Transferases,protein-N(pi)-phosphohistidine--D-mannose phosphotransferase,map00051; map00520; map01100; map02060,Fructose and mannose metabolism; Amino sugar and nucleotide sugar metabolism; Metabolic pathways; Phosphotransferase system (PTS),Carbohydrate metabolism; Glycan biosynthesis and metabolism; Membrane transport,Environmental Information Processing; Metabolism,
+K06889,4,uncharacterized protein,nan,,,,,,,
+K09963,4,uncharacterized protein,nan,,,,,,,
+K16787,4,energy-coupling factor transport system ATP-binding protein,7.-.-.-,Translocases,,map02010,ABC transporters,Membrane transport,Environmental Information Processing,
+K02759,3,cellobiose PTS system EIIA component,"2.7.1.196, 2.7.1.205",Transferases,,map00500; map02060,Starch and sucrose metabolism; Phosphotransferase system (PTS),Carbohydrate metabolism; Membrane transport,Environmental Information Processing; Metabolism,
+K02770,3,fructose PTS system EIIBC or EIIC component,2.7.1.202,Transferases,protein-N(pi)-phosphohistidine--D-fructose phosphotransferase,map00051; map01100; map01120; map02060,Fructose and mannose metabolism; Metabolic pathways; Microbial metabolism in diverse environments; Phosphotransferase system (PTS),Carbohydrate metabolism; Membrane transport,Environmental Information Processing; Metabolism,
+K02796,3,mannose PTS system EIID component,nan,,,map00051; map00520; map01100; map02060,Fructose and mannose metabolism; Amino sugar and nucleotide sugar metabolism; Metabolic pathways; Phosphotransferase system (PTS),Carbohydrate metabolism; Glycan biosynthesis and metabolism; Membrane transport,Environmental Information Processing; Metabolism,
+K03402,3,transcriptional regulator of arginine metabolism,nan,,,,,,,
+K03475,3,ascorbate PTS system EIIC component,nan,,,map00053; map01100; map01120; map02060,Ascorbate and aldarate metabolism; Metabolic pathways; Microbial metabolism in diverse environments; Phosphotransferase system (PTS),Carbohydrate metabolism; Membrane transport,Environmental Information Processing; Metabolism,
+K03657,3,ATP-dependent DNA helicase UvrD/PcrA,5.6.2.4,Isomerases,DNA 3'-5' helicase,map03420; map03430,Nucleotide excision repair; Mismatch repair,Replication and repair,Genetic Information Processing,
+K03710,3,GntR family transcriptional regulator,nan,,,,,,,
+K03169,3,DNA topoisomerase III,5.6.2.1,Isomerases,DNA topoisomerase,,,,,
+K02822,3,ascorbate PTS system EIIB component,2.7.1.194,Transferases,protein-N(pi)-phosphohistidine--L-ascorbate phosphotransferase,map00053; map01100; map01120; map02060,Ascorbate and aldarate metabolism; Metabolic pathways; Microbial metabolism in diverse environments; Phosphotransferase system (PTS),Carbohydrate metabolism; Membrane transport,Environmental Information Processing; Metabolism,
+K02913,3,large subunit ribosomal protein L33,nan,,,map03010,Ribosome,Translation,Genetic Information Processing,
+K02795,3,mannose PTS system EIIC component,nan,,,map00051; map00520; map01100; map02060,Fructose and mannose metabolism; Amino sugar and nucleotide sugar metabolism; Metabolic pathways; Phosphotransferase system (PTS),Carbohydrate metabolism; Glycan biosynthesis and metabolism; Membrane transport,Environmental Information Processing; Metabolism,
+K02016,3,iron complex transport system substrate-binding protein,nan,,,,,,,
+K01104,3,protein-tyrosine phosphatase,3.1.3.48,Hydrolases,protein-tyrosine-phosphatase,,,,,3
+K00926,3,carbamate kinase,2.7.2.2,Transferases,carbamate kinase,map00220; map00230; map00910; map01100; map01110; map01120; map01200,Arginine biosynthesis; Purine metabolism; Nitrogen metabolism; Metabolic pathways; Biosynthesis of secondary metabolites; Microbial metabolism in diverse environments; Carbon metabolism,Amino acid metabolism; Energy metabolism; Nucleotide metabolism,Metabolism,3
+K00615,3,transketolase,2.2.1.1,Transferases,transketolase,map00030; map00710; map01051; map01100; map01110; map01120; map01200; map01230,Pentose phosphate pathway; Carbon fixation by Calvin cycle; Biosynthesis of ansamycins; Metabolic pathways; Biosynthesis of secondary metabolites; Microbial metabolism in diverse environments; Carbon metabolism; Biosynthesis of amino acids,Carbohydrate metabolism; Energy metabolism; Metabolism of terpenoids and polyketides,Metabolism,3
+K00805,3,heptaprenyl diphosphate synthase component 1,2.5.1.30,Transferases,heptaprenyl diphosphate synthase,map00900; map01110,Terpenoid backbone biosynthesis; Biosynthesis of secondary metabolites,Metabolism of terpenoids and polyketides,Metabolism,3
+K07052,3,CAAX protease family protein,nan,,,,,,,
+K19302,3,undecaprenyl-diphosphatase,3.6.1.27,Hydrolases,undecaprenyl-diphosphate phosphatase,map00550; map00552,Peptidoglycan biosynthesis; Teichoic acid biosynthesis,Glycan biosynthesis and metabolism,Metabolism,4
+K07407,3,alpha-galactosidase,3.2.1.22,Hydrolases,alpha-galactosidase,map00052; map00561; map00600; map00603; map01100,Galactose metabolism; Glycerolipid metabolism; Sphingolipid metabolism; Glycosphingolipid biosynthesis - globo and isoglobo series; Metabolic pathways,Carbohydrate metabolism; Glycan biosynthesis and metabolism; Lipid metabolism,Metabolism,3
+K07304,3,peptide-methionine (S)-S-oxide reductase,1.8.4.11,Oxidoreductases,peptide-methionine (S)-S-oxide reductase,,,,,3
+K16785,3,energy-coupling factor transport system permease protein,nan,,,map02010,ABC transporters,Membrane transport,Environmental Information Processing,
+K07284,3,sortase A,3.4.22.70,Hydrolases,sortase A,,,,,3
+K05349,3,beta-glucosidase,3.2.1.21,Hydrolases,beta-glucosidase,map00460; map00500; map00946; map00999; map01100; map01110,Cyanoamino acid metabolism; Starch and sucrose metabolism; Degradation of flavonoids; Biosynthesis of various plant secondary metabolites; Metabolic pathways; Biosynthesis of secondary metabolites,Biosynthesis of other secondary metabolites; Carbohydrate metabolism; Metabolism of other amino acids,Metabolism,5
+K03734,3,FAD:protein FMN transferase,2.7.1.180,Transferases,FAD:protein FMN transferase,,,,,
+K08884,3,"serine/threonine protein kinase, bacterial",2.7.11.1,Transferases,non-specific serine/threonine protein kinase,,,,,3
+K06950,3,uncharacterized protein,nan,,,,,,,
+K06180,3,23S rRNA pseudouridine1911/1915/1917 synthase,5.4.99.23,Isomerases,23S rRNA pseudouridine(1911/1915/1917) synthase,,,,,3
+K05846,3,osmoprotectant transport system permease protein,nan,,,map02010,ABC transporters,Membrane transport,Environmental Information Processing,
+K02035,3,peptide/nickel transport system substrate-binding protein,nan,,,map02024,Quorum sensing,Cellular community - prokaryotes,Cellular Processes,
+K01952,3,phosphoribosylformylglycinamidine synthase,6.3.5.3,Ligases,phosphoribosylformylglycinamidine synthase,map00230; map01100; map01110,Purine metabolism; Metabolic pathways; Biosynthesis of secondary metabolites,Nucleotide metabolism,Metabolism,3
+K01759,3,lactoylglutathione lyase,4.4.1.5,Lyases,lactoylglutathione lyase,map00620; map01100,Pyruvate metabolism; Metabolic pathways,Carbohydrate metabolism,Metabolism,3
+K01209,3,alpha-L-arabinofuranosidase,3.2.1.55,Hydrolases,non-reducing end alpha-L-arabinofuranosidase,map00520; map01100,Amino sugar and nucleotide sugar metabolism; Metabolic pathways,Glycan biosynthesis and metabolism,Metabolism,3
+K00847,3,fructokinase,2.7.1.4,Transferases,fructokinase,map00051; map00500; map00520; map01100; map01110; map01250,Fructose and mannose metabolism; Starch and sucrose metabolism; Amino sugar and nucleotide sugar metabolism; Metabolic pathways; Biosynthesis of secondary metabolites; Biosynthesis of nucleotide sugars,Carbohydrate metabolism; Glycan biosynthesis and metabolism,Metabolism,3
+K01232,3,maltose-6'-phosphate glucosidase,3.2.1.122,Hydrolases,maltose-6'-phosphate glucosidase,map00500; map01100,Starch and sucrose metabolism; Metabolic pathways,Carbohydrate metabolism,Metabolism,3
+K00384,3,thioredoxin reductase (NADPH),1.8.1.9,Oxidoreductases,thioredoxin-disulfide reductase (NADPH),map00450,Selenocompound metabolism,Metabolism of other amino acids,Metabolism,3
+K00244,3,succinate dehydrogenase flavoprotein subunit,1.3.5.1,Oxidoreductases,succinate dehydrogenase,map00020; map00190; map00620; map00650; map00720; map01100; map01110; map01120; map01200; map02020,Citrate cycle (TCA cycle); Oxidative phosphorylation; Pyruvate metabolism; Butanoate metabolism; Other carbon fixation pathways; Metabolic pathways; Biosynthesis of secondary metabolites; Microbial metabolism in diverse environments; Carbon metabolism; Two-component system,Carbohydrate metabolism; Energy metabolism; Signal transduction,Environmental Information Processing; Metabolism,
+K01206,3,alpha-L-fucosidase,3.2.1.51,Hydrolases,alpha-L-fucosidase,map00511; map04142,Other glycan degradation; Lysosome,Glycan biosynthesis and metabolism; Transport and catabolism,Cellular Processes; Metabolism,3
