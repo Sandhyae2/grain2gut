@@ -110,10 +110,129 @@ def home():
                 if st.button(label, key=label):
                     go_to(page_key)
     footer()
-# ---------------------------------------------------- EC Analysis ------------------------------------------------------------------------------
+ # -------------------------------------------------- Millet Data Mapping -------------------------------------------------------------------
+millet_map = {
+    "Enterococcus casseliflavus (Proso Millet)": "77",
+    "Weisella cibaria NM01 (Foxtail Millet)": "78",
+    "Weisella cibaria NM01 (Little Millet)": "79",
+    "Lactococcus lactis (Little Millet)": "80"
+ }
+ # ---------------------------------------------------- EC Analysis ------------------------------------------------------------------------------
 def ec_page():
     st.markdown("<h3 style='text-align:center;'>EC Analysis</h3>", unsafe_allow_html=True)
-# ------------------------------------------ Sidebar with instructions -----------------------------------------------------
+ # ------------------------------------------ Sidebar with instructions -----------------------------------------------------
+    with st.sidebar:
+        if st.button("Back to Home"):
+            go_to("home")  # Your navigation function
+        with st.sidebar.expander("How to Use this Page", expanded=False):
+            st.markdown("""
+            **Instructions:**
+            1. Select the millet LAB from the dropdown at the top.
+            2. On the left, the entire EC dataframe for the selected LAB is displayed.
+            3. Use the **EC number dropdown** above the dataframe to select an EC number.
+            4. The right column will show the textual interpretation for the selected EC number.
+            5. Use the "Back to Home" button at the bottom to return to the home page.
+            """)
+        with st.sidebar.expander("What is an EC Number?", expanded=False):
+            st.markdown("""
+            **EC (Enzyme Commission) numbers** are a numerical classification scheme for enzymes, 
+            based on the chemical reactions they catalyze.  
+            - Each EC number consists of four numbers separated by periods (e.g., `2.7.1.1`).  
+            - The first number represents the main enzyme class (6 major classes: Oxidoreductases, Transferases, Hydrolases, Lyases, Isomerases, Ligases).  
+            - The subsequent numbers give more specific subclass, sub-subclass, and the serial number of the enzyme.  
+            """)
+        with st.sidebar.expander("Why is it relevant?", expanded=False):
+            st.markdown("""
+            EC numbers tell us **what each enzyme in a LAB can do**.
+            For example:  
+            - Which sugars or fibers the bacteria can break down  
+            - Which beneficial compounds (like vitamins or organic acids) they might produce  
+            - How they might interact in food or the gut  
+        So EC numbers help in **connecting the functional predictions from PICRUSt to real biological activities**.
+            """)
+        with st.sidebar.expander("What is in the EC Dataframe?", expanded=False):
+            st.markdown("""
+            1. Only EC numbers with abundance greater than 1 are considered.
+            2. Here's what each column means:
+            - **ec_number**: The Enzyme Commission (EC) number classifying the enzyme's activity.
+            - **ec_abundance**: How many times this enzyme is predicted to be present in the strain.
+            - **ec_function**: Description of the enzyme's function.
+            - **ec_class**: The main EC class (number 1–6) the enzyme belongs to.
+            - **ec_class_name**: The name of the EC class (e.g., Transferases, Hydrolases).
+            - **ko_ids**: KEGG Orthology IDs linked to this enzyme.
+            - **ko_functions**: Descriptions of the KO functions linked to this enzyme.
+            - **pathway_ids**: KEGG pathway IDs associated with this enzyme.
+            - **pathway_names**: Names of the KEGG pathways this enzyme participates in.
+            - **brite_subclass**: KEGG BRITE hierarchy subclass for this enzyme.
+            - **brite_class**: KEGG BRITE hierarchy main class for this enzyme.
+        """)
+ #--------------------------------------------------------Select LAB----------------------------------------------------------------------
+    col1, col2, col3 = st.columns([3, 3, 3])
+    with col2:
+        st.markdown("<h4 style='text-align:center;'>Select the Millet LAB</h4>", unsafe_allow_html=True)
+        selected_strain = st.selectbox(
+            "",
+            list(millet_map.keys()),
+            label_visibility="collapsed",
+            key=f"strain_select_{st.session_state.page}",
+        )
+    suffix = millet_map[selected_strain]
+    
+    # Load EC dataframe
+    try:
+        df = pd.read_csv(f"picrust_output_files/ec{suffix}.csv")
+    except FileNotFoundError:
+        st.error(f"File ec{suffix}.csv not found.")
+        return
+
+    # Load textual interpretation CSV
+    try:
+        text_df = pd.read_csv(f"picrust_output_files/ec{suffix}_text.csv", encoding='ISO-8859-1')  # columns: ec_number, description
+    except FileNotFoundError:
+        st.error(f"Text file ec{suffix}_text.csv not found.")
+        return
+    st.write("")  # spacing
+
+ # ----------------------------------------------- Side-by-Side Columns ---------------------------------------------------------------------------
+    left_col, right_col = st.columns([1, 2])  # left smaller, right bigger
+
+ # ----------------------------------- Left Column: EC number dropdown + Full EC DataFrame ----------------------------------------------------
+    with left_col:
+        st.markdown("<h4 style='text-align:center;'>Select a EC Number</h4>", unsafe_allow_html=True)
+        if 'ec_number' in df.columns:
+            selected_ec = st.selectbox("",df['ec_number'].unique(), label_visibility="collapsed",key="ec_select")
+        else:
+            st.warning("Column 'ec_number' not found in dataframe.")
+            selected_ec = None
+        st.markdown("<h4 style='text-align:center;'>EC DataFrame</h4>", unsafe_allow_html=True)
+        st.dataframe(df, use_container_width=True)
+
+  # -------------------------------------------- Right Column: Textual Interpretation -------------------------------------------------------
+    with right_col:
+        st.markdown("<h4 style='text-align:center;'>Interpretation</h4>", unsafe_allow_html=True)
+        if selected_ec:
+            ec_text = text_df[text_df['ec_number'] == selected_ec]
+            if not ec_text.empty:
+                # Display EC number in larger bold font
+                st.markdown(f"<h3 style='text-align:center;'>{selected_ec}</h3>", unsafe_allow_html=True)
+                # Split the description by semicolon
+                description = ec_text.iloc[0]['description']
+                parts = [part.strip() for part in description.split(';')]
+                for part in parts:
+                    # Split at the first colon to bold the section title
+                    if ':' in part:
+                        title, text = part.split(':', 1)
+                        st.markdown(f"<p style='font-size:16px;'><strong>{title}:</strong> {text.strip()}</p>", unsafe_allow_html=True)
+                    else:
+                        st.markdown(f"<p style='font-size:16px;'>{part}</p>", unsafe_allow_html=True)
+            else:
+                st.warning("No textual description found for this EC number.")
+
+    st.write("")  # spacing
+ # ---------------------------------------------------- EC Analysis ------------------------------------------------------------------------------
+def ec_page():
+    st.markdown("<h3 style='text-align:center;'>EC Analysis</h3>", unsafe_allow_html=True)
+ # ------------------------------------------ Sidebar with instructions -----------------------------------------------------
     with st.sidebar:
         if st.button("Back to Home"):
             go_to("home")  # Your navigation function
