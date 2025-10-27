@@ -64,6 +64,10 @@ def home():
     with left_col:
         if st.button("Summarized Analysis"):
             go_to("summarized_analysis")
+#--------------------------------------------------------------Summary--------------------------------------------------------------------------
+def summary():
+     st.markdown("<h4 style='text-align:center;'>Summary</h4>", unsafe_allow_html=True) 
+     st.markdown("hence these millets can be used for probiotics and foof applications")
  # --------------------------------------------------------------------- Navigation ---------------------------------------------------------------------
 page = st.session_state.page
 if page == "home":
