@@ -69,6 +69,10 @@ def summary():
     with st.sidebar:
         if st.button("Back to Home"):
             go_to("home") 
+    with st.sidebar.expander("Summary", expanded=False):
+            st.markdown("""
+            Teiyuhstrf
+            """)
     st.markdown("<h4 style='text-align:center;'>Summary</h4>", unsafe_allow_html=True) 
     st.markdown("Hence these millets can be used for probiotics and foof applications")
 
