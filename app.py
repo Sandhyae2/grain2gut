@@ -230,6 +230,110 @@ def ec_page():
                 st.warning("No textual description found for this EC number.")
 
     st.write("")  # spacing
+# --------------------------------------------------- KO Page: Side-by-Side + Sidebar -------------------------------------------------------------
+def ko_page():
+    st.markdown("<h3 style='text-align:center;'>KO Analysis</h3>", unsafe_allow_html=True)
+# ------------------------------------- Sidebar with instructions ----------------------------------------------------------------------
+    with st.sidebar:
+        if st.button("Back to Home"):
+            go_to("home")  # Your navigation function
+        with st.sidebar.expander("How to Use this Page", expanded=False):
+            st.markdown("""
+            **Instructions:**
+            1. Select the millet LAB from the dropdown at the top.
+            2. On the left, the entire KO dataframe for the selected LAB is displayed.
+            3. Use the **KO ID dropdown** above the dataframe to select a KO ID.
+            4. The right column will show the textual interpretation for the selected KO number.
+            5. Use the "Back to Home" button at the bottom to return to the home page.
+            """)
+        with st.sidebar.expander("What is a KO ID?", expanded=False):
+            st.markdown("""
+            **KO (KEGG Orthology) IDs** represent groups of genes/proteins that have the **same functional role** in different organisms.  
+            - Each KO ID corresponds to a specific **orthologous gene** in the KEGG database.  
+            - KOs help in linking **genes to metabolic pathways** and **enzyme functions**.  
+            """)
+        with st.sidebar.expander("Why is it relevant?", expanded=False):
+            st.markdown("""
+            KO IDs are important because they tell us **what functions a LAB strain may carry out at the gene level**.  
+            For example:  
+            - Which transporters, enzymes, or proteins are present  
+            - Which metabolic or signaling pathways the strain may be capable of  
+            - How the predicted functions relate to **probiotic and food applications**  
+        In this app, KO IDs help connect **genomic predictions to real biological activities** and link them to EC numbers and pathways.
+            """)
+        with st.sidebar.expander("What is in the KO Dataframe?", expanded=False):
+            st.markdown("""
+            1. Only KO ids with abundance greater than 2 are considered.
+            2. Here's what each column in the KO dataframe means:
+            - **ko_id**: KEGG Orthology ID for a gene/protein with a specific function.
+            - **ko_abundance**: Number of times this KO is predicted in the strain.
+            - **ko_function**: Description of the KO’s functional role.
+            - **ec_id**: Associated EC number(s) for this KO (if available).
+            - **ec_class**: The EC class of the linked enzyme.
+            - **ec_function**: Function of the linked enzyme.
+            - **map_ids**: KEGG pathway map IDs associated with this KO.
+            - **pathway_names**: Names of KEGG pathways this KO participates in.
+            - **brite_subclass**: KEGG BRITE hierarchy subclass for this KO.
+            - **brite_class**: KEGG BRITE hierarchy main class for this KO.
+            - **ec_abundance**: Abundance of the linked EC(s).
+            """)
+# ------------------------------------------ Millet LAB Selection --------------------------------------------------------------------------
+    col1, col2, col3 = st.columns([3, 3, 3])
+    with col2:
+        st.markdown("<h4 style='text-align:center;'>Select the Millet LAB</h4>", unsafe_allow_html=True)
+        selected_strain = st.selectbox(
+            "",
+            list(millet_map.keys()),
+            label_visibility="collapsed",
+            key=f"ko_strain_select_{st.session_state.page}",
+        )
+    suffix = millet_map[selected_strain]
+    # Load KO DataFrame
+    try:
+        df = pd.read_csv(f"picrust_output_files/ko{suffix}.csv")
+    except FileNotFoundError:
+        st.error(f"File ko{suffix}.csv not found.")
+        return
+    # Load textual interpretation CSV
+    try:
+        text_df = pd.read_csv(f"picrust_output_files/ko{suffix}_text.csv", encoding='ISO-8859-1')  # columns: ko_number, description
+    except FileNotFoundError:
+        st.error(f"Text file ko{suffix}_text.csv not found.")
+        return
+    st.write("")  # spacing
+    # ------------------------------------------------- Side-by-Side Columns ---------------------------------------------------------------------------
+    left_col, right_col = st.columns([1, 2])  # left smaller, right bigger
+    # ---------------------------------------- Left Column: KO number dropdown + Full KO DataFrame ----------------------------------------------
+    with left_col:
+        st.markdown("<h4 style='text-align:center;'>Select a KO ID</h4>", unsafe_allow_html=True)
+        if 'ko_id' in df.columns:
+            selected_ko = st.selectbox("", df['ko_id'].unique(), label_visibility="collapsed",key="ko_select")
+        else:
+            st.warning("Column 'ko_number' not found in dataframe.")
+            selected_ko = None
+        st.markdown("<h4 style='text-align:center;'>KO DataFrame</h4>", unsafe_allow_html=True)
+        st.dataframe(df, use_container_width=True)
+    # ---------------------------------------- Right Column: Textual Interpretation -------------------------------------------------------------
+    with right_col:
+        st.markdown("<h4 style='text-align:center;'>Interpretation</h4>", unsafe_allow_html=True)
+        if selected_ko:
+            ko_text = text_df[text_df['ko_id'] == selected_ko]
+            if not ko_text.empty:
+                # Display KO ID in larger bold font
+                st.markdown(f"<h3 style='text-align:center;'>{selected_ko}</h3>", unsafe_allow_html=True)
+                # Split the description by semicolon
+                description = ko_text.iloc[0]['description']
+                parts = [part.strip() for part in description.split(';')]
+                for part in parts:
+                    # Split at the first colon to bold the section title
+                    if ':' in part:
+                        title, text = part.split(':', 1)
+                        st.markdown(f"<p style='font-size:16px;'><strong>{title}:</strong> {text.strip()}</p>", unsafe_allow_html=True)
+                    else:
+                        st.markdown(f"<p style='font-size:16px;'>{part}</p>", unsafe_allow_html=True)
+            else:
+                st.warning("No textual description found for this KO ID.")
+    st.write("")  # spacing
 
 #--------------------------------------------------------------Summary--------------------------------------------------------------------------
 def summary():
