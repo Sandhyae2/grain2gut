@@ -2,7 +2,7 @@ import streamlit as st
 st.markdown("""
 <style>
 .stApp {
-    background-image: url('https://media.istockphoto.com/id/119165809/photo/close-up-of-ripe-wheat-ears.jpg?s=612x612&w=0&k=20&c=HOUVeZyqJz_OOa_DNU6cUjaus_puQ9yS19SK952oIt0=');  
+    background-image: url('https://www.tugraz.at/fileadmin/_processed_/d/b/csm_Banner_Weizen-by-silentforce-AdobeStock_55e08033b4.jpg);  
     background-size: cover;
     background-attachment: fixed;
 }
