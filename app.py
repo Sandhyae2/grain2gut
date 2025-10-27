@@ -41,6 +41,40 @@ if "page" not in st.session_state:
 def go_to(page):
     st.session_state.page = page
     st.rerun()
+# ------------------------------------------------footer----------------------------------------------------------------------------------
+def footer():
+    st.markdown("""
+    <style>
+    .footer-container {
+        position: fixed;
+        left: 50%;
+        bottom: 10px;  /* distance from bottom */
+        transform: translateX(-50%);
+        background-color: #ffff66;  /* Yellow box */
+        color: black;
+        padding: 10px 20px;
+        font-size: 14px;
+        border-radius: 8px;  /* rounded corners */
+        z-index: 100;
+        text-align: center;
+    }
+    .footer-container a {
+        color: 	 #004d66;  /* Dark blue links */
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .footer-container a:hover {
+        text-decoration: underline;
+    }
+    </style>
+    
+    <div class="footer-container">
+        Jointly created by 
+        <a href="https://github.com/VarshaS-37" target="_blank">Varsha</a> &
+        <a href="https://github.com/Sandhyae2" target="_blank">Sandhya</a> |
+        <a href="https://github.com/Sandhyae2/grain2gut/tree/main" target="_blank">GitHub Repo</a>
+    </div>
+    """, unsafe_allow_html=True)
 # ------------------------------------------------------------ Home Page -----------------------------------------------------------------------
 def home():
     st.markdown("<h2 style='text-align:center;'>GraintoGut</h2>", unsafe_allow_html=True)
@@ -64,6 +98,7 @@ def home():
     with left_col:
         if st.button("Summarized Analysis"):
             go_to("summarized_analysis")
+    footer()
 #--------------------------------------------------------------Summary--------------------------------------------------------------------------
 def summary():
     with st.sidebar:
