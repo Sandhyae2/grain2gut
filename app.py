@@ -20,7 +20,7 @@ h2, h1 {
     gap: 40px !important;
 }
 .stButton>button {
-    background-color:#FEF7A2;
+    background-color:#99ccff;
     color:#2c3e50;
     font-size:20px;
     border-radius:10px;
@@ -29,7 +29,7 @@ h2, h1 {
     transition: background-color 0.3s ease;
 }
 .stButton>button:hover {
-    background-color:#DFFBB9;
+    background-color:#f2e6ff;
 }
 </style>
 """, unsafe_allow_html=True)
