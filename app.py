@@ -58,9 +58,18 @@ def home():
         5. Each dataframe was independently linked to reference information from databases.
         6. These dataframes are present in the **Meta Data** section and are used for further analysis.
         """)
+   left_col, middle_col, right_col = st.columns([1, 1, 1])  # left & middle for extra buttons/spaces, right for Detailed Analysis
+    
+# -------------------------------------------------Summarized Analysis-------------------------------------------------------------
+    with left_col:
+        if st.button("Summarized Analysis"):
+            go_to("summarized_analysis")
  # --------------------------------------------------------------------- Navigation ---------------------------------------------------------------------
 page = st.session_state.page
 if page == "home":
     home()
+elif page == "summarized_analysis":
+    summary()
+
     
 
