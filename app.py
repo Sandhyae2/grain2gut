@@ -29,7 +29,7 @@ h2, h1 {
     transition: background-color 0.3s ease;
 }
 .stButton>button:hover {
-    background-color:#e6f9ff;
+    background-color:#b3ecff;
 }
 </style>
 """, unsafe_allow_html=True)
