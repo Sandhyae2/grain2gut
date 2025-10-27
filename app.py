@@ -552,7 +552,7 @@ def ec_class():
         plt.tight_layout()
         st.pyplot(fig)
 
-    with right_col:
+     with right_col:
         st.markdown("### Interpretation")
         st.write(f"""
         - **Dominant EC classes:** {', '.join(class_counts['EC Class'].head(3).tolist())}
