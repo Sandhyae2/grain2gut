@@ -3,7 +3,7 @@ st.set_page_config(layout="wide")
 st.markdown("""
 <style>
 .stApp {
-    background-image: url('https://www.tugraz.at/fileadmin/_processed_/d/b/csm_Banner_Weizen-by-silentforce-AdobeStock_55e08033b4.jpg');  
+    background-image: url('https://thumbs.dreamstime.com/b/vibrant-green-wheat-field-isolated-white-background-nature-farm-food-crop-plant-grass-rural-grain-fresh-beautiful-green-wheat-355319893.jpg');  
     background-size: cover;
     background-attachment: fixed;
 }
