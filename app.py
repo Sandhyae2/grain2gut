@@ -355,6 +355,7 @@ elif page == "summarized_analysis":
     summary()
 elif page == "ec_analysis":
     ec_page()
-
+elif page == "ko_analysis":
+    ko_page()
     
 
