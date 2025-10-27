@@ -334,6 +334,101 @@ def ko_page():
             else:
                 st.warning("No textual description found for this KO ID.")
     st.write("")  # spacing
+    # --------------------------------------------------- Pathway Page: Side-by-Side + Sidebar ----------------------------------------------------------
+def pwy_page():
+    st.markdown("<h3 style='text-align:center;'>Pathway Analysis</h3>", unsafe_allow_html=True)
+    # ---------------------------------------------------- Sidebar with instructions ------------------------------------------------------------------
+    with st.sidebar:
+        if st.button("Back to Home"):
+            go_to("home")  # Your navigation function
+        with st.sidebar.expander("How to Use this Page", expanded=False):
+            st.markdown("""
+            **Instructions:**
+            1. Select the millet LAB from the dropdown at the top.
+            2. On the left, the entire pathway dataframe for the selected LAB is displayed.
+            3. Use the **Pathway ID dropdown** above the dataframe to select a pathway.
+            4. The right column will show the textual interpretation for the selected pathway.
+            5. Use the "Back to Home" button at the bottom to return to the home page.
+            """)
+        with st.sidebar.expander("What is a Pathway?", expanded=False):
+            st.markdown("""
+            **Pathways** represent a series of biochemical reactions or processes that occur in the cell, often involving multiple enzymes and genes.  
+            """)
+        with st.sidebar.expander("Why is it relevant?", expanded=False):
+            st.markdown("""
+            Pathway analysis shows **how the predicted enzymes and genes work together** in biological processes.  
+            This helps us understand:  
+            - Which **metabolic or biosynthetic pathways** are present in the LAB strain  
+            - How complete these pathways are  
+            - The potential **functional and probiotic properties** of the strain
+            """)
+        with st.sidebar.expander("What is in the Pathway Dataframe?", expanded=False):
+            st.markdown("""
+            1. Only pathways with completeness greater than 0.79 are considered.
+            2. Here's what each column in the dataframe means:
+            - **Pathway**: Unique pathway ID in the database (e.g., `ANAGLYCOLYSIS-PWY`).  
+            - **fam_total**: Total number of gene families expected in this pathway.  
+            - **fam_found**: Number of gene families found in the LAB strain for this pathway.  
+            - **completeness**: Fraction of the pathway that is present (0–1), calculated as `fam_found / fam_total`.  
+            - **pathway_name**: Descriptive name of the pathway (e.g., `glycolysis III (from glucose)`).  
+            """)
+    # ---------------------------------------------- Millet LAB Selection -------------------------------------------------------------------
+    col1, col2, col3 = st.columns([3, 3, 3])
+    with col2:
+        st.markdown("<h4 style='text-align:center;'>Select the Millet LAB</h4>", unsafe_allow_html=True)
+        selected_strain = st.selectbox(
+            "",
+            list(millet_map.keys()),
+            label_visibility="collapsed",
+            key=f"pwy_strain_select_{st.session_state.page}",
+        )
+    suffix = millet_map[selected_strain]
+    # Load Pathway DataFrame
+    try:
+        df = pd.read_csv(f"picrust_output_files/pwy_{suffix}.csv")
+    except FileNotFoundError:
+        st.error(f"File pwy_{suffix}.csv not found.")
+        return
+    # Load textual interpretation CSV
+    try:
+        text_df = pd.read_csv(f"picrust_output_files/pwy{suffix}_text.csv")  # columns: pathway_id, description
+    except FileNotFoundError:
+        st.error(f"Text file pwy{suffix}_text.csv not found.")
+        return
+    st.write("")  # spacing
+    # ---------------------------------------------------- Side-by-Side Columns -----------------------------------------------------------------
+    left_col, right_col = st.columns([1, 2])  # left smaller, right bigger
+    # ------------------------------------- Left Column: Pathway ID dropdown + Full Pathway DataFrame -------------------------------------------------
+    with left_col:
+        st.markdown("<h4 style='text-align:center;'>Select a Pathway</h4>", unsafe_allow_html=True)
+        if 'Pathway' in df.columns:
+            selected_pwy = st.selectbox("", df['Pathway'].unique(), label_visibility="collapsed",key="pwy_select")
+        else:
+            st.warning("Column 'pathway_id' not found in dataframe.")
+            selected_pwy = None
+        st.markdown("<h4 style='text-align:center;'>Pathway DataFrame</h4>", unsafe_allow_html=True)
+        st.dataframe(df, use_container_width=True)
+    # -------------------------------------------- Right Column: Textual Interpretation -------------------------------------------------------
+    with right_col:
+        st.markdown("<h4 style='text-align:center;'>Interpretation</h4>", unsafe_allow_html=True)
+        if selected_pwy:
+            pwy_text = text_df[text_df['Pathway'] == selected_pwy]
+            if not pwy_text.empty:
+                # Display Pathway ID in larger bold font
+                st.markdown(f"<h3 style='text-align:center;'>{selected_pwy}</h3>", unsafe_allow_html=True)
+                # Split the description/interpretation by semicolon (if available)
+                description = pwy_text.iloc[0]['description']  # make sure your dataframe has a 'description' column
+                parts = [part.strip() for part in description.split(';')]
+                for part in parts:
+                    # Split at first colon to bold section titles
+                    if ':' in part:
+                        title, text = part.split(':', 1)
+                        st.markdown(f"<p style='font-size:16px;'><strong>{title}:</strong> {text.strip()}</p>", unsafe_allow_html=True)
+                    else:
+                        st.markdown(f"<p style='font-size:16px;'>{part}</p>", unsafe_allow_html=True)
+            else:
+                st.warning("No textual description found for this pathway.")
+    st.write("")  # spacing
 
 #--------------------------------------------------------------Summary--------------------------------------------------------------------------
 def summary():
@@ -357,5 +452,6 @@ elif page == "ec_analysis":
     ec_page()
 elif page == "ko_analysis":
     ko_page()
-    
+elif page == "pwy_analysis":
+    pwy_page(   
 
