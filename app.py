@@ -499,6 +499,64 @@ def millet():
         with col6:
             if st.button("Pathway Enrichment"):
                 go_to("pe")
+#--------------------------------------ec class------------------------------------------------------------------------------------------------
+def ec_class():
+    with st.sidebar:
+        if st.button("Back to Home"):
+            go_to("home")
+        if st.button("Back to Analysis Menu"):
+            go_to("milletwise_analysis")    
+        with st.sidebar.expander("ec distribution", expanded=False):
+            st.markdown("""
+            To be added
+            """)
+    col1, col2, col3 = st.columns([3, 3, 3])
+    with col2:
+        st.markdown("<h4 style='text-align:center;'>EC class distribution</h4>", unsafe_allow_html=True)
+        st.markdown("<h4 style='text-align:center;'>Select the Millet LAB</h4>", unsafe_allow_html=True)
+        selected_strain = st.selectbox(
+            "",
+            list(millet_map.keys()),
+            label_visibility="collapsed",
+            key=f"ec_class_select_{st.session_state.page}",
+        )
+    suffix = millet_map[selected_strain]
+    # ---- EC DISTRIBUTION ----
+    try:
+        # Load EC CSV from local folder
+        df = pd.read_csv(f"picrust_output_files/ec{suffix}.csv")
+    except FileNotFoundError:
+        st.error(f"File ec{suffix}.csv not found in 'picrust_output_files/' folder.")
+        return
+    # Validate presence of required column
+    if "ec_class_name" not in df.columns:
+        st.warning(f"'ec_class_name' column not found in ec{suffix}.csv.")
+        return
+    # Count enzymes by EC class
+    class_counts = df["ec_class_name"].value_counts().reset_index()
+    class_counts.columns = ["EC Class", "Count"]
+# --- Layout: Left (figure) + Right (interpretation) ---
+    left_col, right_col = st.columns([2, 2])
+
+    with left_col:
+        # Plot EC class distribution
+        fig, ax = plt.subplots(figsize=(6, 4))
+        bars=ax.bar(class_counts["EC Class"], class_counts["Count"], color="#4C72B0")
+        ax.set_xlabel("EC Class", fontsize=10)
+        ax.set_ylabel("Number of Enzymes", fontsize=10)
+        ax.set_title(f"EC Class Distribution - {selected_strain}", fontsize=12)
+        plt.xticks(rotation=45, ha="right")
+        for bar in bars:
+            height = bar.get_height()
+            ax.text(bar.get_x() + bar.get_width()/2, height, str(int(height)),ha='center', va='bottom', fontsize=9)
+        plt.tight_layout()
+        st.pyplot(fig)
+
+    with right_col:
+        st.markdown("### Interpretation")
+        st.write(f"""
+        - **Dominant EC classes:** {', '.join(class_counts['EC Class'].head(3).tolist())}
+        """)
 
 #--------------------------------------------------------------Summary--------------------------------------------------------------------------
 def summary():
@@ -526,3 +584,5 @@ elif page == "pwy_analysis":
     pwy_page()  
 elif page == "milletwise_analysis":
     millet()
+elif page == "ec_class":
+    ec_class()
