@@ -1,4 +1,5 @@
 import streamlit as st
+st.set_page_config(layout="wide")
 st.markdown("""
 <style>
 .stApp {
@@ -32,3 +33,22 @@ h2, h1 {
 }
 </style>
 """, unsafe_allow_html=True)
+# ----------------------------------------------------------- Page Control -------------------------------------------------------------
+
+if "page" not in st.session_state:
+    st.session_state.page = "home"
+
+def go_to(page):
+    st.session_state.page = page
+    st.rerun()
+# ------------------------------------------------------------ Home Page -----------------------------------------------------------------------
+def home():
+    st.markdown("<h2 style='text-align:center;'>GraintoGut</h2>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align:center;'>Linking genomic potential of Millet derived Lactic Acid Bacteria to food and probiotic applications</h3>", unsafe_allow_html=True)
+    st.write("") 
+ # --------------------------------------------------------------------- Navigation ---------------------------------------------------------------------
+page = st.session_state.page
+if page == "home":
+    home()
+    
+
