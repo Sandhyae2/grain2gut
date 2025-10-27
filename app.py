@@ -502,7 +502,7 @@ def millet():
             if st.button("Pathway Enrichment"):
                 go_to("pe")
 #--------------------------------------ec class------------------------------------------------------------------------------------------------
-def ec_class:
+def ec_class():
     with st.sidebar:
         if st.button("Back to Home"):
             go_to("home")
