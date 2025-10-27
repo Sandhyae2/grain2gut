@@ -3,7 +3,7 @@ st.set_page_config(layout="wide")
 st.markdown("""
 <style>
 .stApp {
-    background-image: url('https://thumbs.dreamstime.com/b/vibrant-green-wheat-field-isolated-white-background-nature-farm-food-crop-plant-grass-rural-grain-fresh-beautiful-green-wheat-355319893.jpg');  
+    background-image: url('https://media.istockphoto.com/id/1162130673/photo/green-wheat-field.jpg?s=170667a&w=0&k=20&c=n1RnJfTLweksJlZX6l5CFavHzO6CSpLX2ECWrpa08uc=');  
     background-size: cover;
     background-attachment: fixed;
 }
