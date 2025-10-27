@@ -429,6 +429,72 @@ def pwy_page():
             else:
                 st.warning("No textual description found for this pathway.")
     st.write("")  # spacing
+    #---------------------------------------------------millet analysis --------------------------------------------------------------------------
+def millet():
+    with st.sidebar:
+        if st.button("Back to Home"):
+            go_to("home") 
+        with st.sidebar.expander("Millet Data", expanded=False):
+            st.markdown("""
+            Contains data about the four millet derived LAB used and their NCBI links are provided.
+            """)
+        with st.sidebar.expander("Analysis", expanded=False):
+            st.markdown("""
+            To be added
+            """)
+    millet_data = {
+        "Millet Source": ["Proso", "Foxtail", "Little", "Little"],
+        "Strain": ['BM01', 'NM01', 'SM01', 'SM02'],
+        "Organism": [
+            "Enterococcus casseliflavus", 
+            "Weissella cibaria", 
+            "Weissella cibaria", 
+            "Lactococcus lactis"
+        ],
+        "NCBI ID": ['PP355677', 'PP355678', 'PP355679', 'PP355680'],
+        "NCBI Link": [
+            "https://www.ncbi.nlm.nih.gov/nuccore/PP355677.1/", 
+            "https://www.ncbi.nlm.nih.gov/nuccore/pp355678", 
+            "https://www.ncbi.nlm.nih.gov/nuccore/pp355679",
+            "https://www.ncbi.nlm.nih.gov/nuccore/pp355680"] 
+    }
+    millet_df = pd.DataFrame(millet_data)
+    left_col, right_col = st.columns([2, 2]) 
+    with left_col:
+        st.markdown("<h4 style='text-align:center;'>Millet Data</h4>", unsafe_allow_html=True)
+        st.data_editor(
+            millet_df,
+            column_config={
+                "NCBI Link": st.column_config.LinkColumn(
+                    "NCBI Link",
+                    display_text="NCBI Link" 
+                ),
+            },
+            hide_index=True,
+            use_container_width=True
+        )
+    with right_col:
+        st.markdown("<h4 style='text-align:center;'>Analysis</h4>", unsafe_allow_html=True)
+        col1, col2,col3 = st.columns(3)
+        with col1:
+            if st.button("EC class Distribution"):
+                go_to("ec_class")
+        with col2:
+            if st.button("BRITE class & subclass Distribution"):
+                go_to("brite")
+        with col3:
+            if st.button("Trait Distribution"):
+                go_to("trait")        
+        col4, col5,col6= st.columns(3)
+        with col4:
+            if st.button("Common & Unique Traits"):
+                go_to("couq")
+        with col5:
+            if st.button("Comparative Traits"):
+                go_to("comp")
+        with col6:
+            if st.button("Pathway Enrichment"):
+                go_to("pe")
 
 #--------------------------------------------------------------Summary--------------------------------------------------------------------------
 def summary():
