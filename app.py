@@ -912,12 +912,46 @@ def pathway_enrichment():
         if st.button("Back to Analysis Menu"):
             go_to("milletwise_analysis")
 
-    with st.sidebar.expander("About Enrichment", expanded=False):
+     with st.sidebar.expander("Why is it relevant?", expanded=False):
         st.markdown("""
-        **Pathway Enrichment Analysis**
-        compares the frequency of pathways in a selected millet LAB 
-        against all other millets to find significantly overrepresented pathways.
+        Instead of looking at single genes or enzymes individually, enrichment focuses on **whole biological processes**.  
+        This helps reveal **functional abilities** of the strain, such as:
+        - Stress tolerance
+        - Fermentation efficiency
+        - Vitamin / amino acid production
+        - Probiotic survival traits
+        """) 
+    with st.sidebar.expander("How is it done?", expanded=False):
+        st.markdown("""
+        1. Pathway information obtained from **EC, KO, PWY** annotations for the selected millet-derived LAB strain is combined.
+        2. Pathway frequencies from the remaining strains (background) is combined.
+        3. **Fisher’s Exact Test** is performed to find pathways that occur:
+           - **More frequently** in the selected strain than in the combined background strains.
+        4. **FDR correction**  is applied for statistical validity.
+        5. The **most enriched pathways** are displayed in a bar plot + table.
         """)
+    with st.sidebar.expander("What is p-value?", expanded=False):
+        st.markdown("""
+        A **p-value** tells us how likely it is that the observed difference happened **by chance**.
+        - **Small p-value** → Unlikely due to chance → **Result is meaningful**
+        - **Large p-value** → Could easily happen randomly → **Not meaningful**
+
+        ### Significance Rule (Common):
+        - p-value < 0.05 → **Statistically significant**
+        """)
+    with st.sidebar.expander("What is FDR?", expanded=False):
+        st.markdown("""     
+        - When testing **many pathways at once**, some pathways may look significant **just by luck**.
+        - **FDR (False Discovery Rate)** correction adjusts p-values to prevent **false positives**.
+        - **FDR is the corrected p-value**
+        - Lower FDR = **More reliable** result
+        """)
+    with st.sidebar.expander("How to Read the Plot?", expanded=False):
+        st.markdown("""
+        - The **X-axis** shows `-log10(FDR)` → higher value = **stronger enrichment**.
+        - The **Y-axis** lists pathway names.
+        - **Longer bars = pathways more uniquely abundant in the selected strain**.
+       """)
 
     # --- Select Millet LAB ---
     col1, col2, col3 = st.columns([3, 3, 3])
