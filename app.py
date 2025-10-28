@@ -538,7 +538,7 @@ def ec_class():
             go_to("home")
         if st.button("Back to Analysis Menu"):
             go_to("milletwise_analysis")    
-       with st.sidebar.expander("What are the major EC classes?", expanded=False):
+    with st.sidebar.expander("What are the major EC classes?", expanded=False):
             st.markdown("""
             1. **Oxidoreductases (EC 1):** Catalyzes redox reactions, moves electrons between molecules.  
             2. **Transferases (EC 2):** Moves functional groups from one molecule to another.  
@@ -547,7 +547,7 @@ def ec_class():
             5. **Isomerases (EC 5):** Rearranges molecules into different forms.  
             6. **Ligases (EC 6):** Joins two molecules together using energy.
             """)
-        with st.sidebar.expander("How are they relevant?", expanded=False):
+     with st.sidebar.expander("How are they relevant?", expanded=False):
             st.markdown("""
             The presence of these enzymes implies their diverse functional capabilities related to food fermentation and probiotic activity:
         
