@@ -707,6 +707,92 @@ def trait():
         ax.text(bar.get_x() + bar.get_width()/2, height, str(int(height)), ha='center', va='bottom', fontsize=9)
     plt.tight_layout()
     st.pyplot(fig)
+    #-------------------------------------------------common & unique-----------------------------------------------------------------------------
+def couq():
+    with st.sidebar:
+        if st.button("Back to Home"): 
+            go_to("home") 
+        if st.button("Back to Analysis Menu"):
+            go_to("milletwise_analysis") 
+
+    with st.sidebar.expander("Common & Unique Traits", expanded=False): 
+        st.markdown("To be added") 
+    st.write('')
+    st.markdown(f"<h5 style='text-align:center;'>Common & Unique traits</h5>", unsafe_allow_html=True) 
+    from itertools import combinations
+    millet_sets={}
+    # Combine EC, KO, PWY for each millet LAB
+    for strain_name, suffix in millet_map.items():
+        combined_traits = set()
+        files = [f"ec{suffix}_word.csv", f"ko{suffix}_word.csv", f"pwy{suffix}_word.csv"]
+        for f in files:
+            try:
+                df = pd.read_csv(f"picrust_output_files/{f}")
+                if "trait" in df.columns:
+                    combined_traits.update(df["trait"].dropna().unique())
+            except FileNotFoundError:
+                st.warning(f"File {f} not found, skipping.")
+        millet_sets[strain_name] = combined_traits
+
+    from upsetplot import UpSet, from_memberships
+   
+
+    # millet_sets: dict of millet_name -> set of traits
+    memberships = []
+    for millet, traits in millet_sets.items():
+        for trait in traits:
+            memberships.append((trait, millet))
+    
+    # Create the UpSet data
+    data = from_memberships(
+        [[millet for millet in millet_sets if trait in millet_sets[millet]] for trait in set.union(*millet_sets.values())]
+    )
+    
+    plt.figure(figsize=(8,6))
+    upset = UpSet(data, subset_size='count', show_counts=True)
+    upset.plot()
+    st.pyplot(plt)
+
+
+    # --- Common to all 4 LABs ---
+    common_4 = set.intersection(*millet_sets.values())
+    st.markdown(f"<h5 style='text-align:center;'>Traits Common to All 4 Millets</h5>", unsafe_allow_html=True)
+    st.dataframe(pd.DataFrame({"Trait": sorted(common_4)}))
+
+    # --- Unique to each LAB ---
+    unique_rows = []
+    all_union = set.union(*millet_sets.values())
+    for millet, traits in millet_sets.items():
+        unique_traits = traits - (all_union - traits)
+        for trait in sorted(unique_traits):
+            unique_rows.append({"Millet": millet, "Trait": trait})
+    
+    st.markdown(f"<h5 style='text-align:center;'>Unique Traits</h5>", unsafe_allow_html=True)
+    st.dataframe(pd.DataFrame(unique_rows))
+    
+    # --- Common to exactly 3 LABs ---
+    common_3_rows = []
+    for combo in combinations(millet_sets.keys(), 3):
+        s1, s2, s3 = millet_sets[combo[0]], millet_sets[combo[1]], millet_sets[combo[2]]
+        common_3 = (s1 & s2 & s3) - common_4  # remove traits in all 4
+        for trait in sorted(common_3):
+            common_3_rows.append({"Millets": " & ".join(combo), "Trait": trait})
+    st.markdown(f"<h5 style='text-align:center;'> Traits Common to Exactly 3 Millets</h5>", unsafe_allow_html=True)
+    st.dataframe(pd.DataFrame(common_3_rows))
+    
+    # --- Common to exactly 2 LABs ---
+    common_2_rows = []
+    for combo in combinations(millet_sets.keys(), 2):
+        s1, s2 = millet_sets[combo[0]], millet_sets[combo[1]]
+        common_2 = (s1 & s2) - common_4
+        # remove traits in any common_3 combination
+        for combo3 in combinations(millet_sets.keys(), 3):
+            common_3 = set.intersection(*(millet_sets[c] for c in combo3)) - common_4
+            common_2 -= common_3
+        for trait in sorted(common_2):
+            common_2_rows.append({"Millets": " & ".join(combo), "Trait": trait})
+    st.markdown(f"<h5 style='text-align:center;'>Traits Common to Exactly 2 Millets</h5>", unsafe_allow_html=True)
+    st.dataframe(pd.DataFrame(common_2_rows))
 #--------------------------------------------------------------Summary--------------------------------------------------------------------------
 def summary():
     with st.sidebar:
@@ -739,3 +825,5 @@ elif page == "brite":
     brite_class() 
 elif page=="trait":
     trait()
+elif page=="couq":
+    couq()
