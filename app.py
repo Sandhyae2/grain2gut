@@ -863,9 +863,10 @@ def couq():
 
     # --- Unique to each LAB ---
     unique_rows = []
-    all_union = set.union(*millet_sets.values())
     for millet, traits in millet_sets.items():
-        unique_traits = traits - (all_union - traits)
+        # union of all traits in *other* millets
+        other_traits = set.union(*(t for m, t in millet_sets.items() if m != millet))
+        unique_traits = traits - other_traits  # traits found only in this millet
         for trait in sorted(unique_traits):
             unique_rows.append({"Millet": millet, "Trait": trait})
     
