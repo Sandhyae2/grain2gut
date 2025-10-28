@@ -1024,8 +1024,10 @@ def pathway_enrichment():
         plt.tight_layout()
         st.pyplot(fig)
 
-        # --- Show top table ---
-        st.dataframe(res_df.head(20).style.format({"p-value": "{:.3e}", "FDR": "{:.3e}"}))
+    # --- Table output ---
+        st.subheader(f"Top Enriched Pathways in {selected_strain}")
+        st.dataframe(res_df.head(25).style.format({"p-value": "{:.3e}", "FDR": "{:.3e}"}))
+
 
     
 #--------------------------------------------------------------Summary--------------------------------------------------------------------------
