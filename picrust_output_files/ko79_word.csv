@@ -1,19 +1,20 @@
 ko_id,trait
 K01223,Carbohydrate metabolism
 K07024,Carbohydrate metabolism
-K02073,Amino acid metabolism / Transport
-K07335,Transport / Nutrient uptake
-K03294,Amino acid metabolism / Stress response
-K01990,Energy / Fermentation efficiency
-K00016,Lactic acid production / Energy metabolism
+K02073,Transport
+K07335,Nutrient uptake
+K03294,Stress response
+K01990,Energy metabolism
+K00016,Lactic acid production
 K00383,Oxidative stress resistance
-K02003,Energy / Transport
-K01992,Transport / Membrane integrity
-K00712,Cell wall integrity / Texture modification
-K00841,Amino acid metabolism / Flavor enhancement
-K02004,Transport / Nutrient uptake
-K02028,Energy / Amino acid metabolism
-K15580,Amino acid metabolism / Flavor enhancement
-K15634,Carbohydrate metabolism / Energy production
+K02003,Transport
+K01992,Membrane integrity
+K00712,Cell wall integrity
+K00841,Flavor enhancement
+K02004,Nutrient uptake
+K02028,Energy metabolism
+K15580,Flavor enhancement
+K15634,Energy production
+
 
 
