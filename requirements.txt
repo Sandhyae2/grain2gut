@@ -3,3 +3,5 @@ pandas
 plotly
 matplotlib
 upsetplot
+numpy
+scipy
