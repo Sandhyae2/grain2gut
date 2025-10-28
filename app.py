@@ -1063,4 +1063,4 @@ elif page=="trait":
 elif page=="couq":
     couq()
 elif page=="pe":
-     pathway_enrichment()
+    pathway_enrichment()
