@@ -1,6 +1,6 @@
 Pathway,trait
 ARGSYNBSUB-PWY,Amino acid metabolism
-COA-PWY,Energy / fermentation efficiency
+COA-PWY,Energy metabolism
 PEPTIDOGLYCANSYN-PWY,Cell wall integrity
 PWY-5667,Membrane integrity
 PWY-6121,Genomic stability
@@ -10,7 +10,7 @@ PWY0-1319,Membrane integrity
 PWY-7228,Genomic stability
 PWY-7242,Carbohydrate metabolism
 UDPNAGSYN-PWY,Cell wall integrity
-PWY-7219,Energy / fermentation efficiency
+PWY-7219,Fermentation efficiency
 PWY-7208,Genomic stability
 PWY-7197,Genomic stability
 PWY-7221,Genomic stability
@@ -21,13 +21,13 @@ PWY-5840,Energy / fermentation efficiency
 ARGSYN-PWY,Amino acid metabolism
 PWY0-162,Genomic stability
 PWY-7184,Genomic stability
-PWY-7229,Energy / fermentation efficiency
+PWY-7229,Fermentation efficiency
 PWY-6386,Cell wall integrity
 PWY-6125,Genomic stability
 ARO-PWY,Amino acid metabolism
-PWY-6126,Energy / fermentation efficiency
+PWY-6126,Energy metabolism
 P124-PWY,Carbohydrate metabolism
-PWY-5837,Energy / fermentation efficiency
+PWY-5837,Fermentation efficiency
 PWY-6163,Amino acid metabolism
 PWY-5686,Genomic stability
 PWY4FS-8,Membrane integrity
@@ -37,14 +37,15 @@ PWY-6317,carbohydrate metabolism
 GLUTORN-PWY,Amino acid metabolism
 PWY-621,Carbohydrate metabolism
 PWY-6277,Genomic stability
-PWY-6897,Energy / fermentation efficiency
+PWY-6897,Fermentation efficiency
 PWY-6122,Genomic stability
-P161-PWY,Energy / fermentation efficiency
-GLYCOGENSYNTH-PWY,Energy / fermentation efficiency
+P161-PWY,Fermentation efficiency
+GLYCOGENSYNTH-PWY,Energy metabolism
 POLYISOPRENSYN-PWY,Membrane integrity
-PWY-5899,Energy / fermentation efficiency
-PWY-5898,Energy / fermentation efficiency
-PWY-5897,Energy / fermentation efficiency
+PWY-5899,Fermentation efficiency
+PWY-5898,Fermentation efficiency
+PWY-5897,Fermentation efficiency
 PWY-5973,Membrane integrity
+
 
 
