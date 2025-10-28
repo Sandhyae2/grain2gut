@@ -912,7 +912,7 @@ def pathway_enrichment():
         if st.button("Back to Analysis Menu"):
             go_to("milletwise_analysis")
 
-     with st.sidebar.expander("Why is it relevant?", expanded=False):
+    with st.sidebar.expander("Why is it relevant?", expanded=False):
         st.markdown("""
         Instead of looking at single genes or enzymes individually, enrichment focuses on **whole biological processes**.  
         This helps reveal **functional abilities** of the strain, such as:
