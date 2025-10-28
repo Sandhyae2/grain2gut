@@ -144,7 +144,7 @@ def ec_page():
     with st.sidebar:
         if st.button("Back to Home"):
             go_to("home")  # Your navigation function
-         with st.sidebar.expander("How to Use this Page", expanded=False):
+    with st.sidebar.expander("How to Use this Page", expanded=False):
             st.markdown("""
             **Instructions:**
             1. Select the millet LAB from the dropdown at the top.
@@ -153,7 +153,7 @@ def ec_page():
             4. The right column will show the textual interpretation for the selected EC number.
             5. Use the **"Back to Home"** button at the bottom to return to the home page.
             """)
-        with st.sidebar.expander("What is an EC Number?", expanded=False):
+    with st.sidebar.expander("What is an EC Number?", expanded=False):
             st.markdown("""
             **EC (Enzyme Commission) numbers** are a numerical classification scheme for enzymes, 
             based on the chemical reactions they catalyze.  
@@ -161,7 +161,7 @@ def ec_page():
             - The first number represents the main enzyme class (6 major classes: Oxidoreductases, Transferases, Hydrolases, Lyases, Isomerases, Ligases).  
             - The subsequent numbers give more specific subclass, sub-subclass, and the serial number of the enzyme.  
             """)
-        with st.sidebar.expander("Why is it relevant?", expanded=False):
+    with st.sidebar.expander("Why is it relevant?", expanded=False):
             st.markdown("""
             EC numbers tell us **what each enzyme in a LAB can do**. 
             
@@ -172,7 +172,7 @@ def ec_page():
             
             So EC numbers help in **connecting the functional predictions from PICRUSt to real biological activities**.
             """)
-        with st.sidebar.expander("What is in the EC Dataframe?", expanded=False):
+    with st.sidebar.expander("What is in the EC Dataframe?", expanded=False):
             st.markdown("""
             1. Only EC numbers with abundance greater than 1 are considered.
             2. Here's what each column means:
