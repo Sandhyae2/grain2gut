@@ -547,7 +547,7 @@ def ec_class():
             5. **Isomerases (EC 5):** Rearranges molecules into different forms.  
             6. **Ligases (EC 6):** Joins two molecules together using energy.
             """)
-     with st.sidebar.expander("How are they relevant?", expanded=False):
+    with st.sidebar.expander("How are they relevant?", expanded=False):
             st.markdown("""
             The presence of these enzymes implies their diverse functional capabilities related to food fermentation and probiotic activity:
         
