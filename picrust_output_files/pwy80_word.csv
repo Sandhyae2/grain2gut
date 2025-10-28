@@ -3,7 +3,7 @@ ANAGLYCOLYSIS-PWY,fermentation efficiency
 DTDPRHAMSYN-PWY,Cell wall integrity
 ARGSYNBSUB-PWY,Amino acid metabolism
 ARGSYN-PWY,Amino acid metabolism
-COA-PWY,Energy / fermentation efficiency
+COA-PWY,Energy metabolism
 PEPTIDOGLYCANSYN-PWY,Cell wall integrity
 OANTIGEN-PWY,Adhesion to intestinal cells
 GLUTORN-PWY,Amino acid metabolism
@@ -12,7 +12,7 @@ PWY-6123,DNA replication
 PWY-5667,Membrane integrity
 UDPNAGSYN-PWY,Cell wall integrity
 PWY-6609,Genomic stability
-PWY-7219,Energy / fermentation efficiency
+PWY-7219,Fermentation efficiency
 PWY-7242,Carbohydrate metabolism
 PWY0-1319,Membrane integrity
 PWY0-1298,DNA repair
@@ -26,8 +26,8 @@ PWY-6387,Cell wall integrity
 PWY-5100,Lactic acid production
 P124-PWY,Carbohydrate metabolism
 ANAEROFRUCAT-PWY,Lactic acid production
-GLYCOLYSIS,Energy / fermentation efficiency
-PWY-5484,Energy / fermentation efficiency
+GLYCOLYSIS,Fermentation efficiency
+PWY-5484,Fermentation efficiency
 PWY-5910,Membrane integrity
 PWY-5840,Antioxidant activity
 RIBOSYN2-PWY,Enzyme regulation
@@ -35,7 +35,7 @@ PWY-5154,Amino acid metabolism
 ARO-PWY,Amino acid metabolism
 PWY-6471,Cell wall integrity
 PWY-7229,DNA replication
-PWY-6126,Energy / fermentation efficiency
+PWY-6126,Fermentation efficiency
 PWY-922,Membrane integrity
 PWY-7400,Amino acid metabolism
 PWY-5837,Antioxidant activity
@@ -47,19 +47,20 @@ THRESYN-PWY,Amino acid metabolism
 PWY-7234,DNA replication
 PWY4FS-7,Membrane integrity
 PWY-5898,Antioxidant activity
-PWY-6897,Energy / fermentation efficiency
-PWY-7111,Energy / fermentation efficiency
+PWY-6897,Fermentation efficiency
+PWY-7111,Fermentation efficiency
 PWY-7199,DNA replication
 PWY-6151,Enzyme regulation
 PWY-5973,Membrane integrity
 PWY-5899,Antioxidant activity
 PWY-5897,Antioxidant activity
 NONOXIPENT-PWY,Carbohydrate metabolism
-P125-PWY,Energy / fermentation efficiency
+P125-PWY,Fermentation efficiency
 FASYN-ELONG-PWY,Membrane integrity
 P161-PWY,Carbohydrate metabolism
 POLYISOPRENSYN-PWY,Membrane integrity
 PWY-6122,DNA replication
 PWY-6277,DNA replication
+
 
 
