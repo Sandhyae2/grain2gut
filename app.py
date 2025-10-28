@@ -646,7 +646,67 @@ def brite_class():
             ax.text(bar.get_x() + bar.get_width()/2, height, str(int(height)),ha='center', va='bottom', fontsize=9)
         plt.tight_layout()
         st.pyplot(fig)
-
+#----------------------------------------------------trait distribution--------------------------------------------------------------------------------            
+def trait():
+    st.markdown("<h4 style='text-align:center;'>Biological Trait Distribution</h4>", unsafe_allow_html=True)
+    with st.sidebar:
+        if st.button("Back to Home"): 
+            go_to("home") 
+        if st.button("Back to Analysis Menu"):
+            go_to("milletwise_analysis") 
+    with st.sidebar.expander("Why are they relevant?", expanded=False): 
+        st.markdown("""
+        By assigning biological traits, we can predict how a LAB may behave in food or in the gut,  
+        which helps identify **better LAB strains** for use in food applications.
+        """, unsafe_allow_html=True)
+ 
+    col1, col2, col3 = st.columns([3, 3, 3]) 
+    with col2:
+        st.write("")
+        st.markdown("<h5 style='text-align:center;'>Select distribution category</h5>", unsafe_allow_html=True)
+        selected_dist = st.selectbox(
+            "",
+            ['EC Traits','KO Traits','PWY Traits'],
+            label_visibility="collapsed",
+            key=f"brite_class_select_{st.session_state.page}",
+        )
+        st.markdown("<h5 style='text-align:center;'>Select the Millet LAB</h5>", unsafe_allow_html=True)
+        selected_strain = st.selectbox(
+            "",
+            list(millet_map.keys()),
+            label_visibility="collapsed",
+            key=f"pwy_strain_select_{st.session_state.page}",
+        )
+    suffix = millet_map[selected_strain]
+    try:
+        df = pd.read_csv(f"picrust_output_files/{selected_dist.split(' ')[0].lower()}{suffix}_word.csv")
+    except FileNotFoundError:
+        st.error(f"File {selected_dist.strip(' ')[0].lower()}{suffix}.csv not found.")
+        return
+    
+    # Validate columns
+    if 'trait' not in df.columns:
+        st.warning("trait column not found in the CSV.")
+        return
+    trait_counts = (
+        df["trait"].dropna().value_counts()
+    )
+    trait_counts = trait_counts[trait_counts >= 2]  # Keep only counts >= 3
+    trait_counts = trait_counts.reset_index()
+    trait_counts.columns = ["Trait", "Count"]
+    
+    fig, ax = plt.subplots(figsize=(6, 4))
+    bars=ax.bar(trait_counts["Trait"], trait_counts["Count"], color="#4C72B0")
+    ax.set_xlabel("Trait")
+    ax.set_ylabel("Count")
+    ax.set_title(f"Trait Distribution - {selected_strain}")
+    plt.xticks(rotation=45, ha="right")
+    # Add value labels on top of bars
+    for bar in bars:
+        height = bar.get_height()
+        ax.text(bar.get_x() + bar.get_width()/2, height, str(int(height)), ha='center', va='bottom', fontsize=9)
+    plt.tight_layout()
+    st.pyplot(fig)
 #--------------------------------------------------------------Summary--------------------------------------------------------------------------
 def summary():
     with st.sidebar:
@@ -677,3 +737,5 @@ elif page == "ec_class":
     ec_class()
 elif page == "brite":
     brite_class() 
+elif page=="trait":
+    trait()
