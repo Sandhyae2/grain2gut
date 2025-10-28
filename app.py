@@ -1019,7 +1019,7 @@ def pathway_enrichment():
         ax.barh(top["Pathway"], -np.log10(top["FDR"]), color="#4C72B0")
         ax.set_xlabel("-log10(FDR)")
         ax.set_ylabel("Pathway")
-        ax.set_title(f"Top Enriched Pathways ({prefix.upper()}) - {selected_strain}")
+        ax.set_title(f"Combined EC–KO–PWY Enrichment: {selected_strain}")
         ax.invert_yaxis()
         plt.tight_layout()
         st.pyplot(fig)
