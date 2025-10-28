@@ -96,6 +96,18 @@ def home():
         5. Each dataframe was independently linked to reference information from databases.
         6. These dataframes are present in the **Meta Data** section and are used for further analysis.
         """)
+         with st.sidebar.expander("Summarized Analysis", expanded=False):
+        st.markdown("""
+        This contains the overall summary of our results.
+        """)
+    with st.sidebar.expander("Millet-wise Analysis", expanded=False):
+        st.markdown("""
+        This contains the detailed analysis and functional comparison across millets.
+        """)
+    with st.sidebar.expander("Meta Data", expanded=False):
+        st.markdown("""
+        This contains all the processed dataframes created from the raw files and are used for further analysis.
+        """)
     left_col, middle_col, right_col = st.columns([1, 1, 1])  # left & middle for extra buttons/spaces, right for Detailed Analysis
     
 # -------------------------------------------------Summarized Analysis-------------------------------------------------------------
@@ -445,9 +457,26 @@ def millet():
             st.markdown("""
             Contains data about the four millet derived LAB used and their NCBI links are provided.
             """)
-        with st.sidebar.expander("Analysis", expanded=False):
+        with st.sidebar.expander("EC class Distribution", expanded=False):
+            st.markdown("""Shows the distribution of EC numbers across the six major EC classes for each millet.""")
+        with st.sidebar.expander("BRITE class & subclass Distribution", expanded=False):
             st.markdown("""
-            To be added
+            - For each EC number & KO id, multiple map ids (pathway ids) are retrieved.
+            - These map ids are then mapped to their BRITE class & subclasses whose distribution across each millet is plotted.
+            """)
+        with st.sidebar.expander("Biological Trait Distribution", expanded=False):
+            st.markdown("""
+            - Based on our understanding of all the data, we have assigned biological traits to each EC, KO, PWY.
+            - Their distribution is plotted for each millet.
+            """)
+        with st.sidebar.expander("Common & Unique Traits", expanded=False):
+            st.markdown("""
+            - The assigned biological traits are compared across millets.
+            - The common and unique traits across millets are plotted here.
+            """)
+        with st.sidebar.expander("to be added", expanded=False):
+            st.markdown("""
+            to be added
             """)
     millet_data = {
         "Millet Source": ["Proso", "Foxtail", "Little", "Little"],
@@ -509,9 +538,25 @@ def ec_class():
             go_to("home")
         if st.button("Back to Analysis Menu"):
             go_to("milletwise_analysis")    
-        with st.sidebar.expander("ec distribution", expanded=False):
+       with st.sidebar.expander("What are the major EC classes?", expanded=False):
             st.markdown("""
-            To be added
+            1. **Oxidoreductases (EC 1):** Catalyzes redox reactions, moves electrons between molecules.  
+            2. **Transferases (EC 2):** Moves functional groups from one molecule to another.  
+            3. **Hydrolases (EC 3):** Breaks molecules using water.  
+            4. **Lyases (EC 4):** Breaks bonds in molecules without water or oxidation.  
+            5. **Isomerases (EC 5):** Rearranges molecules into different forms.  
+            6. **Ligases (EC 6):** Joins two molecules together using energy.
+            """)
+        with st.sidebar.expander("How are they relevant?", expanded=False):
+            st.markdown("""
+            The presence of these enzymes implies their diverse functional capabilities related to food fermentation and probiotic activity:
+        
+            1. **Oxidoreductases (EC 1):** Helps in fermentation, making acids, and giving antioxidant benefits.  
+            2. **Transferases (EC 2):** Helps in making vitamins and amino acids that improve nutrition.  
+            3. **Hydrolases (EC 3):** Helps in breaking food molecules, improving digestibility, and releasing helpful compounds.  
+            4. **Lyases (EC 4):** Helps in forming flavor compounds and allowing flexible use of nutrients.  
+            5. **Isomerases (EC 5):** Helps in changing sugars and amino acids into useful forms and making prebiotics.  
+            6. **Ligases (EC 6):** Helps in bacterial growth and stability in foods.
             """)
     col1, col2, col3 = st.columns([3, 3, 3])
     with col2:
@@ -568,10 +613,23 @@ def brite_class():
             go_to("home") 
         if st.button("Back to Analysis Menu"):
             go_to("milletwise_analysis") 
-    with st.sidebar.expander("ko brite distribution", expanded=False): 
-        st.markdown(""" To be added """) 
-    with st.sidebar.expander("ec brite distribution", expanded=False): 
-        st.markdown(""" To be added """) 
+    with st.sidebar.expander("What is a BRITE class?", expanded=False): 
+        st.markdown("""
+        - BRITE classes are top-level functional categories in the KEGG database.  
+        - They group genes, proteins, and pathways based on broad biological roles, such as enzymes, transporters, or signaling proteins.
+        """, unsafe_allow_html=True)
+    with st.sidebar.expander("What is a BRITE subclass?", expanded=False): 
+        st.markdown("""
+        - BRITE subclasses are more specific categories within each BRITE class.  
+        - They further organize proteins or pathways by detailed functions, like specific enzyme families, types of transporters, or metabolic pathways.
+        """, unsafe_allow_html=True)
+    with st.sidebar.expander("Why are they relevant?", expanded=False): 
+        st.markdown("""
+        - Helps identify enzymes and pathways that probiotic bacteria can use to metabolize food components.
+        - Shows which bioactive compounds (vitamins, organic acids, peptides) they might produce.
+        - Reveals mechanisms for survival and interaction</b> in food or the gut, like stress response or nutrient transport.
+        """, unsafe_allow_html=True)
+
     col1, col2, col3 = st.columns([3, 3, 3]) 
     with col2:
         st.write("")
@@ -832,6 +890,7 @@ def couq():
             common_2_rows.append({"Millets": " & ".join(combo), "Trait": trait})
     st.markdown(f"<h5 style='text-align:center;'>Traits Common to Exactly 2 Millets</h5>", unsafe_allow_html=True)
     st.dataframe(pd.DataFrame(common_2_rows))
+    
 #--------------------------------------------------------------Summary--------------------------------------------------------------------------
 def summary():
     with st.sidebar:
