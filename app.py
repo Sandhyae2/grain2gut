@@ -96,7 +96,7 @@ def home():
         5. Each dataframe was independently linked to reference information from databases.
         6. These dataframes are present in the **Meta Data** section and are used for further analysis.
         """)
-         with st.sidebar.expander("Summarized Analysis", expanded=False):
+    with st.sidebar.expander("Summarized Analysis", expanded=False):
         st.markdown("""
         This contains the overall summary of our results.
         """)
