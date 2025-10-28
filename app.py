@@ -483,7 +483,7 @@ def millet():
             """)
         with st.sidebar.expander("to be added", expanded=False):
             st.markdown("""
-            to be added
+            Pathway enrichment helps identify **which biological pathways are more represented or more active** in one LAB strain **compared to others**.
             """)
     millet_data = {
         "Millet Source": ["Proso", "Foxtail", "Little", "Little"],
