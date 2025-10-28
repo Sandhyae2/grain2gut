@@ -481,7 +481,7 @@ def millet():
             - The assigned biological traits are compared across millets.
             - The common and unique traits across millets are plotted here.
             """)
-        with st.sidebar.expander("to be added", expanded=False):
+        with st.sidebar.expander("Pathway Enrichment", expanded=False):
             st.markdown("""
             Pathway enrichment helps identify **which biological pathways are more represented or more active** in one LAB strain **compared to others**.
             """)
