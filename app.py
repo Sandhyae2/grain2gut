@@ -135,7 +135,7 @@ def home():
 millet_map = {
     "Enterococcus casseliflavus (Proso Millet)": "77",
     "Weisella cibaria NM01 (Foxtail Millet)": "78",
-    "Weisella cibaria NM01 (Little Millet)": "79",
+    "Weisella cibaria SM01 (Little Millet)": "79",
     "Lactococcus lactis (Little Millet)": "80"
  }
  # ---------------------------------------------------- EC Analysis ------------------------------------------------------------------------------
@@ -466,11 +466,6 @@ def millet():
             """)
         with st.sidebar.expander("EC class Distribution", expanded=False):
             st.markdown("""Shows the distribution of EC numbers across the six major EC classes for each millet.""")
-        with st.sidebar.expander("BRITE class & subclass Distribution", expanded=False):
-            st.markdown("""
-            - For each EC number & KO id, multiple map ids (pathway ids) are retrieved.
-            - These map ids are then mapped to their BRITE class & subclasses whose distribution across each millet is plotted.
-            """)
         with st.sidebar.expander("Biological Trait Distribution", expanded=False):
             st.markdown("""
             - Based on our understanding of all the data, we have assigned biological traits to each EC, KO, PWY.
@@ -518,14 +513,11 @@ def millet():
         )
     with right_col:
         st.markdown("<h4 style='text-align:center;'>Analysis</h4>", unsafe_allow_html=True)
-        col1, col2,col3 = st.columns(3)
+        col1, col2,= st.columns()
         with col1:
             if st.button("EC class Distribution"):
                 go_to("ec_class")
         with col2:
-            if st.button("BRITE class & subclass Distribution"):
-                go_to("brite")
-        with col3:
             if st.button("Trait Distribution"):
                 go_to("trait")        
         col4, col5= st.columns(2)
