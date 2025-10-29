@@ -457,6 +457,7 @@ def pwy_page():
     st.write("")  # spacing
     #---------------------------------------------------millet analysis --------------------------------------------------------------------------
 def millet():
+    st.markdown("<h4 style='text-align:center;'>Millet-wise Analysis</h4>", unsafe_allow_html=True)
     with st.sidebar:
         if st.button("Back to Home"):
             go_to("home") 
@@ -520,11 +521,11 @@ def millet():
         with col2:
             if st.button("Trait Distribution"):
                 go_to("trait")        
-        col3, col4= st.columns(2)
-        with col3:
+        col4, col5= st.columns(2)
+        with col4:
             if st.button("Common & Unique Traits"):
                 go_to("couq")
-        with col4:
+        with col5:
             if st.button("Pathway Enrichment"):
                 go_to("pe")
     
