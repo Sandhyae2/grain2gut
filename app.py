@@ -513,7 +513,7 @@ def millet():
         )
     with right_col:
         st.markdown("<h4 style='text-align:center;'>Analysis</h4>", unsafe_allow_html=True)
-        col1, col2,= st.columns()
+        col1, col2,= st.columns(2)
         with col1:
             if st.button("EC class Distribution"):
                 go_to("ec_class")
