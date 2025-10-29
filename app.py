@@ -989,7 +989,7 @@ elif page == "milletwise_analysis":
     millet()
 elif page == "ec_class":
     ec_class()
- elif page=="trait":
+elif page=="trait":
     trait()
 elif page=="couq":
     couq()
