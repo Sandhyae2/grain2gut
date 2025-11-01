@@ -1018,15 +1018,15 @@ def pathway_enrichment():
                 continue
             try:
                df_bg = pd.read_csv(f, encoding="utf-8", on_bad_lines="skip")
-        except UnicodeDecodeError:
-            df_bg = pd.read_csv(f, encoding="latin1", on_bad_lines="skip")
-        for col in ["pathway_ids", "map_ids", "Pathway"]:
-            if col in df_bg.columns:
-                df_bg[col] = (
-                    df_bg[col].astype(str)
-                    .str.replace(" ", "")
-                    .str.replace(";", ",")
-                    .str.split(",")
+            except UnicodeDecodeError:
+               df_bg = pd.read_csv(f, encoding="latin1", on_bad_lines="skip")
+            for col in ["pathway_ids", "map_ids", "Pathway"]:
+               if col in df_bg.columns:
+                   df_bg[col] = (
+                      df_bg[col].astype(str)
+                      .str.replace(" ", "")
+                      .str.replace(";", ",")
+                      .str.split(",")
                 )
                 background_pathways.extend(df_bg[col].explode().dropna().tolist())
                 break
