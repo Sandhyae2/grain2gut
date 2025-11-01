@@ -1028,8 +1028,8 @@ def pathway_enrichment():
                       .str.replace(";", ",")
                       .str.split(",")
                 )
-                background_pathways.extend(df_bg[col].explode().dropna().tolist())
-                break
+                   background_pathways.extend(df_bg[col].explode().dropna().tolist())
+                   break
 
         if not background_pathways:
             st.warning(f"No background pathways found for {prefix.upper()}.")
