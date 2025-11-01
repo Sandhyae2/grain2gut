@@ -1053,7 +1053,7 @@ def pathway_enrichment():
 
         if not results:
             st.warning(f"No significant pathways found for {prefix.upper()}.")
-            continue
+            return
 
         res_df = pd.DataFrame(results)
         res_df["FDR"] = multipletests(res_df["p-value"], method="fdr_bh")[1]
