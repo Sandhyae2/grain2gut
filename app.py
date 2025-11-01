@@ -4,7 +4,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 
-st.set_page_config(layout="wide")
+st.set_page_config(layout="wide",page_icon="🌾")
+
+
 st.markdown("""
 <style>
 .stApp {
@@ -38,6 +40,42 @@ h2, h1 {
 }
 </style>
 """, unsafe_allow_html=True)
+
+#---------------------------disclaimer-----------------------------
+if "show_disclaimer" not in st.session_state:
+    st.session_state.show_disclaimer = True
+if st.session_state.show_disclaimer:
+    st.markdown("""
+    <div style="
+        max-width: 400px;
+        margin: 10px auto;
+        padding: 14px 18px;
+        border-radius: 10px;
+        background-color:#FEF7A2;
+        font-size: 15px;
+        line-height: 1.5;
+    ">
+        <div style="text-align:center;">
+            <b>Welcome to Grain2Gut 🌾</b><br>
+            <b>⚠️ Disclaimer</b>
+        </div>
+        <div style="text-align:left; margin-top:8px;">
+            <ul style="padding-left:16px; margin:0;">
+                <li>Use the <b>Sidebar</b> to navigate the app sections.</li>
+                <li><b>Do not</b> use the browser <b>Back</b> button as it will exit the app.</li>
+            </ul>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+
+    col1, col2, col3 = st.columns([3,2,3])
+    with col2:
+        if st.button("Click here to reach the App 🦠"):
+            st.session_state.show_disclaimer = False
+            st.rerun()
+
+    st.stop()
+
 # ----------------------------------------------------------- Page Control -------------------------------------------------------------
 
 if "page" not in st.session_state:
