@@ -978,7 +978,7 @@ def pathway_enrichment():
         )
 
     suffix = millet_map[selected_strain]
-    data_dir = "picrust_processed_output_files"
+    data_dir = "picrust_output_files"
 
     # --- Collect all pathways from EC, KO, and PWY ---
     all_pathways = []
