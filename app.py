@@ -863,10 +863,10 @@ def couq():
         [[millet for millet in millet_sets if trait in millet_sets[millet]] for trait in set.union(*millet_sets.values())]
     )
     
-    plt.figure(figsize=(8,6))
+    fig = plt.figure(figsize=(8,6))
     upset = UpSet(data, subset_size='count', show_counts=True)
-    upset.plot()
-    st.pyplot(plt)
+    upset.plot(fig=fig)  # pass the figure explicitly
+    st.pyplot(fig)
 
 
     # --- Common to all 4 LABs ---
@@ -913,7 +913,6 @@ def couq():
 
 from scipy.stats import fisher_exact
 from statsmodels.stats.multitest import multipletests
-import streamlit as st
 import glob
 import os
 
@@ -979,42 +978,36 @@ def pathway_enrichment():
         )
 
     suffix = millet_map[selected_strain]
-    data_dir = "picrust_output_files"
+    data_dir = "picrust_processed_output_files"
 
-    # --- Loop over EC, KO, and PWY ---
-    for prefix in ["ec", "ko", "pwy"]:
-        st.markdown(f"<h5 style='text-align:center;'>{prefix.upper()}-based Enrichment</h5>", unsafe_allow_html=True)
+    # --- Collect all pathways from EC, KO, and PWY ---
+    all_pathways = []
 
-        # Handle different filename patterns
-        if prefix == "pwy":
-            file_path = os.path.join(data_dir, f"pwy_{suffix}.csv")  # <-- underscore
-        else:
-            file_path = os.path.join(data_dir, f"{prefix}{suffix}.csv")
+    file_path = os.path.join(data_dir, f"pwy_{suffix}.csv")
 
-        if not os.path.exists(file_path):
-            st.warning(f"File not found: {file_path}")
-            continue
+    if not os.path.exists(file_path):
+        st.warning(f"File not found: {file_path}")
+        return
 
-        df = pd.read_csv(file_path, encoding="utf-8", on_bad_lines="skip")
+    df = pd.read_csv(file_path, encoding="utf-8", on_bad_lines="skip")
 
-        # --- Identify the correct column containing pathway IDs ---
-        pathway_col = None
-        for possible in ["pathway_ids", "map_ids", "Pathway"]:
-            if possible in df.columns:
-                pathway_col = possible
-                break
+    # Identify correct column
+    for col in ["pathway_ids", "map_ids", "Pathway"]:
+        if col in df.columns:
+            df[col] = (
+                df[col].astype(str)
+                .str.replace(" ", "")
+                .str.replace(";", ",")
+                .str.split(",")
+            )
+            all_pathways.extend(df[col].explode().dropna().tolist())
+            break
 
-        if not pathway_col:
-            st.warning(f"No pathway column found in {prefix.upper()} file.")
-            continue
+    if not all_pathways:
+        st.warning("No pathway data found for selected millet.")
+        return
 
-        df[pathway_col] = ( df[pathway_col].astype(str).str.replace(" ", "").str.replace(";", ",").str.split(","))
-        millet_pathways = df[pathway_col].explode().dropna().tolist()
-        if not millet_pathways:
-            st.info(f"No pathway entries found in {prefix.upper()} data.")
-            continue
-
-        millet_counts = pd.Series(millet_pathways).value_counts()
+        millet_counts = pd.Series(all_pathways).value_counts()
 
         # --- Build background from all other millets of same file type ---
         if prefix == "pwy":
@@ -1023,20 +1016,29 @@ def pathway_enrichment():
             all_files = glob.glob(os.path.join(data_dir, f"{prefix}*.csv"))
 
         background_pathways = []
-        for f in all_files:
-            if not f.endswith(f"{suffix}.csv"):
-                try:
-                    df_bg = pd.read_csv(f, encoding="utf-8", on_bad_lines="skip")
-                except UnicodeDecodeError:
-                    df_bg = pd.read_csv(f, encoding="latin1", on_bad_lines="skip")
+        files = glob.glob(os.path.join(data_dir, "pwy_*.csv"))
 
-                if pathway_col in df_bg.columns:
-                    df_bg[pathway_col] = df_bg[pathway_col].astype(str).str.replace(" ", "").str.split(",")
-                    background_pathways.extend(df_bg[pathway_col].explode().dropna().tolist())
+    for f in files:
+        if f.endswith(f"{suffix}.csv"):  # skip current strain
+            continue
+        try:
+            df_bg = pd.read_csv(f, encoding="utf-8", on_bad_lines="skip")
+        except UnicodeDecodeError:
+            df_bg = pd.read_csv(f, encoding="latin1", on_bad_lines="skip")
+        for col in ["pathway_ids", "map_ids", "Pathway"]:
+            if col in df_bg.columns:
+                df_bg[col] = (
+                    df_bg[col].astype(str)
+                    .str.replace(" ", "")
+                    .str.replace(";", ",")
+                    .str.split(",")
+                )
+                background_pathways.extend(df_bg[col].explode().dropna().tolist())
+                break)
 
         if not background_pathways:
             st.warning(f"No background pathways found for {prefix.upper()}.")
-            continue
+            return
 
         bg_counts = pd.Series(background_pathways).value_counts()
 
@@ -1049,7 +1051,7 @@ def pathway_enrichment():
                 [count_in_bg, len(background_pathways) - count_in_bg]
             ]
             try:
-                odds, p = fisher_exact(table, alternative="greater")
+                _, p = fisher_exact(table, alternative="greater")
             except ValueError:
                 continue
             results.append({"Pathway": pathway, "Count": count_in_millet, "p-value": p})
@@ -1084,13 +1086,7 @@ def summary():
     with st.sidebar:
         if st.button("Back to Home"):
             go_to("home") 
-    with st.sidebar.expander("Summary", expanded=False):
-            st.markdown("""
-            Teiyuhstrf
-            """)
-    st.markdown("<h4 style='text-align:center;'>Summary</h4>", unsafe_allow_html=True) 
-    st.markdown("Hence these millets can be used for probiotics and foof applications")
-
+        st.markdown("<h3 style='text-align:center;'>Summary</h4>", unsafe_allow_html=True) 
  # --------------------------------------------------------------------- Navigation ---------------------------------------------------------------------
 page = st.session_state.page
 if page == "home":
