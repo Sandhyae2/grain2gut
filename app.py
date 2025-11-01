@@ -1013,11 +1013,11 @@ def pathway_enrichment():
         background_pathways = []
         files = glob.glob(os.path.join(data_dir, "pwy_*.csv"))
 
-    for f in files:
-        if f.endswith(f"{suffix}.csv"):  # skip current strain
-            continue
-        try:
-            df_bg = pd.read_csv(f, encoding="utf-8", on_bad_lines="skip")
+        for f in files:
+            if f.endswith(f"{suffix}.csv"):  # skip current strain
+                continue
+            try:
+               df_bg = pd.read_csv(f, encoding="utf-8", on_bad_lines="skip")
         except UnicodeDecodeError:
             df_bg = pd.read_csv(f, encoding="latin1", on_bad_lines="skip")
         for col in ["pathway_ids", "map_ids", "Pathway"]:
