@@ -1010,12 +1010,6 @@ def pathway_enrichment():
 
         millet_counts = pd.Series(all_pathways).value_counts()
 
-        # --- Build background from all other millets of same file type ---
-        if prefix == "pwy":
-            all_files = glob.glob(os.path.join(data_dir, "pwy_*.csv"))
-        else:
-            all_files = glob.glob(os.path.join(data_dir, f"{prefix}*.csv"))
-
         background_pathways = []
         files = glob.glob(os.path.join(data_dir, "pwy_*.csv"))
 
