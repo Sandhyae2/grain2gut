@@ -2,7 +2,8 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-
+from upsetplot import UpSet, from_memberships
+from itertools import combinations
 
 st.set_page_config(layout="wide",page_icon="🌾")
 
