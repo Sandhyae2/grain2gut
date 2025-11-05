@@ -7,7 +7,7 @@ from itertools import combinations
 
 st.set_page_config(layout="wide",page_icon="🌾")
 
-
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 st.markdown("""
 <style>
 .stApp {
@@ -57,7 +57,7 @@ if st.session_state.show_disclaimer:
         line-height: 1.5;
     ">
         <div style="text-align:center;">
-            <b>Welcome to Grain2Gut 🌾</b><br>
+            <b>Welcome to GraintoGut 🌾</b><br>
             <b>⚠️ Disclaimer</b>
         </div>
         <div style="text-align:left; margin-top:8px;">
@@ -116,7 +116,7 @@ def footer():
         Jointly created by 
         <a href="https://github.com/Sandhyae2" target="_blank">Sandhya</a>&
         <a href="https://github.com/VarshaS-37" target="_blank">Varsha</a>|
-        <a href="https://github.com/Sandhyae2/grain2gut/tree/main" target="_blank">GitHub Repo</a>
+        <a href="https://github.com/Sandhyae2/GraintoGut/tree/main" target="_blank">GitHub Repo</a>
     </div>
     """, unsafe_allow_html=True)
 # ------------------------------------------------------------ Home Page -----------------------------------------------------------------------
@@ -198,7 +198,7 @@ def ec_page():
             **EC (Enzyme Commission) numbers** are a numerical classification scheme for enzymes, 
             based on the chemical reactions they catalyze.  
             - Each EC number consists of four numbers separated by periods (e.g., `2.7.1.1`).  
-            - The first number represents the main enzyme class (6 major classes: Oxidoreductases, Transferases, Hydrolases, Lyases, Isomerases, Ligases).  
+            - The first number represents the main enzyme class (7 major classes: Oxidoreductases, Transferases, Hydrolases, Lyases, Isomerases, Ligases, Tanslocases).  
             - The subsequent numbers give more specific subclass, sub-subclass, and the serial number of the enzyme.  
             """)
     with st.sidebar.expander("Why is it relevant?", expanded=False):
@@ -214,17 +214,17 @@ def ec_page():
             """)
     with st.sidebar.expander("What is in the EC Dataframe?", expanded=False):
             st.markdown("""
-            1. Only EC numbers with abundance greater than 1 are considered.
+            1. Only EC numbers with abundance greater than 2 are considered.
             2. Here's what each column means:
             - **ec_number**: The Enzyme Commission (EC) number classifying the enzyme's activity.
             - **ec_abundance**: How many times this enzyme is predicted to be present in the strain.
             - **ec_function**: Description of the enzyme's function.
-            - **ec_class**: The main EC class (number 1–6) the enzyme belongs to.
-            - **ec_class_name**: The name of the EC class (e.g., Transferases, Hydrolases).
+            - **ec_class**: The main EC class (number 1–7) the enzyme belongs to.
+            - **ec_class_name**: The name of the EC class (e.g., Oxidoreductase, Hydrolases).
             - **ko_ids**: KEGG Orthology IDs linked to this enzyme.
             - **ko_functions**: Descriptions of the KO functions linked to this enzyme.
             - **pathway_ids**: KEGG pathway IDs associated with this enzyme.
-            - **pathway_names**: Names of the KEGG pathways this enzyme participates in.
+            - **pathway_names**: Names of the KEGG pathways this enzyme involved in.
             - **brite_subclass**: KEGG BRITE hierarchy subclass for this enzyme.
             - **brite_class**: KEGG BRITE hierarchy main class for this enzyme.
         """)
@@ -328,7 +328,7 @@ def ko_page():
             """)
         with st.sidebar.expander("What is in the KO Dataframe?", expanded=False):
             st.markdown("""
-            1. Only KO ids with abundance greater than 2 are considered.
+            1. Only KO ids with abundance greater than 3 are considered.
             2. Here's what each column in the KO dataframe means:
             - **ko_id**: KEGG Orthology ID for a gene/protein with a specific function.
             - **ko_abundance**: Number of times this KO is predicted in the strain.
@@ -429,7 +429,7 @@ def pwy_page():
             """)
         with st.sidebar.expander("What is in the Pathway Dataframe?", expanded=False):
             st.markdown("""
-            1. Only pathways with completeness greater than 0.79 are considered.
+            1. Only pathways with completeness greater than 0.8 are considered.
             2. Here's what each column in the dataframe means:
             - **Pathway**: Unique pathway ID in the database (e.g., `ANAGLYCOLYSIS-PWY`).  
             - **fam_total**: Total number of gene families expected in this pathway.  
@@ -516,10 +516,7 @@ def millet():
             - The assigned biological traits are compared across millets.
             - The common and unique traits across millets are plotted here.
             """)
-        with st.sidebar.expander("Pathway Enrichment", expanded=False):
-            st.markdown("""
-            Pathway enrichment helps identify **which biological pathways are more represented or more active** in one LAB strain **compared to others**.
-            """)
+        
     millet_data = {
         "Millet Source": ["Proso", "Foxtail", "Little", "Little"],
         "Strain": ['BM01', 'NM01', 'SM01', 'SM02'],
@@ -560,13 +557,11 @@ def millet():
         with col2:
             if st.button("Trait Distribution"):
                 go_to("trait")        
-        col4, col5= st.columns(2)
+        col4, col5= st.columns(1)
         with col4:
             if st.button("Common & Unique Traits"):
                 go_to("couq")
-        with col5:
-            if st.button("Pathway Enrichment"):
-                go_to("pe")
+       
     
 #--------------------------------------ec class------------------------------------------------------------------------------------------------
 def ec_class():
@@ -583,6 +578,7 @@ def ec_class():
             4. **Lyases (EC 4):** Breaks bonds in molecules without water or oxidation.  
             5. **Isomerases (EC 5):** Rearranges molecules into different forms.  
             6. **Ligases (EC 6):** Joins two molecules together using energy.
+            7. **Translocase (EC 7) : ** Moves ions or molecules acorss membrane or within cells.
             """)
     with st.sidebar.expander("How are they relevant?", expanded=False):
             st.markdown("""
@@ -594,6 +590,7 @@ def ec_class():
             4. **Lyases (EC 4):** Helps in forming flavor compounds and allowing flexible use of nutrients.  
             5. **Isomerases (EC 5):** Helps in changing sugars and amino acids into useful forms and making prebiotics.  
             6. **Ligases (EC 6):** Helps in bacterial growth and stability in foods.
+            7. ** Translocase (EC 7) :** Helps in transporting proteins and molecules across membranes.
             """)
     col1, col2, col3 = st.columns([3, 3, 3])
     with col2:
@@ -910,170 +907,6 @@ def couq():
             common_2_rows.append({"Millets": " & ".join(combo), "Trait": trait})
     st.markdown(f"<h5 style='text-align:center;'>Traits Common to Exactly 2 Millets</h5>", unsafe_allow_html=True)
     st.dataframe(pd.DataFrame(common_2_rows))
-#------------------------------------------------------enrichment-------------------------------------------------------------------
-
-from scipy.stats import fisher_exact
-from statsmodels.stats.multitest import multipletests
-import glob
-import os
-
-def pathway_enrichment():
-    st.markdown("<h4 style='text-align:center;'>Pathway Enrichment Analysis</h4>", unsafe_allow_html=True)
-
-    with st.sidebar:
-        if st.button("Back to Home"): 
-            go_to("home")
-        if st.button("Back to Analysis Menu"):
-            go_to("milletwise_analysis")
-
-    with st.sidebar.expander("Why is it relevant?", expanded=False):
-        st.markdown("""
-        Instead of looking at single genes or enzymes individually, enrichment focuses on **whole biological processes**.  
-        This helps reveal **functional abilities** of the strain, such as:
-        - Stress tolerance
-        - Fermentation efficiency
-        - Vitamin / amino acid production
-        - Probiotic survival traits
-        """) 
-    with st.sidebar.expander("How is it done?", expanded=False):
-        st.markdown("""
-        1. Pathway information obtained from **EC, KO, PWY** annotations for the selected millet-derived LAB strain is combined.
-        2. Pathway frequencies from the remaining strains (background) is combined.
-        3. **Fisher’s Exact Test** is performed to find pathways that occur:
-           - **More frequently** in the selected strain than in the combined background strains.
-        4. **FDR correction**  is applied for statistical validity.
-        5. The **most enriched pathways** are displayed in a bar plot + table.
-        """)
-    with st.sidebar.expander("What is p-value?", expanded=False):
-        st.markdown("""
-        A **p-value** tells us how likely it is that the observed difference happened **by chance**.
-        - **Small p-value** → Unlikely due to chance → **Result is meaningful**
-        - **Large p-value** → Could easily happen randomly → **Not meaningful**
-
-        ### Significance Rule (Common):
-        - p-value < 0.05 → **Statistically significant**
-        """)
-    with st.sidebar.expander("What is FDR?", expanded=False):
-        st.markdown("""     
-        - When testing **many pathways at once**, some pathways may look significant **just by luck**.
-        - **FDR (False Discovery Rate)** correction adjusts p-values to prevent **false positives**.
-        - **FDR is the corrected p-value**
-        - Lower FDR = **More reliable** result
-        """)
-    with st.sidebar.expander("How to Read the Plot?", expanded=False):
-        st.markdown("""
-        - The **X-axis** shows `-log10(FDR)` → higher value = **stronger enrichment**.
-        - The **Y-axis** lists pathway names.
-        - **Longer bars = pathways more uniquely abundant in the selected strain**.
-       """)
-
-    # --- Select Millet LAB ---
-    col1, col2, col3 = st.columns([3, 3, 3])
-    with col2:
-        st.markdown("<p style='text-align:center;'>Select Millet LAB</p>", unsafe_allow_html=True)
-        selected_strain = st.selectbox(
-            "",
-            list(millet_map.keys()),
-            label_visibility="collapsed",
-            key=f"pwy_enrich_select_{st.session_state.page}",
-        )
-
-    suffix = millet_map[selected_strain]
-    data_dir = "picrust_output_files"
-
-    # --- Collect all pathways from EC, KO, and PWY ---
-    all_pathways = []
-
-    file_path = os.path.join(data_dir, f"pwy_{suffix}.csv")
-
-    if not os.path.exists(file_path):
-        st.warning(f"File not found: {file_path}")
-        return
-
-    df = pd.read_csv(file_path, encoding="utf-8", on_bad_lines="skip")
-
-    # Identify correct column
-    for col in ["pathway_ids", "map_ids", "Pathway"]:
-        if col in df.columns:
-            df[col] = (
-                df[col].astype(str)
-                .str.replace(" ", "")
-                .str.replace(";", ",")
-                .str.split(",")
-            )
-            all_pathways.extend(df[col].explode().dropna().tolist())
-            break
-
-    if not all_pathways:
-        st.warning("No pathway data found for selected millet.")
-        return
-
-        millet_counts = pd.Series(all_pathways).value_counts()
-
-        background_pathways = []
-        files = glob.glob(os.path.join(data_dir, "pwy_*.csv"))
-
-        for f in files:
-            if f.endswith(f"{suffix}.csv"):  # skip current strain
-                continue
-            try:
-               df_bg = pd.read_csv(f, encoding="utf-8", on_bad_lines="skip")
-            except UnicodeDecodeError:
-               df_bg = pd.read_csv(f, encoding="latin1", on_bad_lines="skip")
-            for col in ["pathway_ids", "map_ids", "Pathway"]:
-               if col in df_bg.columns:
-                   df_bg[col] = (
-                      df_bg[col].astype(str)
-                      .str.replace(" ", "")
-                      .str.replace(";", ",")
-                      .str.split(",")
-                )
-                   background_pathways.extend(df_bg[col].explode().dropna().tolist())
-                   break
-
-        if not background_pathways:
-            st.warning(f"No background pathways found for {prefix.upper()}.")
-            return
-
-        bg_counts = pd.Series(background_pathways).value_counts()
-
-        # --- Fisher’s exact test for enrichment ---
-        results = []
-        for pathway, count_in_millet in millet_counts.items():
-            count_in_bg = bg_counts.get(pathway, 0)
-            table = [
-                [count_in_millet, len(millet_pathways) - count_in_millet],
-                [count_in_bg, len(background_pathways) - count_in_bg]
-            ]
-            try:
-                _, p = fisher_exact(table, alternative="greater")
-            except ValueError:
-                continue
-            results.append({"Pathway": pathway, "Count": count_in_millet, "p-value": p})
-
-        if not results:
-            st.warning(f"No significant pathways found for {prefix.upper()}.")
-            return
-
-        res_df = pd.DataFrame(results)
-        res_df["FDR"] = multipletests(res_df["p-value"], method="fdr_bh")[1]
-        res_df = res_df.sort_values("FDR")
-
-        # --- Plot top pathways ---
-        top = res_df.head(10)
-        fig, ax = plt.subplots(figsize=(7, 5))
-        ax.barh(top["Pathway"], -np.log10(top["FDR"]), color="#4C72B0")
-        ax.set_xlabel("-log10(FDR)")
-        ax.set_ylabel("Pathway")
-        ax.set_title(f"Combined EC–KO–PWY Enrichment: {selected_strain}")
-        ax.invert_yaxis()
-        plt.tight_layout()
-        st.pyplot(fig)
-
-    # --- Table output ---
-        st.subheader(f"Top Enriched Pathways in {selected_strain}")
-        st.dataframe(res_df.head(25).style.format({"p-value": "{:.3e}", "FDR": "{:.3e}"}))
-
 
     
 #--------------------------------------------------------------Summary--------------------------------------------------------------------------
@@ -1770,7 +1603,7 @@ def summary():
     
     st.markdown("<h4 style='text-align:center;'>Biological Traits Analysis Summary</h4>", unsafe_allow_html=True)
     with st.expander("Which are the common and unique biological traits?"):
-            df = create_trait_table(millet_map, path="picrust_processed_output_files/")
+            df = create_trait_table(millet_map, path="picrust_output_files/")
             df = style_trait_table(df)
             st.dataframe(df, use_container_width=True)
     with st.expander("Overall, what are the biological traits supporting the use of these LABs in probiotic/food applications?"):
