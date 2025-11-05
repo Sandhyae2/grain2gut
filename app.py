@@ -52,7 +52,7 @@ if st.session_state.show_disclaimer:
         margin: 10px auto;
         padding: 14px 18px;
         border-radius: 10px;
-        background-color:#ffff66;
+        background-color:#b3ecff;
         font-size: 15px;
         line-height: 1.5;
     ">
