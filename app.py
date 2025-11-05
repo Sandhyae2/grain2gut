@@ -557,7 +557,7 @@ def millet():
         with col2:
             if st.button("Trait Distribution"):
                 go_to("trait")        
-        col4 = st.columns(1)
+        col4, = st.columns(1)
         with col4:
             if st.button("Common & Unique Traits"):
                 go_to("couq")
