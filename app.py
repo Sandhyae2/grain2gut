@@ -122,8 +122,9 @@ def footer():
 # ------------------------------------------------------------ Home Page -----------------------------------------------------------------------
 def home():
     st.markdown("<h2 style='text-align:center;'>GraintoGut</h2>", unsafe_allow_html=True)
-    st.markdown("<h3 style='text-align:center;'>Linking genomic potential of Millet derived Lactic Acid Bacteria to food and probiotic applications</h3>", unsafe_allow_html=True)
+    st.markdown("<h4 style='text-align:center;'><i>Linking genomic potential of Millet derived Lactic Acid Bacteria to food and probiotic applications</i></h4>", unsafe_allow_html=True)
     st.write("") 
+  
  # ----------------------------------- Sidebar with Project Description ------------------------------------------------------------------------
    # "Back to Home" button at the top of the sidebar
     
