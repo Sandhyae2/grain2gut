@@ -694,7 +694,7 @@ def brite():
             "top_5_brite_subclass": ec_top_subclass
         }
         # -------- KO --------
-        ko_file = f"picrust_processed_output_files/ko{suffix}.csv"
+        ko_file = f"picrust_output_files/ko{suffix}.csv"
         try:
             ko_df = pd.read_csv(ko_file, encoding="latin1")
         except:
@@ -1502,83 +1502,8 @@ def summary():
             - **Utilization of dietary fibers for enhanced gut adaptation**  
             """)
 
-    with st.expander("Which pathways are enriched in a LAB than the other LABs?"):
-        with st.expander("Enterococcus casseliflavus (Proso Millet)"):
-            st.markdown("""
-            | **Functional Feature** | **Key Enzymes / Pathways** | **Relevance to Probiotic Function & Gut Adaptation** |
-            |---|---|---|
-            | **Energy Production & Glycolysis** | ANAGLYCOLYSIS-PWY, GLYCOLYSIS | Converts glucose to pyruvate, generating ATP and NADH to support LAB growth, survival, and fermentation-driven acid production in the gut. |
-            | **Amino Acid Biosynthesis** | ARGSYNBSUB-PWY, VALSYN-PWY | Produces L-arginine and L-valine for protein synthesis and nitrogen metabolism, enhancing bacterial growth, stress resilience, and metabolic versatility. |
-            | **Cell Wall Integrity & Peptidoglycan Formation** | PEPTIDOGLYCANSYN-PWY, PWY-6386, PWY-6387, UDPNAGSYN-PWY, DTDPRHAMSYN-PWY | Synthesizes peptidoglycan precursors and cell wall polysaccharides, maintaining robust cell walls for survival under gut stress and during fermentation. |
-            | **Fermentation & Acid Production** | PWY-5100 | Converts pyruvate to lactate and acetate, supporting anaerobic energy generation, acidification of foods, and healthy microbial balance in the gut. |
-            | **Coenzyme & Nucleotide Biosynthesis** | COA-PWY, PWY-6121, PWY-6123, PWY-7219, PWY-6609 | Supports CoA, purine, and nucleotide biosynthesis, essential for energy metabolism, DNA/RNA synthesis, and growth. |
-            | **Plant Sugar Utilization & Fiber Metabolism** | GALACTUROCAT-PWY, PWY-7242 | Enables utilization of plant-derived sugars and uronic acids for energy, supporting growth in fiber-rich environments and dietary fiber breakdown. |
-            
-            ⭐ **Key Takeaway**  
-            These highly enriched pathways collectively enhance:  
-            - **Energy generation and fermentation efficiency**  
-            - **Amino acid and nucleotide metabolism for growth and stress resilience**  
-            - **Cell wall synthesis for survival in gut and food systems**  
-            - **Utilization of dietary fibers, supporting gut colonization and prebiotic interactions**  
-            """)
-
-        with st.expander("Weisella cibaria NM01 (Foxtail Millet)"):
-            st.markdown("""
-            | **Pathway** | **Function / Role in Probiotics** | **p-value** | **FDR** |
-            |---|---|---|---|
-            | **GALACTUROCAT-PWY** | D-galacturonate degradation: Utilizes plant-derived sugars, supporting probiotic growth and fiber metabolism. | 0.241 | 0.671 |
-            | **ANAGLYCOLYSIS-PWY** | Glycolysis III: Converts glucose to pyruvate, providing energy for LAB growth and fermentation. | 0.425 | 0.671 |
-            | **DTDPRHAMSYN-PWY** | dTDP-L-rhamnose biosynthesis: Essential for cell wall polysaccharide synthesis and structural integrity. | 0.425 | 0.671 |
-            | **VALSYN-PWY** | L-Valine biosynthesis: Provides amino acids for protein synthesis and probiotic metabolic activity. | 0.425 | 0.671 |
-            | **PWY-5100** | Pyruvate fermentation to acetate and lactate: Supports energy production, acidification, and gut adaptation. | 0.565 | 0.671 |
-            
-            ⭐ **Key Takeaway**  
-            These top 5 pathways highlight the most enriched functions contributing to probiotic efficacy:  
-            - **Energy Metabolism & Fermentation:** ANAGLYCOLYSIS-PWY and PWY-5100 provide ATP and drive production of lactate/acetate, supporting survival and gut colonization.  
-            - **Cell Wall Integrity:** DTDPRHAMSYN-PWY ensures robust bacterial cell walls, improving resilience under gut and fermentation stress.  
-            - **Amino Acid Synthesis:** VALSYN-PWY supplies essential amino acids like L-valine, supporting protein metabolism and growth.  
-            - **Fiber & Plant Sugar Utilization:** GALACTUROCAT-PWY allows breakdown of plant-derived sugars, enhancing growth in fiber-rich environments and contributing to gut microbiota interactions.  
-            """)
-        with st.expander("Weisella cibaria SM01 (Little Millet)"):
-            st.write("Same as Weisella cibaria NM01 (Foxtail Millet)")
-        with st.expander("Lactococcus lactis (Little Millet)"):
-            st.markdown("""
-            | **Pathway** | **Function / Role in Probiotics** | **p-value** | **FDR** |
-            |---|---|---|---|
-            | **SER-GLYSYN-PWY** | L-Serine and Glycine biosynthesis: Supplies amino acids critical for protein synthesis and bacterial growth. | 0.339 | 0.811 |
-            | **ANAGLYCOLYSIS-PWY** | Glycolysis III: Converts glucose to pyruvate, providing energy for lactic acid bacteria (LAB) growth and fermentation. | 0.563 | 0.811 |
-            | **DTDPRHAMSYN-PWY** | dTDP-L-rhamnose biosynthesis: Key for cell wall polysaccharide formation and structural integrity. | 0.563 | 0.811 |
-            | **OANTIGEN-PWY** | O-antigen biosynthesis: Supports cell envelope structure and interaction with the host gut environment. | 0.563 | 0.811 |
-            | **VALSYN-PWY** | L-Valine biosynthesis: Supplies essential amino acids for protein synthesis and metabolic activity. | 0.563 | 0.811 |
-            
-            ⭐ **Key Takeaway**  
-            These top 5 pathways highlight enriched functions that are important for probiotic activity:  
-            - **Energy & Fermentation:** ANAGLYCOLYSIS-PWY ensures ATP generation and drives fermentation, supporting survival and colonization in the gut.  
-            - **Cell Wall & Structural Integrity:** DTDPRHAMSYN-PWY and OANTIGEN-PWY maintain robust cell walls, enhancing stress tolerance and gut persistence.  
-            - **Amino Acid Biosynthesis:** SER-GLYSYN-PWY and VALSYN-PWY provide essential building blocks for protein synthesis and overall bacterial metabolism.  
-            """)
-        with st.expander("Overall Summary"):
-            st.markdown("""
-            | **Functional Category** | **Representative Pathways** | **Role in Probiotic Function & Gut Adaptation** |
-            |---|---|---|
-            | **Energy Production & Glycolysis** | ANAGLYCOLYSIS-PWY, GLYCOLYSIS | Converts glucose to pyruvate, producing ATP and NADH to support LAB growth, survival, and fermentation-driven acid production in the gut. |
-            | **Amino Acid Biosynthesis** | ARGSYNBSUB-PWY, VALSYN-PWY, SER-GLYSYN-PWY | Supplies essential amino acids (L-arginine, L-valine, L-serine, glycine) for protein synthesis, nitrogen metabolism, and overall metabolic activity, enhancing growth and stress resilience. |
-            | **Cell Wall & Structural Integrity** | PEPTIDOGLYCANSYN-PWY, PWY-6386, PWY-6387, UDPNAGSYN-PWY, DTDPRHAMSYN-PWY, OANTIGEN-PWY | Ensures robust cell wall formation and peptidoglycan synthesis, promoting bacterial survival under gut stress, fermentation conditions, and host interactions. |
-            | **Fermentation & Acid Production** | PWY-5100 | Converts pyruvate to lactate and acetate, supporting anaerobic energy production, acidification of foods, microbial balance in the gut, and improved sensory qualities of fermented foods. |
-            | **Coenzyme & Nucleotide Metabolism** | COA-PWY, PWY-6121, PWY-6123, PWY-7219, PWY-6609 | Supports biosynthesis of coenzymes, nucleotides, and purines, essential for DNA/RNA synthesis, growth, and metabolic versatility. |
-            | **Plant Sugar & Fiber Utilization** | GALACTUROCAT-PWY, PWY-7242 | Degrades plant-derived sugars and uronic acids, providing energy in fiber-rich environments and supporting gut microbiota interactions and prebiotic metabolism. |
-            
-            ⭐ **Key Takeaway**  
-            Across all millet-adapted LAB strains (Enterococcus casseliflavus, Weisella cibaria NM01/SM01, Lactococcus lactis):  
-            - **Energy & Fermentation:** LAB efficiently metabolize glucose and pyruvate to generate ATP and fermentation acids, enhancing gut colonization and survival.  
-            - **Amino Acid Supply:** Pathways for L-arginine, L-valine, L-serine, and glycine biosynthesis support protein metabolism, bacterial growth, and resilience.  
-            - **Cell Wall Strength & Stress Tolerance:** Peptidoglycan and O-antigen pathways ensure structural integrity, supporting survival under gut stress and fermentation conditions.  
-            - **Nucleotide & Coenzyme Biosynthesis:** Supports replication, gene expression, and metabolic flexibility.  
-            - **Fiber & Plant Sugar Utilization:** Enables LAB to thrive on plant-derived substrates, improving gut interactions and prebiotic utilization.  
-            - Overall, these enriched pathways highlight **robust, resilient, and functionally versatile probiotics** capable of energy-efficient growth, stress adaptation, fermentation activity, and beneficial gut interactions.
-            """)
-
-    with st.expander("Overall, how relevant are the predicted pathways in terms of probiotic/food appplications?"):
+   
+         with st.expander("Overall, how relevant are the predicted pathways in terms of probiotic/food appplications?"):
          
         st.markdown("""
         **Overall Probiotic Functional Pattern**  
