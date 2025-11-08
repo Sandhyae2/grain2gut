@@ -11,7 +11,7 @@ st.set_page_config(layout="wide",page_icon="🌾")
 st.markdown("""
 <style>
 .stApp {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV9HDIGsrOZbmgP4MuahUsG1g6PoC8TtgTmg&s');  
+    background-image: url('https://media.istockphoto.com/id/156593937/photo/wheat-field.jpg?s=612x612&w=0&k=20&c=J7CsfpGSpBy3yMn4ZEHLvFh7OqKLL0-FXKvL5TVlSRQ=');  
     background-size: cover;
     background-attachment: fixed;
 }
