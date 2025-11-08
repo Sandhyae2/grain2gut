@@ -1,48 +1,49 @@
 Pathway,trait
 ARGSYNBSUB-PWY,Amino acid metabolism
-COA-PWY,Energy / fermentation efficiency
+COA-PWY,Fermentation efficiency
 PEPTIDOGLYCANSYN-PWY,Cell wall integrity
 PWY-5667,Membrane integrity
-PWY-6121,DNA repair / replication
-PWY-6123,DNA repair / replication
+PWY-6121,DNA repair 
+PWY-6123,DNA repair
 RUMP-PWY,Oxidative stress resistance
 PWY0-1319,Membrane integrity
-PWY-7228,Energy / fermentation efficiency
+PWY-7228,Fermentation efficiency
 PWY-7242,Carbohydrate metabolism
 UDPNAGSYN-PWY,Cell wall integrity
-PWY-7219,Energy / fermentation efficiency
-PWY-7208,Energy / fermentation efficiency
-PWY-7197,DNA repair / replication
-PWY-7221,Energy / fermentation efficiency
+PWY-7219,Fermentation efficiency
+PWY-7208,Fermentation efficiency
+PWY-7197,DNA replication
+PWY-7221,Fermentation efficiency
 PWY-6387,Cell wall integrity
-PWY-841,Energy / fermentation efficiency
+PWY-841,Fermentation efficiency
 P122-PWY,Lactic acid production
-PWY-5840,Energy / fermentation efficiency
+PWY-5840,Fermentation efficiency
 ARGSYN-PWY,Amino acid metabolism
-PWY0-162,Energy / fermentation efficiency
-PWY-7184,DNA repair / replication
-PWY-7229,Energy / fermentation efficiency
+PWY0-162,Fermentation efficiency
+PWY-7184,DNA replication
+PWY-7229,Fermentation efficiency
 PWY-6386,Cell wall integrity
-PWY-6125,Energy / fermentation efficiency
+PWY-6125,Fermentation efficiency
 ARO-PWY,Amino acid metabolism
-PWY-6126,Energy / fermentation efficiency
-P124-PWY,Energy / fermentation efficiency
-PWY-5837,Energy / fermentation efficiency
+PWY-6126,Fermentation efficiency
+P124-PWY,Fermentation efficiency
+PWY-5837,Fermentation efficiency
 PWY-6163,Amino acid metabolism
-PWY-5686,Energy / fermentation efficiency
+PWY-5686,Fermentation efficiency
 PWY4FS-8,Membrane integrity
-PWY-7234,Energy / fermentation efficiency
+PWY-7234,Fermentation efficiency
 PWY4FS-7,Membrane integrity
 PWY-6317,Carbohydrate metabolism
 GLUTORN-PWY,Amino acid metabolism
 PWY-621,Carbohydrate metabolism
-PWY-6277,Energy / fermentation efficiency
-PWY-6897,Energy / fermentation efficiency
-PWY-6122,Energy / fermentation efficiency
-P161-PWY,Energy / fermentation efficiency
-GLYCOGENSYNTH-PWY,Energy / fermentation efficiency
+PWY-6277,Fermentation efficiency
+PWY-6897,Fermentation efficiency
+PWY-6122,Fermentation efficiency
+P161-PWY,Fermentation efficiency
+GLYCOGENSYNTH-PWY,Fermentation efficiency
 POLYISOPRENSYN-PWY,Membrane integrity
-PWY-5899,Energy / fermentation efficiency
-PWY-5898,Energy / fermentation efficiency
-PWY-5897,Energy / fermentation efficiency
+PWY-5899,Fermentation efficiency
+PWY-5898,Fermentation efficiency
+PWY-5897,Fermentation efficiency
 PWY-5973,Membrane integrity
+
