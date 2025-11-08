@@ -11,7 +11,7 @@ st.set_page_config(layout="wide",page_icon="🌾")
 st.markdown("""
 <style>
 .stApp {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGbTdgj1s0TItz2LpB93_k8Ms1d-_4UDwIAA&s');  
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAOz-0IszBAoWV5nX96W9sYnEMb4UpymarQQ&s');  
     background-size: cover;
     background-attachment: fixed;
 }
