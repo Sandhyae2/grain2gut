@@ -1505,22 +1505,22 @@ def summary():
    
          with st.expander("Overall, how relevant are the predicted pathways in terms of probiotic/food appplications?"):
          
-        st.markdown("""
-        **Overall Probiotic Functional Pattern**  
-        - All millet-derived LAB strains exhibit complete and enriched pathways for energy metabolism, amino acid biosynthesis, and cell wall formation, reflecting strong probiotic potential.  
-        - These pathways collectively indicate efficient fermentation ability, gut adaptability, and metabolic resilience** suitable for probiotic and food applications.  
+              st.markdown("""
+              **Overall Probiotic Functional Pattern**  
+              - All millet-derived LAB strains exhibit complete and enriched pathways for energy metabolism, amino acid biosynthesis, and cell wall formation, reflecting strong probiotic potential.  
+              - These pathways collectively indicate efficient fermentation ability, gut adaptability, and metabolic resilience** suitable for probiotic and food applications.  
     
-        **Enterococcus casseliflavus (Proso Millet)**  
-        - Shows enhanced glycolysis and amino acid biosynthesis, promoting robust growth and fermentation-driven acid production.  
-        - Strengthened cell wall synthesis and coenzyme pathways ensure resilience under gut and fermentation stress.  
+              **Enterococcus casseliflavus (Proso Millet)**  
+              - Shows enhanced glycolysis and amino acid biosynthesis, promoting robust growth and fermentation-driven acid production.  
+              - Strengthened cell wall synthesis and coenzyme pathways ensure resilience under gut and fermentation stress.  
     
-        **Weissella cibaria NM01 (Foxtail Millet) & Weissella cibaria SM01 (Little Millet)**  
-        - Exhibit **efficient utilization of plant sugars and fibers**, supporting growth in plant-based environments and improved prebiotic interactions.  
-        - Maintain **balanced energy metabolism and acid production**, promoting gut colonization and microbiome stability.  
+              **Weissella cibaria NM01 (Foxtail Millet) & Weissella cibaria SM01 (Little Millet)**  
+              - Exhibit **efficient utilization of plant sugars and fibers**, supporting growth in plant-based environments and improved prebiotic interactions.  
+              - Maintain **balanced energy metabolism and acid production**, promoting gut colonization and microbiome stability.  
     
-        **Lactococcus lactis (Little Millet)**  
-        - Demonstrates strong amino acid and nucleotide biosynthesis, enhancing protein metabolism and growth stability.  
-        - Possesses cell wall and fermentation pathways, ensuring survival, acidification ability, and probiotic persistence.  
+               **Lactococcus lactis (Little Millet)**  
+               - Demonstrates strong amino acid and nucleotide biosynthesis, enhancing protein metabolism and growth stability.  
+               - Possesses cell wall and fermentation pathways, ensuring survival, acidification ability, and probiotic persistence.  
     
         ⭐ **Key Takeaway**  
         - Collectively, these LAB strains display **robust metabolic versatility, structural integrity, and fermentation efficiency**
