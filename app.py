@@ -915,7 +915,7 @@ def summary():
     with st.sidebar:
         if st.button("Back to Home"):
             go_to("home") 
-        st.markdown("<h3 style='text-align:center;'>Summary</h4>", unsafe_allow_html=True)
+    st.markdown("<h3 style='text-align:center;'>Summary</h4>", unsafe_allow_html=True)
 
 
   #---------------------------------ec analysis-------------------------------------------------------
