@@ -1100,14 +1100,14 @@ def summary():
             - **Strong adaptability and probiotic potential**  
             """)
        
-    with st.expander("Which are the dominant BRITE classes and subclasses of the pathways associated with each EC number and what do they mean?"):
+        with st.expander("Which are the dominant BRITE classes and subclasses of the pathways associated with each EC number and what do they mean?"):
         dict=brite()
-        for isolate, values in dict["EC"].items():
-            with st.expander(isolate):
-                st.markdown("**Top 5 BRITE Classes:**")
-                st.write(values["top_5_brite_class"])
-                st.markdown("**Top 5 BRITE Sub-classes:**")
-                st.write(values["top_5_brite_subclass"])
+           for isolate, values in dict["EC"].items():
+               with st.expander(isolate):
+                    st.markdown("**Top 5 BRITE Classes:**")
+                    st.write(values["top_5_brite_class"])
+                    st.markdown("**Top 5 BRITE Sub-classes:**")
+                    st.write(values["top_5_brite_subclass"])
         with st.expander("Overall Summary"):
             st.markdown("""
             **Overall Probiotic Functional Pattern**  
