@@ -1522,9 +1522,9 @@ def summary():
                - Demonstrates strong amino acid and nucleotide biosynthesis, enhancing protein metabolism and growth stability.  
                - Possesses cell wall and fermentation pathways, ensuring survival, acidification ability, and probiotic persistence.  
     
-        ⭐ **Key Takeaway**  
-        - Collectively, these LAB strains display **robust metabolic versatility, structural integrity, and fermentation efficiency**
-        """)
+              ⭐ **Key Takeaway**  
+              - Collectively, these LAB strains display **robust metabolic versatility, structural integrity, and fermentation efficiency**
+              """)
       
     
     st.markdown("<h4 style='text-align:center;'>Biological Traits Analysis Summary</h4>", unsafe_allow_html=True)
