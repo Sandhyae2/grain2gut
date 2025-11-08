@@ -1101,7 +1101,7 @@ def summary():
             """)
        
         with st.expander("Which are the dominant BRITE classes and subclasses of the pathways associated with each EC number and what do they mean?"):
-        dict=brite()
+           dict=brite()
            for isolate, values in dict["EC"].items():
                with st.expander(isolate):
                     st.markdown("**Top 5 BRITE Classes:**")
