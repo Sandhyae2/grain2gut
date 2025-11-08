@@ -1503,7 +1503,7 @@ def summary():
             """)
 
    
-   with st.expander("Overall, how relevant are the predicted pathways in terms of probiotic/food appplications?"):
+        with st.expander("Overall, how relevant are the predicted pathways in terms of probiotic/food appplications?"):
          
             st.markdown("""
               **Overall Probiotic Functional Pattern**  
