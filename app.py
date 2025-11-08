@@ -1505,7 +1505,7 @@ def summary():
    
          with st.expander("Overall, how relevant are the predicted pathways in terms of probiotic/food appplications?"):
          
-              st.markdown("""
+            st.markdown("""
               **Overall Probiotic Functional Pattern**  
               - All millet-derived LAB strains exhibit complete and enriched pathways for energy metabolism, amino acid biosynthesis, and cell wall formation, reflecting strong probiotic potential.  
               - These pathways collectively indicate efficient fermentation ability, gut adaptability, and metabolic resilience** suitable for probiotic and food applications.  
