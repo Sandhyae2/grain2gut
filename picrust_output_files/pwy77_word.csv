@@ -1,63 +1,64 @@
 Pathway,trait
-ANAGLYCOLYSIS-PWY,Energy / fermentation efficiency
+ANAGLYCOLYSIS-PWY,Fermentation efficiency
 ARGSYNBSUB-PWY,Amino acid metabolism
-COA-PWY,Energy / fermentation efficiency
+COA-PWY,Fermentation efficiency
 DTDPRHAMSYN-PWY,Cell wall integrity
 GALACTUROCAT-PWY,Carbohydrate metabolism
 PEPTIDOGLYCANSYN-PWY,Cell wall integrity
 VALSYN-PWY,Amino acid metabolism
 PWY-6386,Cell wall integrity
 PWY-6387,Cell wall integrity
-PWY-6121,DNA repair / replication
-PWY-6123,DNA repair / replication
+PWY-6121,DNA replication
+PWY-6123,DNA replication
 PWY-5667,Membrane integrity
-PWY-5100,Energy / fermentation efficiency
-PWY-6609,DNA repair / replication
-PWY-7219,DNA repair / replication
+PWY-5100,Fermentation efficiency
+PWY-6609,DNA replication
+PWY-7219,DNA replication
 PWY-7242,Carbohydrate metabolism
 PWY0-1319,Membrane integrity
-PWY0-1298,DNA repair / replication
-PWY0-1297,DNA repair / replication
-PWY0-1296,DNA repair / replication
+PWY0-1298,DNA replication
+PWY0-1297,DNA replication
+PWY0-1296,DNA replication
 PWY0-1061,Amino acid metabolism
 UDPNAGSYN-PWY,Cell wall integrity
-P124-PWY,Energy / fermentation efficiency
+P124-PWY,Fermentation efficiency
 ANAEROFRUCAT-PWY,Lactic acid production
-GLYCOLYSIS,Energy / fermentation efficiency
-PWY-5484,Energy / fermentation efficiency
+GLYCOLYSIS,Fermentation efficiency
+PWY-5484,Fermentation efficiency
 OANTIGEN-PWY,Cell wall integrity
-PWY-5840,Energy / fermentation efficiency
+PWY-5840,Fermentation efficiency
 PWY-5910,Membrane integrity
 DAPLYSINESYN-PWY,Amino acid metabolism
 ARGSYN-PWY,Amino acid metabolism
-RIBOSYN2-PWY,Energy / fermentation efficiency
+RIBOSYN2-PWY,Fermentation efficiency
 ARO-PWY,Amino acid metabolism
-PWY-7229,DNA repair / replication
+PWY-7229,DNA replication
 PWY-6471,Cell wall integrity
-PWY-6126,DNA repair / replication
+PWY-6126,DNA replication
 PWY-922,Membrane integrity
-PWY-5837,Energy / fermentation efficiency
+PWY-5837,Fermentation efficiency
 PWY-5097,Amino acid metabolism
-PWY-7234,DNA repair / replication
+PWY-7234,DNA replication
 PWY4FS-8,Membrane integrity
 THRESYN-PWY,Amino acid metabolism
 PWY-6163,Amino acid metabolism
-PWY-5686,DNA repair / replication
+PWY-5686,DNA replication
 PWY-6317,Carbohydrate metabolism
 PWY4FS-7,Membrane integrity
-PWY-7199,DNA repair / replication
-PWY-7111,Energy / fermentation efficiency
+PWY-7199,DNA replication
+PWY-7111,Fermentation efficiency
 PWY0-1261,Cell wall integrity
-PWY-6122,DNA repair / replication
+PWY-6122,DNA replication
 PWY-5973,Membrane integrity
 PWY-621,Carbohydrate metabolism
-PWY-5897,Energy / fermentation efficiency
-PWY-5899,Energy / fermentation efficiency
-PWY-5898,Energy / fermentation efficiency
+PWY-5897,Fermentation efficiency
+PWY-5899,Fermentation efficiency
+PWY-5898,Fermentation efficiency
 NONOXIPENT-PWY,Carbohydrate metabolism
 FASYN-ELONG-PWY,Membrane integrity
 GLUTORN-PWY,Amino acid metabolism
-GLYCOGENSYNTH-PWY,Energy / fermentation efficiency
+GLYCOGENSYNTH-PWY,Fermentation efficiency
 POLYISOPRENSYN-PWY,Cell wall integrity
-P161-PWY,Energy / fermentation efficiency
-PWY-6277,Energy / fermentation efficiency
+P161-PWY,Fermentation efficiency
+PWY-6277,Fermentation efficiency
+
