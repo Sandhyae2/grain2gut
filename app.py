@@ -11,7 +11,7 @@ st.set_page_config(layout="wide",page_icon="🌾")
 st.markdown("""
 <style>
 .stApp {
-    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Flush-green-wheat&psig=AOvVaw2VheyOoCYGNVIUsepZLMlU&ust=1762698317735000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCMDdt6Hh4pADFQAAAAAdAAAAABAE');  
+    background-image: url('https://media.istockphoto.com/id/156593937/photo/wheat-field.jpg?s=612x612&w=0&k=20&c=J7CsfpGSpBy3yMn4ZEHLvFh7OqKLL0-FXKvL5TVlSRQ=');  
     background-size: cover;
     background-attachment: fixed;
 }
