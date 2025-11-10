@@ -150,6 +150,24 @@ def home():
         This contains all the processed dataframes created from the raw files and are used for further analysis.
         """)
     left_col, middle_col, right_col = st.columns([1, 1, 1])  # left & middle for extra buttons/spaces, right for Detailed Analysis
+    millet_data = {
+        "Millet Source": ["Proso", "Foxtail", "Little", "Little"],
+        "Strain": ['BM01', 'NM01', 'SM01', 'SM02'],
+        "Organism": [
+            "Enterococcus casseliflavus", 
+            "Weissella cibaria", 
+            "Weissella cibaria", 
+            "Lactococcus lactis"
+        ],
+        "NCBI ID": ['PP355677', 'PP355678', 'PP355679', 'PP355680'],
+        "NCBI Link": [
+            "https://www.ncbi.nlm.nih.gov/nuccore/PP355677.1/", 
+            "https://www.ncbi.nlm.nih.gov/nuccore/pp355678", 
+            "https://www.ncbi.nlm.nih.gov/nuccore/pp355679",
+            "https://www.ncbi.nlm.nih.gov/nuccore/pp355680"] 
+    }
+    millet_df = pd.DataFrame(millet_data)
+    left_col, right_col = st.columns([2, 2]) 
     with left_col:
         st.markdown("<h4 style='text-align:center;'>Millet Data</h4>", unsafe_allow_html=True)
         st.data_editor(
@@ -171,24 +189,7 @@ def home():
     with left_col:
         if st.button("Millet-wise Analysis"):
             go_to("milletwise_analysis")
-    millet_data = {
-        "Millet Source": ["Proso", "Foxtail", "Little", "Little"],
-        "Strain": ['BM01', 'NM01', 'SM01', 'SM02'],
-        "Organism": [
-            "Enterococcus casseliflavus", 
-            "Weissella cibaria", 
-            "Weissella cibaria", 
-            "Lactococcus lactis"
-        ],
-        "NCBI ID": ['PP355677', 'PP355678', 'PP355679', 'PP355680'],
-        "NCBI Link": [
-            "https://www.ncbi.nlm.nih.gov/nuccore/PP355677.1/", 
-            "https://www.ncbi.nlm.nih.gov/nuccore/pp355678", 
-            "https://www.ncbi.nlm.nih.gov/nuccore/pp355679",
-            "https://www.ncbi.nlm.nih.gov/nuccore/pp355680"] 
-    }
-    millet_df = pd.DataFrame(millet_data)
-    left_col, right_col = st.columns([2, 2]) 
+    
    
  # -------------------------------------------------- Meta Data ---------------------------------------------------------------------------
     with right_col:
