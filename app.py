@@ -193,7 +193,7 @@ def home():
            
 
 # ------------------------------------------------Millet-wise Analysis---------------------------------------------------------------
-   with middle_col:
+    with middle_col:
         with st.container(border=True):
             if st.button("Summarized Analysis", use_container_width=True):
                 go_to("summarized_analysis")
