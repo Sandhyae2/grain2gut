@@ -184,7 +184,7 @@ def home():
     st.markdown("<h4 style='text-align:center; margin-top:30px;'>Analysis Options</h4>", unsafe_allow_html=True)
     left_col, middle_col, right_col = st.columns([1, 1, 1]) 
 # -------------------------------------------------Summarized Analysis-------------------------------------------------------------
-    
+    desc_style = "background-color:#f8f9fa; padding:8px; border-radius:8px; text-align:center; font-size:14px; color:#555;"
     with left_col:
         if st.button("Millet-wise Analysis", use_container_width=True):
             go_to("milletwise_analysis")
