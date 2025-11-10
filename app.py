@@ -202,8 +202,9 @@ def home():
  # -------------------------------------------------- Meta Data ---------------------------------------------------------------------------
     with right_col:
         # Detailed Analysis heading
-        st.markdown("<h4 style='text-align:center; margin-bottom:20px;'>Meta Data</h4>", unsafe_allow_html=True)
+        
         with st.container(border=True):
+            st.markdown("<h4 style='text-align:center; margin-bottom:20px;'>Meta Data</h4>", unsafe_allow_html=True)
             st.write("Processed dataframes created from raw files for further analysis.")
             # Center buttons below the heading
             for label, page_key in [("EC Analysis", "ec_analysis"), ("KO Analysis", "ko_analysis"), ("Pathway Analysis", "pwy_analysis")]:
