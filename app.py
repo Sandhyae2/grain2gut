@@ -152,11 +152,11 @@ def home():
     left_col, middle_col, right_col = st.columns([1, 1, 1])  # left & middle for extra buttons/spaces, right for Detailed Analysis
     
 # -------------------------------------------------Summarized Analysis-------------------------------------------------------------
-    with left_col:
+    with middle_col:
         if st.button("Summarized Analysis"):
             go_to("summarized_analysis")
     # ------------------------------------------------Millet-wise Analysis---------------------------------------------------------------
-    with middle_col:
+    with left_col:
         if st.button("Millet-wise Analysis"):
             go_to("milletwise_analysis")
    
