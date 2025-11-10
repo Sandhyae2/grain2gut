@@ -186,9 +186,10 @@ def home():
 # -------------------------------------------------Summarized Analysis-------------------------------------------------------------
     with left_col:
         with st.container(border=True):
-            st.write("Detailed analysis and functional comparison across millets.")
             if st.button("Millet-wise Analysis", use_container_width=True):
                 go_to("milletwise_analysis")
+            st.write("Detailed analysis and functional comparison across millets.")
+            
            
 
 # ------------------------------------------------Millet-wise Analysis---------------------------------------------------------------
