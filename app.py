@@ -185,14 +185,10 @@ def home():
     left_col, middle_col, right_col = st.columns([1, 1, 1]) 
 # -------------------------------------------------Summarized Analysis-------------------------------------------------------------
     with left_col:
-        if st.button("Millet-wise Analysis"):
-            go_to("milletwise_analysis")
-        st.markdown(
-            "<p style='text-align:center; font-size:14px; color:gray;'>"
-            "Detailed analysis and functional comparison across millets."
-            "</p>", 
-            unsafe_allow_html=True
-        )
+        with st.container(border=True):
+            if st.button("Millet-wise Analysis", use_container_width=True):
+                go_to("milletwise_analysis")
+            st.write("Detailed analysis and functional comparison across millets.")
 
 # ------------------------------------------------Millet-wise Analysis---------------------------------------------------------------
     with middle_col:
