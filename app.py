@@ -149,7 +149,7 @@ def home():
         st.markdown("""
         This contains all the processed dataframes created from the raw files and are used for further analysis.
         """)
-    left_col, middle_col, right_col = st.columns([1, 1, 1])  # left & middle for extra buttons/spaces, right for Detailed Analysis
+    # left & middle for extra buttons/spaces, right for Detailed Analysis
     millet_data = {
         "Millet Source": ["Proso", "Foxtail", "Little", "Little"],
         "Strain": ['BM01', 'NM01', 'SM01', 'SM02'],
@@ -180,16 +180,15 @@ def home():
         hide_index=True,
         use_container_width=True
     )
+     left_col, middle_col, right_col = st.columns([1, 1, 1]) 
 # -------------------------------------------------Summarized Analysis-------------------------------------------------------------
     with left_col:
         if st.button("Millet-wise Analysis"):
             go_to("milletwise_analysis")
+# ------------------------------------------------Millet-wise Analysis---------------------------------------------------------------
     with middle_col:
         if st.button("Summarized Analysis"):
             go_to("summarized_analysis")
-    # ------------------------------------------------Millet-wise Analysis---------------------------------------------------------------
-   
-    
    
  # -------------------------------------------------- Meta Data ---------------------------------------------------------------------------
     with right_col:
