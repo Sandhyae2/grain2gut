@@ -184,11 +184,11 @@ def home():
     st.markdown("<h4 style='text-align:center; margin-top:30px;'>Analysis Options</h4>", unsafe_allow_html=True)
     left_col, middle_col, right_col = st.columns([1, 1, 1]) 
 # -------------------------------------------------Summarized Analysis-------------------------------------------------------------
-    desc_style = "background-color:#f8f9fa; padding:8px; border-radius:8px; text-align:center; font-size:14px; color:#555;"
     with left_col:
         if st.button("Millet-wise Analysis", use_container_width=True):
             go_to("milletwise_analysis")
-        st.markdown(f"<div style='{desc_style}'>Detailed analysis and functional comparison across millets.</div>", unsafe_allow_html=True)
+        with st.expander("About this"):
+            st.write("Detailed analysis and functional comparison across millets.")
 
 # ------------------------------------------------Millet-wise Analysis---------------------------------------------------------------
     with middle_col:
