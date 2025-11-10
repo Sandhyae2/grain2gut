@@ -150,7 +150,19 @@ def home():
         This contains all the processed dataframes created from the raw files and are used for further analysis.
         """)
     left_col, middle_col, right_col = st.columns([1, 1, 1])  # left & middle for extra buttons/spaces, right for Detailed Analysis
-    
+    with left_col:
+        st.markdown("<h4 style='text-align:center;'>Millet Data</h4>", unsafe_allow_html=True)
+        st.data_editor(
+            millet_df,
+            column_config={
+                "NCBI Link": st.column_config.LinkColumn(
+                    "NCBI Link",
+                    display_text="NCBI Link" 
+                ),
+            },
+            hide_index=True,
+            use_container_width=True
+        )
 # -------------------------------------------------Summarized Analysis-------------------------------------------------------------
     with middle_col:
         if st.button("Summarized Analysis"):
@@ -177,19 +189,7 @@ def home():
     }
     millet_df = pd.DataFrame(millet_data)
     left_col, right_col = st.columns([2, 2]) 
-    with left_col:
-        st.markdown("<h4 style='text-align:center;'>Millet Data</h4>", unsafe_allow_html=True)
-        st.data_editor(
-            millet_df,
-            column_config={
-                "NCBI Link": st.column_config.LinkColumn(
-                    "NCBI Link",
-                    display_text="NCBI Link" 
-                ),
-            },
-            hide_index=True,
-            use_container_width=True
-        )
+   
  # -------------------------------------------------- Meta Data ---------------------------------------------------------------------------
     with right_col:
         # Detailed Analysis heading
