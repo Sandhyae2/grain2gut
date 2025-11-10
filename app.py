@@ -180,7 +180,7 @@ def home():
         hide_index=True,
         use_container_width=True
     )
-     left_col, middle_col, right_col = st.columns([1, 1, 1]) 
+    left_col, middle_col, right_col = st.columns([1, 1, 1]) 
 # -------------------------------------------------Summarized Analysis-------------------------------------------------------------
     with left_col:
         if st.button("Millet-wise Analysis"):
