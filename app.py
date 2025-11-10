@@ -184,7 +184,7 @@ def home():
     st.markdown("<h4 style='text-align:center; margin-top:30px;'>Analysis Options</h4>", unsafe_allow_html=True)
     left_col, middle_col, right_col = st.columns([1, 1, 1]) 
 # -------------------------------------------------Summarized Analysis-------------------------------------------------------------
-   with left_col:
+    with left_col:
         with st.container(border=True):
             st.write("Detailed analysis and functional comparison across millets.")
             if st.button("Millet-wise Analysis", use_container_width=True):
