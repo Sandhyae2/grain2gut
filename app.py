@@ -167,28 +167,28 @@ def home():
             "https://www.ncbi.nlm.nih.gov/nuccore/pp355680"] 
     }
     millet_df = pd.DataFrame(millet_data)
-    left_col, right_col = st.columns([2, 2]) 
-    with left_col:
-        st.markdown("<h4 style='text-align:center;'>Millet Data</h4>", unsafe_allow_html=True)
-        st.data_editor(
-            millet_df,
-            column_config={
-                "NCBI Link": st.column_config.LinkColumn(
-                    "NCBI Link",
-                    display_text="NCBI Link" 
-                ),
-            },
-            hide_index=True,
-            use_container_width=True
-        )
+    
+    st.markdown("<h4 style='text-align:center;'>Millet Data</h4>", unsafe_allow_html=True)
+    st.data_editor(
+        millet_df,
+        column_config={
+            "NCBI Link": st.column_config.LinkColumn(
+                "NCBI Link",
+                display_text="NCBI Link" 
+            ),
+        },
+        hide_index=True,
+        use_container_width=True
+    )
 # -------------------------------------------------Summarized Analysis-------------------------------------------------------------
+    with left_col:
+        if st.button("Millet-wise Analysis"):
+            go_to("milletwise_analysis")
     with middle_col:
         if st.button("Summarized Analysis"):
             go_to("summarized_analysis")
     # ------------------------------------------------Millet-wise Analysis---------------------------------------------------------------
-    with left_col:
-        if st.button("Millet-wise Analysis"):
-            go_to("milletwise_analysis")
+   
     
    
  # -------------------------------------------------- Meta Data ---------------------------------------------------------------------------
