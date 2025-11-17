@@ -294,7 +294,7 @@ def ec_page():
     
     # Load EC dataframe
     try:
-        df = pd.read_csv(f"picrust_processed_output_files/ec{suffix}.csv")
+        df = pd.read_csv(f"picrust_output_files/ec{suffix}.csv")
     except FileNotFoundError:
         st.error(f"File ec{suffix}.csv not found.")
         return
