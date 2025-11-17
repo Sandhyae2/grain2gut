@@ -11,7 +11,7 @@ st.set_page_config(layout="wide",page_icon="🌾")
 st.markdown("""
 <style>
 .stApp {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7hquk1fhuj9H6Mddv3TIJSOe9eMPNlvU7qQ&s');
+    background-image: url('https://media.istockphoto.com/id/849782900/photo/a-close-up-of-green-wheat-growing-in-a-field-swaffham-prior-cambridgeshire-england-uk.jpg?s=612x612&w=0&k=20&c=vghE7Bza3RQMLkFin32CJ02kbAGoVdWDu9MarkMrYVc=');
     background-attachment: fixed;
 }
 .block-container {
