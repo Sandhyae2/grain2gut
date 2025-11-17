@@ -301,7 +301,7 @@ def ec_page():
 
     # Load textual interpretation CSV
     try:
-        text_df = pd.read_csv(f"picrust_processed_output_files/ec{suffix}_text.csv", encoding='ISO-8859-1')  # columns: ec_number, description
+        text_df = pd.read_csv(f"picrust_output_files/ec{suffix}_text.csv", encoding='ISO-8859-1')  # columns: ec_number, description
     except FileNotFoundError:
         st.error(f"Text file ec{suffix}_text.csv not found.")
         return
@@ -404,13 +404,13 @@ def ko_page():
     suffix = millet_map[selected_strain]
     # Load KO DataFrame
     try:
-        df = pd.read_csv(f"picrust_processed_output_files/ko{suffix}.csv")
+        df = pd.read_csv(f"picrust_output_files/ko{suffix}.csv")
     except FileNotFoundError:
         st.error(f"File ko{suffix}.csv not found.")
         return
     # Load textual interpretation CSV
     try:
-        text_df = pd.read_csv(f"picrust_processed_output_files/ko{suffix}_text.csv", encoding='ISO-8859-1')  # columns: ko_number, description
+        text_df = pd.read_csv(f"picrust_output_files/ko{suffix}_text.csv", encoding='ISO-8859-1')  # columns: ko_number, description
     except FileNotFoundError:
         st.error(f"Text file ko{suffix}_text.csv not found.")
         return
@@ -499,13 +499,13 @@ def pwy_page():
     suffix = millet_map[selected_strain]
     # Load Pathway DataFrame
     try:
-        df = pd.read_csv(f"picrust_processed_output_files/pwy_{suffix}.csv")
+        df = pd.read_csv(f"picrust_output_files/pwy_{suffix}.csv")
     except FileNotFoundError:
         st.error(f"File pwy_{suffix}.csv not found.")
         return
     # Load textual interpretation CSV
     try:
-        text_df = pd.read_csv(f"picrust_processed_output_files/pwy{suffix}_text.csv")  # columns: pathway_id, description
+        text_df = pd.read_csv(f"picrust_output_files/pwy{suffix}_text.csv")  # columns: pathway_id, description
     except FileNotFoundError:
         st.error(f"Text file pwy{suffix}_text.csv not found.")
         return
