@@ -122,121 +122,121 @@ def footer():
 # ------------------------------------------------------------ Home Page -----------------------------------------------------------------------
 def home():
     st.markdown("<h2 style='text-align:center;'>GraintoGut</h2>", unsafe_allow_html=True)
-    st.markdown("<h4 style='text-align:center;'><i>Linking genomic potential of Millet derived Lactic Acid Bacteria to food and probiotic applications</i></h4>", unsafe_allow_html=True)
+    st.markdown("<h4 style='text-align:center;  font-style:italic;'><i>Linking genomic potential of Millet derived Lactic Acid Bacteria to food and probiotic applications</i></h4>", unsafe_allow_html=True)
     st.write("") 
   
  # ----------------------------------- Sidebar with Project Description ------------------------------------------------------------------------
    # "Back to Home" button at the top of the sidebar
     
-    with st.sidebar.expander("About This App", expanded=False):
-        st.markdown("""
-        1. This app is based on a research paper by our guide, where lactic acid bacteria (LAB) were isolated and characterized from millets([research paper link](https://github.com/Sandhyae2/grain2gut/blob/main/Isolation_%26_characterization_of_biological_traits_of_millet-derived_lactic_acid_bacteria.pdf)).
-        2. Among the isolates, four LAB strains showed probiotic characteristics, and their 16S rRNA partial sequences were submitted to NCBI.
-        3. These sequences have been used for functional prediction using PICRUSt (Phylogenetic Investigation of Communities by Reconstruction of Unobserved States).
-        4. The raw PICRUSt outputs were processed to obtain KO (KEGG Orthology), EC (Enzyme Commission), and PWY (Pathway) dataframes.
-        5. Each dataframe was independently linked to reference information from databases.
-        6. These dataframes are present in the **Meta Data** section and are used for further analysis.
-        """)
-    with st.sidebar.expander("Summarized Analysis", expanded=False):
-        st.markdown("""
-        This contains the overall summary of our results.
-        """)
-    with st.sidebar.expander("Millet-wise Analysis", expanded=False):
-        st.markdown("""
-        This contains the detailed analysis and functional comparison across millets.
-        """)
-    with st.sidebar.expander("Meta Data", expanded=False):
-        st.markdown("""
-        This contains all the processed dataframes created from the raw files and are used for further analysis.
-        """)
-    with st.expander("About This App", expanded=False):
-        st.markdown("""
-        1. This app is based on a research paper by our guide, where lactic acid bacteria (LAB) were isolated and characterized from millets([research paper link](https://github.com/Sandhyae2/grain2gut/blob/main/Isolation_%26_characterization_of_biological_traits_of_millet-derived_lactic_acid_bacteria.pdf)).
-        2. Among the isolates, four LAB strains showed probiotic characteristics, and their 16S rRNA partial sequences were submitted to NCBI.
-        3. These sequences have been used for functional prediction using PICRUSt (Phylogenetic Investigation of Communities by Reconstruction of Unobserved States).
-        4. The raw PICRUSt outputs were processed to obtain KO (KEGG Orthology), EC (Enzyme Commission), and PWY (Pathway) dataframes.
-        5. Each dataframe was independently linked to reference information from databases.
-        6. These dataframes are present in the **Meta Data** section and are used for further analysis.
-        """)
-    # left & middle for extra buttons/spaces, right for Detailed Analysis
-    millet_data = {
-        "Millet Source": ["Proso", "Foxtail", "Little", "Little"],
-        "Strain": ['BM01', 'NM01', 'SM01', 'SM02'],
-        "Organism": [
-            "Enterococcus casseliflavus", 
-            "Weissella cibaria", 
-            "Weissella cibaria", 
-            "Lactococcus lactis"
-        ],
-        "NCBI ID": ['PP355677', 'PP355678', 'PP355679', 'PP355680'],
-        "NCBI Link": [
-            "https://www.ncbi.nlm.nih.gov/nuccore/PP355677.1/", 
-            "https://www.ncbi.nlm.nih.gov/nuccore/pp355678", 
-            "https://www.ncbi.nlm.nih.gov/nuccore/pp355679",
-            "https://www.ncbi.nlm.nih.gov/nuccore/pp355680"] 
-    }
-    millet_df = pd.DataFrame(millet_data)
+    # ====== PAGE LAYOUT ======
+    left_col, middle_col, right_col = st.columns([1,2,3])
     
-    st.markdown("<h4 style='text-align:center;'>Millet Data</h4>", unsafe_allow_html=True)
-    st.data_editor(
-        millet_df,
-        column_config={
-            "NCBI Link": st.column_config.LinkColumn(
-                "NCBI Link",
-                display_text="NCBI Link" 
-            ),
-        },
-        hide_index=True,
-        use_container_width=True
-    )
-    # ------------------------------------ Navigation Buttons ------------------------------------
-    st.markdown("<h4 style='text-align:center; margin-top:30px;'>Analysis Options</h4>", unsafe_allow_html=True)
-    left_col, middle_col, right_col = st.columns([1, 1, 1]) 
-# -------------------------------------------------Summarized Analysis-------------------------------------------------------------
+    # ================================
+    # LEFT COLUMN
+    # ================================
     with left_col:
-        with st.container(border=True):
-            if st.button("Millet-wise Analysis", use_container_width=True):
-                go_to("milletwise_analysis")
-            st.write("Detailed analysis and functional comparison across millets.")
-            
-           
-
-# ------------------------------------------------Millet-wise Analysis---------------------------------------------------------------
-    with middle_col:
-        with st.container(border=True):
-            if st.button("Summarized Analysis", use_container_width=True):
-                go_to("summarized_analysis")
-            st.write("Overall summary of the results.")
-   
- # -------------------------------------------------- Meta Data ---------------------------------------------------------------------------
-    with right_col:
-        # Detailed Analysis heading
+        # ===== Expander: About this App ===== 
+        with st.sidebar.expander("About This App", expanded=False):
+            st.markdown("""
+            1. This app is based on a research paper on lactic acid bacteria (LAB) isolated from millets  
+            (<a href="https://github.com/VarshaS-37/Grain2Gut/blob/main/Isolation_%26_characterization_of_biological_traits_of_millet-derived_lactic_acid_bacteria.pdf" target="_blank">Research Paper</a>)  
+            2. Four LAB strains showed probiotic potential, and their 16S rRNA sequences were submitted to NCBI.  
+            3. These sequences were analyzed using PICRUSt for functional prediction.  
+            4. Outputs were processed into **KO**, **EC**, and **PWY** datasets linked to reference databases.
+            """, unsafe_allow_html=True)
+          # ===== Expander: Millet Data Overview =====
+        with st.expander("Millet Data Overview", expanded=False):
+            millet_data = {
+                "Millet Source": ["Proso", "Foxtail", "Little", "Little"],
+                "Strain": ['BM01', 'NM01', 'SM01', 'SM02'],
+                "Organism": [
+                    "Enterococcus casseliflavus",
+                    "Weissella cibaria",
+                    "Weissella cibaria",
+                    "Lactococcus lactis"
+                ],
+                "NCBI ID": ['PP355677', 'PP355678', 'PP355679', 'PP355680'],
+                "NCBI Link": [
+                    "https://www.ncbi.nlm.nih.gov/nuccore/PP355677.1/",
+                    "https://www.ncbi.nlm.nih.gov/nuccore/pp355678",
+                    "https://www.ncbi.nlm.nih.gov/nuccore/pp355679",
+                    "https://www.ncbi.nlm.nih.gov/nuccore/pp355680"
+                ]
+            }
+            millet_df = pd.DataFrame(millet_data) 
         
+            st.data_editor(
+                millet_df,
+                column_config={
+                    "NCBI Link": st.column_config.LinkColumn("NCBI Link", display_text="NCBI Link"),
+                },
+                hide_index=True,
+                use_container_width=True
+            )
+     # ================================
+    # RIGHT COLUMN
+    # ================================
+    with middle_col:
+        # ===== Row 1: Analysis Section =====
         with st.container(border=True):
-            st.markdown("<h4 style='text-align:center; margin-bottom:20px;'>Meta Data</h4>", unsafe_allow_html=True)
-            st.write("Processed dataframes created from raw files for further analysis.")
-            # Center buttons below the heading
-            for label, page_key in [("EC Analysis", "ec_analysis"), ("KO Analysis", "ko_analysis"), ("Pathway Analysis", "pwy_analysis")]:
-                col1, col2, col3 = st.columns([1, 2, 1])  # middle column holds the button
-                with col2:
-                    if st.button(label, key=label):
-                        go_to(page_key)
-    footer()
- # -------------------------------------------------- Millet Data Mapping -------------------------------------------------------------------
+            st.markdown("<h4 style='text-align:center;'>Analysis</h4>", unsafe_allow_html=True)
+            col1, col2 = st.columns(2)
+    
+            with col1:
+                with st.container(border=True):
+                    if st.button("Millet-wise Analysis", use_container_width=True):
+                        go_to("milletwise_analysis")
+                    st.write("Detailed comparison of functions across millet strains.")
+    
+            with col2:
+                with st.container(border=True):
+                    if st.button("Inference", use_container_width=True):
+                        go_to("summarized_analysis")
+                    st.write("Summarized overall interpretation of results.")
+    
+        st.markdown(" ")
+    with right_col:
+        # ===== Row 2: Functional Prediction Section =====
+        with st.container(border=True):
+            st.markdown("<h4 style='text-align:center;'>Functional Prediction</h4>", unsafe_allow_html=True)
+            ec_col, ko_col, pwy_col = st.columns(3)
+    
+            with ec_col:
+                with st.container(border=True):
+                    if st.button("Predicted ECs", use_container_width=True):
+                        go_to("ec_analysis")
+                    st.write("Explore enzyme-level functions based on EC numbers.")
+    
+            with ko_col:
+                with st.container(border=True):
+                    if st.button("Predicted KOs", use_container_width=True):
+                        go_to("ko_analysis")
+                    st.write("Explore gene functions using KEGG Orthology mappings.")
+    
+            with pwy_col:
+                with st.container(border=True):
+                    if st.button("Predicted Pathways", use_container_width=True):
+                        go_to("pwy_analysis")
+                    st.write("Explore metabolic and biologically associated pathways.")
+
+    # ===== FOOTER =====
+    footer()     
+# -------------------------------------------------- Millet Data Mapping -------------------------------------------------------------------
 millet_map = {
     "Enterococcus casseliflavus (Proso Millet)": "77",
     "Weisella cibaria NM01 (Foxtail Millet)": "78",
     "Weisella cibaria SM01 (Little Millet)": "79",
     "Lactococcus lactis (Little Millet)": "80"
  }
+    
  # ---------------------------------------------------- EC Analysis ------------------------------------------------------------------------------
 def ec_page():
     st.markdown("<h3 style='text-align:center;'>EC Analysis</h3>", unsafe_allow_html=True)
- # ------------------------------------------ Sidebar with instructions -----------------------------------------------------
+     # ------------------------------------------ Sidebar with instructions -----------------------------------------------------
     with st.sidebar:
-        if st.button("Back to Home"):
+        if st.button("Back to Homepage 🏠"):
             go_to("home")  # Your navigation function
-    with st.sidebar.expander("How to Use this Page", expanded=False):
+        with st.sidebar.expander("How to Use this Page", expanded=False):
             st.markdown("""
             **Instructions:**
             1. Select the millet LAB from the dropdown at the top.
@@ -245,15 +245,15 @@ def ec_page():
             4. The right column will show the textual interpretation for the selected EC number.
             5. Use the **"Back to Home"** button at the bottom to return to the home page.
             """)
-    with st.sidebar.expander("What is an EC Number?", expanded=False):
+        with st.sidebar.expander("What is an EC Number?", expanded=False):
             st.markdown("""
             **EC (Enzyme Commission) numbers** are a numerical classification scheme for enzymes, 
             based on the chemical reactions they catalyze.  
             - Each EC number consists of four numbers separated by periods (e.g., `2.7.1.1`).  
-            - The first number represents the main enzyme class (7 major classes: Oxidoreductases, Transferases, Hydrolases, Lyases, Isomerases, Ligases, Tanslocases).  
+            - The first number represents the main enzyme class (6 major classes: Oxidoreductases, Transferases, Hydrolases, Lyases, Isomerases, Ligases).  
             - The subsequent numbers give more specific subclass, sub-subclass, and the serial number of the enzyme.  
             """)
-    with st.sidebar.expander("Why is it relevant?", expanded=False):
+        with st.sidebar.expander("Why is it relevant?", expanded=False):
             st.markdown("""
             EC numbers tell us **what each enzyme in a LAB can do**. 
             
@@ -264,23 +264,23 @@ def ec_page():
             
             So EC numbers help in **connecting the functional predictions from PICRUSt to real biological activities**.
             """)
-    with st.sidebar.expander("What is in the EC Dataframe?", expanded=False):
+        with st.sidebar.expander("What is in the EC Dataframe?", expanded=False):
             st.markdown("""
-            1. Only EC numbers with abundance greater than 2 are considered.
+            1. Only EC numbers with abundance greater than 1 are considered.
             2. Here's what each column means:
             - **ec_number**: The Enzyme Commission (EC) number classifying the enzyme's activity.
             - **ec_abundance**: How many times this enzyme is predicted to be present in the strain.
             - **ec_function**: Description of the enzyme's function.
-            - **ec_class**: The main EC class (number 1–7) the enzyme belongs to.
-            - **ec_class_name**: The name of the EC class (e.g., Oxidoreductase, Hydrolases).
+            - **ec_class**: The main EC class (number 1–6) the enzyme belongs to.
+            - **ec_class_name**: The name of the EC class (e.g., Transferases, Hydrolases).
             - **ko_ids**: KEGG Orthology IDs linked to this enzyme.
             - **ko_functions**: Descriptions of the KO functions linked to this enzyme.
             - **pathway_ids**: KEGG pathway IDs associated with this enzyme.
-            - **pathway_names**: Names of the KEGG pathways this enzyme involved in.
+            - **pathway_names**: Names of the KEGG pathways this enzyme participates in.
             - **brite_subclass**: KEGG BRITE hierarchy subclass for this enzyme.
             - **brite_class**: KEGG BRITE hierarchy main class for this enzyme.
         """)
- #--------------------------------------------------------Select LAB----------------------------------------------------------------------
+    #--------------------------------------------------------Select LAB----------------------------------------------------------------------
     col1, col2, col3 = st.columns([3, 3, 3])
     with col2:
         st.markdown("<h4 style='text-align:center;'>Select the Millet LAB</h4>", unsafe_allow_html=True)
@@ -294,23 +294,23 @@ def ec_page():
     
     # Load EC dataframe
     try:
-        df = pd.read_csv(f"picrust_output_files/ec{suffix}.csv")
+        df = pd.read_csv(f"picrust_processed_output_files/ec{suffix}.csv")
     except FileNotFoundError:
         st.error(f"File ec{suffix}.csv not found.")
         return
 
     # Load textual interpretation CSV
     try:
-        text_df = pd.read_csv(f"picrust_output_files/ec{suffix}_text.csv", encoding='ISO-8859-1')  # columns: ec_number, description
+        text_df = pd.read_csv(f"picrust_processed_output_files/ec{suffix}_text.csv", encoding='ISO-8859-1')  # columns: ec_number, description
     except FileNotFoundError:
         st.error(f"Text file ec{suffix}_text.csv not found.")
         return
     st.write("")  # spacing
 
- # ----------------------------------------------- Side-by-Side Columns ---------------------------------------------------------------------------
+    # ----------------------------------------------- Side-by-Side Columns ---------------------------------------------------------------------------
     left_col, right_col = st.columns([1, 2])  # left smaller, right bigger
 
- # ----------------------------------- Left Column: EC number dropdown + Full EC DataFrame ----------------------------------------------------
+    # ----------------------------------- Left Column: EC number dropdown + Full EC DataFrame ----------------------------------------------------
     with left_col:
         st.markdown("<h4 style='text-align:center;'>Select a EC Number</h4>", unsafe_allow_html=True)
         if 'ec_number' in df.columns:
@@ -321,7 +321,7 @@ def ec_page():
         st.markdown("<h4 style='text-align:center;'>EC DataFrame</h4>", unsafe_allow_html=True)
         st.dataframe(df, use_container_width=True)
 
-  # -------------------------------------------- Right Column: Textual Interpretation -------------------------------------------------------
+    # -------------------------------------------- Right Column: Textual Interpretation -------------------------------------------------------
     with right_col:
         st.markdown("<h4 style='text-align:center;'>Interpretation</h4>", unsafe_allow_html=True)
         if selected_ec:
@@ -341,14 +341,12 @@ def ec_page():
                         st.markdown(f"<p style='font-size:16px;'>{part}</p>", unsafe_allow_html=True)
             else:
                 st.warning("No textual description found for this EC number.")
-
-    st.write("")  # spacing
 # --------------------------------------------------- KO Page: Side-by-Side + Sidebar -------------------------------------------------------------
 def ko_page():
     st.markdown("<h3 style='text-align:center;'>KO Analysis</h3>", unsafe_allow_html=True)
-# ------------------------------------- Sidebar with instructions ----------------------------------------------------------------------
+    # ------------------------------------- Sidebar with instructions ----------------------------------------------------------------------
     with st.sidebar:
-        if st.button("Back to Home"):
+        if st.button("Back to Homepage 🏠"):
             go_to("home")  # Your navigation function
         with st.sidebar.expander("How to Use this Page", expanded=False):
             st.markdown("""
@@ -365,7 +363,6 @@ def ko_page():
             **KO (KEGG Orthology) IDs** represent groups of genes/proteins that have the **same functional role** in different organisms.  
             - Each KO ID corresponds to a specific **orthologous gene** in the KEGG database.  
             - KOs help in linking **genes to metabolic pathways** and **enzyme functions**.  
-            
             """)
         with st.sidebar.expander("Why is it relevant?", expanded=False):
             st.markdown("""
@@ -380,7 +377,7 @@ def ko_page():
             """)
         with st.sidebar.expander("What is in the KO Dataframe?", expanded=False):
             st.markdown("""
-            1. Only KO ids with abundance greater than 3 are considered.
+            1. Only KO ids with abundance greater than 2 are considered.
             2. Here's what each column in the KO dataframe means:
             - **ko_id**: KEGG Orthology ID for a gene/protein with a specific function.
             - **ko_abundance**: Number of times this KO is predicted in the strain.
@@ -394,7 +391,7 @@ def ko_page():
             - **brite_class**: KEGG BRITE hierarchy main class for this KO.
             - **ec_abundance**: Abundance of the linked EC(s).
             """)
-# ------------------------------------------ Millet LAB Selection --------------------------------------------------------------------------
+    # ------------------------------------------ Millet LAB Selection --------------------------------------------------------------------------
     col1, col2, col3 = st.columns([3, 3, 3])
     with col2:
         st.markdown("<h4 style='text-align:center;'>Select the Millet LAB</h4>", unsafe_allow_html=True)
@@ -407,13 +404,13 @@ def ko_page():
     suffix = millet_map[selected_strain]
     # Load KO DataFrame
     try:
-        df = pd.read_csv(f"picrust_output_files/ko{suffix}.csv")
+        df = pd.read_csv(f"picrust_processed_output_files/ko{suffix}.csv")
     except FileNotFoundError:
         st.error(f"File ko{suffix}.csv not found.")
         return
     # Load textual interpretation CSV
     try:
-        text_df = pd.read_csv(f"picrust_output_files/ko{suffix}_text.csv", encoding='ISO-8859-1')  # columns: ko_number, description
+        text_df = pd.read_csv(f"picrust_processed_output_files/ko{suffix}_text.csv", encoding='ISO-8859-1')  # columns: ko_number, description
     except FileNotFoundError:
         st.error(f"Text file ko{suffix}_text.csv not found.")
         return
@@ -450,13 +447,13 @@ def ko_page():
                         st.markdown(f"<p style='font-size:16px;'>{part}</p>", unsafe_allow_html=True)
             else:
                 st.warning("No textual description found for this KO ID.")
-    st.write("")  # spacing
-    # --------------------------------------------------- Pathway Page: Side-by-Side + Sidebar ----------------------------------------------------------
+   
+# --------------------------------------------------- Pathway Page: Side-by-Side + Sidebar ----------------------------------------------------------
 def pwy_page():
     st.markdown("<h3 style='text-align:center;'>Pathway Analysis</h3>", unsafe_allow_html=True)
     # ---------------------------------------------------- Sidebar with instructions ------------------------------------------------------------------
     with st.sidebar:
-        if st.button("Back to Home"):
+        if st.button("Back to Homepage 🏠"):
             go_to("home")  # Your navigation function
         with st.sidebar.expander("How to Use this Page", expanded=False):
             st.markdown("""
@@ -481,7 +478,7 @@ def pwy_page():
             """)
         with st.sidebar.expander("What is in the Pathway Dataframe?", expanded=False):
             st.markdown("""
-            1. Only pathways with completeness greater than 0.8 are considered.
+            1. Only pathways with completeness greater than 0.79 are considered.
             2. Here's what each column in the dataframe means:
             - **Pathway**: Unique pathway ID in the database (e.g., `ANAGLYCOLYSIS-PWY`).  
             - **fam_total**: Total number of gene families expected in this pathway.  
@@ -502,13 +499,13 @@ def pwy_page():
     suffix = millet_map[selected_strain]
     # Load Pathway DataFrame
     try:
-        df = pd.read_csv(f"picrust_output_files/pwy_{suffix}.csv")
+        df = pd.read_csv(f"picrust_processed_output_files/pwy_{suffix}.csv")
     except FileNotFoundError:
         st.error(f"File pwy_{suffix}.csv not found.")
         return
     # Load textual interpretation CSV
     try:
-        text_df = pd.read_csv(f"picrust_output_files/pwy{suffix}_text.csv")  # columns: pathway_id, description
+        text_df = pd.read_csv(f"picrust_processed_output_files/pwy{suffix}_text.csv")  # columns: pathway_id, description
     except FileNotFoundError:
         st.error(f"Text file pwy{suffix}_text.csv not found.")
         return
@@ -545,46 +542,40 @@ def pwy_page():
                         st.markdown(f"<p style='font-size:16px;'>{part}</p>", unsafe_allow_html=True)
             else:
                 st.warning("No textual description found for this pathway.")
-    st.write("")  # spacing
-    #---------------------------------------------------millet analysis --------------------------------------------------------------------------
+    
+#---------------------------------------------------millet analysis --------------------------------------------------------------------------
 def millet():
     st.markdown("<h4 style='text-align:center;'>Millet-wise Analysis</h4>", unsafe_allow_html=True)
-    with st.sidebar:
-        if st.button("Back to Home"):
-            go_to("home") 
-        with st.sidebar.expander("Millet Data", expanded=False):
-            st.markdown("""
-            Contains data about the four millet derived LAB used and their NCBI links are provided.
-            """)
-        with st.sidebar.expander("EC class Distribution", expanded=False):
-            st.markdown("""Shows the distribution of EC numbers across the six major EC classes for each millet.""")
-        with st.sidebar.expander("Biological Trait Distribution", expanded=False):
+    if st.button("Back to Homepage 🏠"):
+        go_to("home") 
+    col1, col2,col3 = st.columns(3)
+    with col1:
+        with st.container(border=True):
+            cola,colb,colc=st.columns([0.5,2,0.5])
+            with colb:
+                if st.button("EC class Distribution"):
+                    go_to("ec_class")
+            st.write("""Shows the distribution of EC numbers across the six major EC classes for each millet.""")
+    with col2:
+        with st.container(border=True):
+            cola,colb,colc=st.columns([0.5,2,0.5])
+            with colb:
+                if st.button("Trait Distribution"):
+                    go_to("trait")
             st.markdown("""
             - Based on our understanding of all the data, we have assigned biological traits to each EC, KO, PWY.
             - Their distribution is plotted for each millet.
             """)
-        with st.sidebar.expander("Common & Unique Traits", expanded=False):
+    with col3:
+        with st.container(border=True):
+            cola,colb,colc=st.columns([0.5,2,0.5])
+            with colb:
+                if st.button("Common & Unique Traits"):
+                    go_to("couq")
             st.markdown("""
             - The assigned biological traits are compared across millets.
             - The common and unique traits across millets are plotted here.
             """)
-        
-    
-    with right_col:
-        st.markdown("<h4 style='text-align:center;'>Analysis</h4>", unsafe_allow_html=True)
-        col1, col2,= st.columns(2)
-        with col1:
-            if st.button("EC class Distribution"):
-                go_to("ec_class")
-        with col2:
-            if st.button("Trait Distribution"):
-                go_to("trait")        
-        col4,col5,col6 = st.columns(3)
-        with col5:
-            if st.button("Common & Unique Traits"):
-                go_to("couq")
-       
-    
 #--------------------------------------ec class------------------------------------------------------------------------------------------------
 def ec_class():
     with st.sidebar:
@@ -661,7 +652,7 @@ def ec_class():
         st.write(f"""
         - **Dominant EC classes:** {', '.join(class_counts['EC Class'].head(3).tolist())}
         """)
-#-----------------------------------------------------------brite class-------------------------------------------------------------------
+    #-----------------------------------------------------------brite class-------------------------------------------------------------------
 import glob
 import os
 
@@ -930,8 +921,7 @@ def couq():
     st.markdown(f"<h5 style='text-align:center;'>Traits Common to Exactly 2 Millets</h5>", unsafe_allow_html=True)
     st.dataframe(pd.DataFrame(common_2_rows))
 
-    
-#--------------------------------------------------------------Summary--------------------------------------------------------------------------
+    #--------------------------------------------------------------Summary--------------------------------------------------------------------------
 def summary():
     with st.sidebar:
         if st.button("Back to Home"):
@@ -1623,9 +1613,8 @@ def create_trait_table(millet_map, path=""):
     return trait_df
 def style_trait_table(df):
     return df.style.applymap(lambda x: 'background-color: #DFFBB9' if x == "Yes" else '')
-     
-
- # --------------------------------------------------------------------- Navigation ---------------------------------------------------------------------
+    
+# --------------------------------------------------------------------- Navigation ---------------------------------------------------------------------
 page = st.session_state.page
 if page == "home":
     home()
