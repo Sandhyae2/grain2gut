@@ -11,7 +11,7 @@ st.set_page_config(layout="wide",page_icon="🌾")
 st.markdown("""
 <style>
 .stApp {
-    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkpjOEjG3asuLPAywOPdUVAkaWM-L9IAn2ag&s');  
+    background-image: url('https://www.shutterstock.com/image-photo/wheat-on-white-background-crop-600nw-94180360.jpg');  
     background-size: cover;
     background-attachment: fixed;
 }
