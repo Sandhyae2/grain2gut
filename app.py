@@ -579,7 +579,7 @@ def millet():
 #--------------------------------------ec class------------------------------------------------------------------------------------------------
 def ec_class():
     with st.sidebar:
-        if st.button("Back to Home"):
+        if st.button("Back to Homepage  🏠"):
             go_to("home")
         if st.button("Back to Analysis Menu"):
             go_to("milletwise_analysis")    
@@ -737,7 +737,7 @@ def brite():
 def trait():
     st.markdown("<h4 style='text-align:center;'>Biological Trait Distribution</h4>", unsafe_allow_html=True)
     with st.sidebar:
-        if st.button("Back to Home"): 
+        if st.button("Back to Homepage 🏠"): 
             go_to("home") 
         if st.button("Back to Analysis Menu"):
             go_to("milletwise_analysis") 
@@ -797,7 +797,7 @@ def trait():
     #-------------------------------------------------common & unique-----------------------------------------------------------------------------
 def couq():
     with st.sidebar:
-        if st.button("Back to Home"): 
+        if st.button("Back to Homepage 🏠"): 
             go_to("home") 
         if st.button("Back to Analysis Menu"):
             go_to("milletwise_analysis") 
@@ -924,7 +924,7 @@ def couq():
     #--------------------------------------------------------------Summary--------------------------------------------------------------------------
 def summary():
     with st.sidebar:
-        if st.button("Back to Home"):
+        if st.button("Back to Homepage 🏠"):
             go_to("home") 
     st.markdown("<h3 style='text-align:center;'>Summary</h4>", unsafe_allow_html=True)
 
