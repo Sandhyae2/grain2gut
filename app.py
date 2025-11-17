@@ -11,7 +11,7 @@ st.set_page_config(layout="wide",page_icon="🌾")
 st.markdown("""
 <style>
 .stApp {
-    background-image: url('https://t4.ftcdn.net/jpg/00/52/71/67/360_F_52716794_MQc4vXzSeDtBQCNXYis4ULt01AzV6MiI.jpg');
+    background-image: url('https://www.shutterstock.com/image-photo/beautiful-landscape-rural-indian-green-260nw-2450675311.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
