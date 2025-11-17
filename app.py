@@ -11,7 +11,7 @@ st.set_page_config(layout="wide",page_icon="🌾")
 st.markdown("""
 <style>
 .stApp {
-    background-image: url('https://www.shutterstock.com/image-photo/wheat-on-white-background-crop-600nw-94180360.jpg');  
+    background-image: url('https://www.jiomart.com/images/product/original/rvijzrhmlk/green-world-hi-8759-pusa-tejas-wheat-seeds-10-kg-product-images-orvijzrhmlk-p595634646-0-202211261614.jpg?im=Resize=(420,420)');  
     background-size: cover;
     background-attachment: fixed;
 }
