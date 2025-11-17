@@ -12,6 +12,7 @@ st.markdown("""
 <style>
 .stApp {
     background-image: url('https://t4.ftcdn.net/jpg/00/52/71/67/360_F_52716794_MQc4vXzSeDtBQCNXYis4ULt01AzV6MiI.jpg');
+    background-size: cover;
     background-attachment: fixed;
 }
 .block-container {
