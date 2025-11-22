@@ -11,7 +11,7 @@ st.set_page_config(layout="wide",page_icon="🌾")
 st.markdown("""
 <style>
 .stApp {
-    background-image: url('https://www.shutterstock.com/image-photo/seeds-ripe-wheat-on-white-260nw-2282634727.jpg')
+    background-image: url('https://img.freepik.com/premium-photo/ripe-dried-wheat-spikelets-isolated-white-background_274234-4424.jpg')
     background-size: cover;
     background-attachment: fixed;
 }
