@@ -11,7 +11,7 @@ st.set_page_config(layout="wide",page_icon="🌾")
 st.markdown("""
 <style>
 .stApp {
-    background-image: url('https://img.freepik.com/premium-photo/ripe-dried-wheat-spikelets-isolated-white-background_274234-4424.jpg')
+    background-image: url('https://t3.ftcdn.net/jpg/09/61/24/02/360_F_961240255_F3ir5FchsBv7sdJe4sZ1fEFQst0d82vA.jpg')
     background-size: cover;
     background-attachment: fixed;
 }
