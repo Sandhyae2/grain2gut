@@ -138,7 +138,8 @@ def home():
         with st.expander("About This App", expanded=False):
             st.markdown("""
             1. This app is based on a research paper on lactic acid bacteria (LAB) isolated from millets  
-            (<a href="https://github.com/Sandhyae2/GraintoGut/blob/main/Isolation_%26_characterization_of_biological_traits_of_millet-derived_lactic_acid_bacteria.pdf")  
+            (<a href="https://github.com/Sandhyae2/GraintoGut/blob/main/Isolation_%26_characterization_of_biological_traits_of_millet-derived_lactic_acid_bacteria.pdf" target="_blank">Research Paper</a>)  
+            2. Four LAB strains showed probiotic potential, and their 16S rRNA sequences were submitted to NCBI.    
             2. Four LAB strains showed probiotic potential, and their 16S rRNA sequences were submitted to NCBI.  
             3. These sequences were analyzed using PICRUSt for functional prediction.  
             4. Outputs were processed into **KO**, **EC**, and **PWY** datasets linked to reference databases.
