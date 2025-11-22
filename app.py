@@ -591,7 +591,7 @@ def ec_class():
             4. **Lyases (EC 4):** Breaks bonds in molecules without water or oxidation.  
             5. **Isomerases (EC 5):** Rearranges molecules into different forms.  
             6. **Ligases (EC 6):** Joins two molecules together using energy.
-            7. **Translocase (EC 7) : ** Moves ions or molecules acorss membrane or within cells.
+            7. **Translocase (EC 7):** Moves ions or molecules acorss membrane or within cells.
             """)
     with st.sidebar.expander("How are they relevant?", expanded=False):
             st.markdown("""
@@ -603,7 +603,7 @@ def ec_class():
             4. **Lyases (EC 4):** Helps in forming flavor compounds and allowing flexible use of nutrients.  
             5. **Isomerases (EC 5):** Helps in changing sugars and amino acids into useful forms and making prebiotics.  
             6. **Ligases (EC 6):** Helps in bacterial growth and stability in foods.
-            7. ** Translocase (EC 7) :** Helps in transporting proteins and molecules across membranes.
+            7. ** Translocase (EC 7):** Helps in transporting proteins and molecules across membranes.
             """)
     col1, col2, col3 = st.columns([3, 3, 3])
     with col2:
@@ -840,6 +840,8 @@ def couq():
         So:
         - A **tall bar with all dots connected** = Many **core shared traits**
         - A **tall bar with only one dot** = Many **unique traits for that strain**
+        ### 3) Left Horizontal Bars (Side Panel)
+        The **bars on the left side of the plot** indicate the **total number of traits per millet strain**.
         
         """)
 
@@ -923,10 +925,10 @@ def couq():
 
     #--------------------------------------------------------------Summary--------------------------------------------------------------------------
 def summary():
-    with st.sidebar:
+        st.sidebar:
         if st.button("Back to Homepage 🏠"):
             go_to("home") 
-    st.markdown("<h3 style='text-align:center;'>Inference</h4>", unsafe_allow_html=True)
+        st.markdown("<h3 style='text-align:center;'>Inference</h4>", unsafe_allow_html=True)
 
 
   #---------------------------------ec analysis-------------------------------------------------------
