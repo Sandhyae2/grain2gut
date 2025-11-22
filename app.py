@@ -930,7 +930,7 @@ def summary():
 
 
   #---------------------------------ec analysis-------------------------------------------------------
-    st.markdown("<h4 style='text-align:center;'>EC Analysis Summary</h4>", unsafe_allow_html=True) 
+    st.markdown("<h4 style='text-align:center;'>Enzymes</h4>", unsafe_allow_html=True) 
     with st.expander("Which are the top abundant EC numbers and what do they imply? "):
         with st.expander("Enterococcus casseliflavus (Proso Millet)"):
             st.markdown("""
@@ -1186,7 +1186,7 @@ def summary():
 
 
 
-    st.markdown("<h4 style='text-align:center;'>KO Analysis Summary</h4>", unsafe_allow_html=True)
+    st.markdown("<h4 style='text-align:center;'>KEGG Orthologs</h4>", unsafe_allow_html=True)
     with st.expander("Which are the top abundant KO ids and what do they imply?"):
         with st.expander("Enterococcus casseliflavus (Proso Millet)"):
             st.markdown("""
@@ -1377,7 +1377,7 @@ def summary():
         - A reliable probiotic with sustained energy and nutrient metabolism, promoting digestive wellness and balanced gut flora.
         """)
 
-    st.markdown("<h4 style='text-align:center;'>PWY Analysis Summary</h4>", unsafe_allow_html=True) 
+    st.markdown("<h4 style='text-align:center;'>Pathways</h4>", unsafe_allow_html=True) 
     with st.expander("Which are the pathways which have completeness as 1 and what do they imply?"):
         with st.expander("Enterococcus casseliflavus (Proso Millet)"):
             st.markdown("""
@@ -1538,7 +1538,7 @@ def summary():
               """)
       
     
-    st.markdown("<h4 style='text-align:center;'>Biological Traits Analysis Summary</h4>", unsafe_allow_html=True)
+    st.markdown("<h4 style='text-align:center;'>Biological Traits </h4>", unsafe_allow_html=True)
     with st.expander("Which are the common and unique biological traits?"):
             df = create_trait_table(millet_map, path="picrust_output_files/")
             df = style_trait_table(df)
