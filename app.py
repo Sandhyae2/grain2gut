@@ -94,7 +94,7 @@ def footer():
         left: 50%;
         bottom: 10px;  /* distance from bottom */
         transform: translateX(-50%);
-        background-color: #ffff66;  /* Yellow box */
+        background-color: #b3ecff;  /* Yellow box */
         color: black;
         padding: 10px 20px;
         font-size: 14px;
@@ -125,8 +125,7 @@ def home():
     st.markdown("<h4 style='text-align:center;  font-style:italic;'><i>Linking genomic potential of Millet derived Lactic Acid Bacteria to food and probiotic applications</i></h4>", unsafe_allow_html=True)
     st.write("") 
   
- # ----------------------------------- Sidebar with Project Description ------------------------------------------------------------------------
-   # "Back to Home" button at the top of the sidebar
+
     
     # ====== PAGE LAYOUT ======
     left_col, middle_col, right_col = st.columns([1,2,3])
