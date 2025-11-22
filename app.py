@@ -603,7 +603,7 @@ def ec_class():
             4. **Lyases (EC 4):** Helps in forming flavor compounds and allowing flexible use of nutrients.  
             5. **Isomerases (EC 5):** Helps in changing sugars and amino acids into useful forms and making prebiotics.  
             6. **Ligases (EC 6):** Helps in bacterial growth and stability in foods.
-            7. ** Translocase (EC 7):** Helps in transporting proteins and molecules across membranes.
+            7. **Translocase (EC 7):** Helps in transporting proteins and molecules across membranes.
             """)
     col1, col2, col3 = st.columns([3, 3, 3])
     with col2:
