@@ -135,7 +135,7 @@ def home():
     # ================================
     with left_col:
         # ===== Expander: About this App ===== 
-        with st.sidebar.expander("About This App", expanded=False):
+        with st.expander("About This App", expanded=False):
             st.markdown("""
             1. This app is based on a research paper on lactic acid bacteria (LAB) isolated from millets  
             (<a href="https://github.com/VarshaS-37/Grain2Gut/blob/main/Isolation_%26_characterization_of_biological_traits_of_millet-derived_lactic_acid_bacteria.pdf" target="_blank">Research Paper</a>)  
