@@ -121,7 +121,7 @@ def footer():
     """, unsafe_allow_html=True)
 # ------------------------------------------------------------ Home Page -----------------------------------------------------------------------
 def home():
-    st.markdown("<h2 style='text-align:center;'>GraintoGut</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='text-align:center;'>GraintoGut 🌾</h2>", unsafe_allow_html=True)
     st.markdown("<h4 style='text-align:center;  font-style:italic;'><i>Linking genomic potential of Millet derived Lactic Acid Bacteria to food and probiotic applications</i></h4>", unsafe_allow_html=True)
     st.write("") 
   
@@ -138,7 +138,7 @@ def home():
         with st.expander("About This App", expanded=False):
             st.markdown("""
             1. This app is based on a research paper on lactic acid bacteria (LAB) isolated from millets  
-            (<a href="https://github.com/VarshaS-37/Grain2Gut/blob/main/Isolation_%26_characterization_of_biological_traits_of_millet-derived_lactic_acid_bacteria.pdf" target="_blank">Research Paper</a>)  
+            (<a href="https://github.com/Sandhyae2/GraintoGut/blob/main/Isolation_%26_characterization_of_biological_traits_of_millet-derived_lactic_acid_bacteria.pdf")  
             2. Four LAB strains showed probiotic potential, and their 16S rRNA sequences were submitted to NCBI.  
             3. These sequences were analyzed using PICRUSt for functional prediction.  
             4. Outputs were processed into **KO**, **EC**, and **PWY** datasets linked to reference databases.
