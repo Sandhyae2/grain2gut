@@ -114,8 +114,8 @@ def footer():
     
     <div class="footer-container">
         Jointly created by 
-        <a href="https://github.com/Sandhyae2" target="_blank">Sandhya</a>&
-        <a href="https://github.com/VarshaS-37" target="_blank">Varsha</a>|
+        <a href="https://github.com/Sandhyae2" target="_blank">Sandhya</a> & 
+        <a href="https://github.com/VarshaS-37" target="_blank">Varsha</a> |
         <a href="https://github.com/Sandhyae2/GraintoGut/tree/main" target="_blank">GitHub Repo</a>
     </div>
     """, unsafe_allow_html=True)
