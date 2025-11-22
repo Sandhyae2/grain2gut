@@ -925,10 +925,10 @@ def couq():
 
     #--------------------------------------------------------------Summary--------------------------------------------------------------------------
 def summary():
-        st.sidebar:
-        if st.button("Back to Homepage 🏠"):
-            go_to("home") 
-        st.markdown("<h3 style='text-align:center;'>Inference</h4>", unsafe_allow_html=True)
+    st.sidebar:
+    if st.button("Back to Homepage 🏠"):
+        go_to("home") 
+    st.markdown("<h3 style='text-align:center;'>Inference</h4>", unsafe_allow_html=True)
 
 
   #---------------------------------ec analysis-------------------------------------------------------
